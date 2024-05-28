@@ -1,18 +1,14 @@
 package com.sf.healthylifestyle.di.modules
 
+import com.sf.healthylifestyle.data.repository.AuthRepository
+import com.sf.healthylifestyle.domain.irepository.IAuthRepository
 import dagger.Module
+import dagger.Provides
+import javax.inject.Singleton
 
 @Module
 class DataModule {
-/*    @Provides
+    @Provides
     @Singleton
-    fun provideRepository(
-        ottApi: OttApi,
-        mapper: IMoviesMapper
-    ): MoviesRepository {
-        return MovieRepositoryImpl(
-            ottApi = ottApi,
-            mapper = mapper
-        )
-    }*/
+    fun provideRepository() = AuthRepository()
 }
