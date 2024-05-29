@@ -1,6 +1,7 @@
 package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.data.repository.AuthRepository
+import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
 import com.sf.healthylifestyle.domain.usecases.GetTokenByPhone
 import dagger.Module
 import dagger.Provides
@@ -13,6 +14,12 @@ class DomainModule {
     @Provides
     fun provideGetTokenByPhone(repository: AuthRepository): GetTokenByPhone {
         return GetTokenByPhone(repository = repository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideGetTokenByEmail(repository: AuthRepository): GetTokenByEmail {
+        return GetTokenByEmail(repository = repository)
     }
 
 }
