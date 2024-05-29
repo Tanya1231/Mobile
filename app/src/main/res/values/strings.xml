@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HealthyLifestyle</string>
+    <!-- bottom navigation menu -->
+    <string name="menu_settings_title">настройки</string>
+    <string name="menu_home_title">главная</string>
+    <string name="menu_book_title">книга</string>
+    <string name="menu_mydish_title">моя тарелка</string>
+    <string name="menu_catalogue_title">каталог</string>
+    <string name="menu_profile_text">профиль</string>
 </resources>

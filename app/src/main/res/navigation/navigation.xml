@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sf.healthylifestyle.view.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="com.sf.healthylifestyle.view.book.BookFragment"
+        android:label="fragment_book"
+        tools:layout="@layout/fragment_book" />
+    <fragment
+        android:id="@+id/catalogueFragment"
+        android:name="com.sf.healthylifestyle.view.catalogue.CatalogueFragment"
+        android:label="fragment_catalogue"
+        tools:layout="@layout/fragment_catalogue" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sf.healthylifestyle.view.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/mydishFragment"
+        android:name="com.sf.healthylifestyle.view.mydish.MyDishFragment"
+        android:label="fragment_mydish"
+        tools:layout="@layout/fragment_mydish" />
+</navigation>
