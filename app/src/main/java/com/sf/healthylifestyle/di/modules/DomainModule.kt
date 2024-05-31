@@ -3,6 +3,7 @@ package com.sf.healthylifestyle.di.modules
 import com.sf.healthylifestyle.data.repository.AuthRepository
 import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
 import com.sf.healthylifestyle.domain.usecases.GetTokenByPhone
+import com.sf.healthylifestyle.domain.usecases.RegisterUser
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -20,6 +21,12 @@ class DomainModule {
     @Provides
     fun provideGetTokenByEmail(repository: AuthRepository): GetTokenByEmail {
         return GetTokenByEmail(repository = repository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideRegisterUser(repository: AuthRepository): RegisterUser {
+        return RegisterUser(repository = repository)
     }
 
 }

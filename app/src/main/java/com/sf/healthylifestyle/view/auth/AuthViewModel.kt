@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 class AuthViewModel(
     private val getTokenByPhone: GetTokenByPhone,
     private val getTokenByEmail: GetTokenByEmail,
-    ) : ViewModel() {
+) : ViewModel() {
 
     private var _token = MutableSharedFlow<String>()
     val token: SharedFlow<String>
