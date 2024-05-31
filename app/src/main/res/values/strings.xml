@@ -7,4 +7,12 @@
     <string name="menu_mydish_title">моя тарелка</string>
     <string name="menu_catalogue_title">каталог</string>
     <string name="menu_profile_text">профиль</string>
+    <string name="register_text">Регистрация</string>
+    <string name="register_next">Далее</string>
+    <string name="name">Имя</string>
+    <string name="email">Почта</string>
+    <string name="phone">Номер телефона</string>
+    <string name="data">Дата рождения</string>
+    <string name="password">Пароль</string>
+    <string name="next">Далее</string>
 </resources>
