@@ -24,4 +24,5 @@
     <string name="enter_code">Введите код из СМС</string>
     <string name="sent_phone">Отправили на номер</string>
     <string name="code">code</string>
+    <string name="have_account">Уже есть аккаунт?</string>
 </resources>
