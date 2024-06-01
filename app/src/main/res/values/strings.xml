@@ -21,4 +21,7 @@
     <string name="done">Готово</string>
     <string name="no_account">Нет аккаунта?</string>
     <string name="register">Зарегистрироваться</string>
+    <string name="enter_code">Введите код из СМС</string>
+    <string name="sent_phone">Отправили на номер</string>
+    <string name="code">code</string>
 </resources>

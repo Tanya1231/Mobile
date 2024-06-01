@@ -15,7 +15,7 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="50dp"
         android:text="@string/create_entry"
         android:textColor="#808080"
         android:textSize="14sp"
@@ -39,9 +39,10 @@
         android:id="@id/layout_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
         android:layout_marginBottom="10dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/phoneError"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_text">
@@ -49,19 +50,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/no_account"
             android:layout_marginEnd="20dp"
+            android:text="@string/no_account"
             android:textColor="@color/black"
             android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:linksClickable="true"
             android:text="@string/register"
             android:textColor="@color/black"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:linksClickable="true"/>
+            android:textStyle="bold" />
 
 
     </LinearLayout>
