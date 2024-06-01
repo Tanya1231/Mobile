@@ -4,6 +4,7 @@ package com.sf.healthylifestyle.di.modules
 import com.sf.healthylifestyle.view.MainActivity
 import com.sf.healthylifestyle.view.auth.AuthFragment
 import com.sf.healthylifestyle.view.home.HomeFragment
+import com.sf.healthylifestyle.view.register.RegisterFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -18,6 +19,9 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindAuthFragment(): AuthFragment
+
+    @ContributesAndroidInjector
+    fun bindRegisterFragment(): RegisterFragment
 
 
 }
