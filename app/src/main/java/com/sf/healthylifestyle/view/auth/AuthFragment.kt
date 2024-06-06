@@ -60,6 +60,10 @@ class AuthFragment : Fragment()
         binding.submit.setOnClickListener{
             findNavController().navigate(R.id.action_authFragment_to_confirmFragment)
         }
+
+        binding.tvReg.setOnClickListener{
+            findNavController().navigate(R.id.action_authFragment_to_registerFragment)
+        }
     }
 
     override fun onDestroyView() {
