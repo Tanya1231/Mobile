@@ -4,6 +4,7 @@ import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
 import com.sf.healthylifestyle.domain.usecases.GetTokenByPhone
 import com.sf.healthylifestyle.domain.usecases.RegisterUser
 import com.sf.healthylifestyle.view.auth.AuthViewModel
+import com.sf.healthylifestyle.view.confirm.ConfirmViewModel
 import com.sf.healthylifestyle.view.profile.ProfileViewModel
 import com.sf.healthylifestyle.view.register.RegisterViewModel
 import dagger.Module
@@ -28,6 +29,13 @@ class AppModule() {
 
         ) = RegisterViewModel.Factory(
         registerUser = registerUser,
+    )
+
+    @Provides
+    fun provideConfirmViewModelFactory(
+
+        ) = ConfirmViewModel.Factory(
+
     )
 
 }

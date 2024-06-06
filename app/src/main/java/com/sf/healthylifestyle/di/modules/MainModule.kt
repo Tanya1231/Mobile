@@ -3,7 +3,12 @@ package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.view.MainActivity
 import com.sf.healthylifestyle.view.auth.AuthFragment
+import com.sf.healthylifestyle.view.book.BookFragment
+import com.sf.healthylifestyle.view.catalogue.CatalogueFragment
+import com.sf.healthylifestyle.view.confirm.ConfirmFragment
 import com.sf.healthylifestyle.view.home.HomeFragment
+import com.sf.healthylifestyle.view.mydish.MyDishFragment
+import com.sf.healthylifestyle.view.profile.ProfileFragment
 import com.sf.healthylifestyle.view.register.RegisterFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -23,5 +28,18 @@ interface MainModule {
     @ContributesAndroidInjector
     fun bindRegisterFragment(): RegisterFragment
 
+    @ContributesAndroidInjector
+    fun bindConfirmFragment(): ConfirmFragment
 
+    @ContributesAndroidInjector
+    fun bindBookFragment(): BookFragment
+
+    @ContributesAndroidInjector
+    fun bindCatalogueFragment(): CatalogueFragment
+
+    @ContributesAndroidInjector
+    fun bindMyDishFragment(): MyDishFragment
+
+    @ContributesAndroidInjector
+    fun bindMyProfileFragment(): ProfileFragment
 }

@@ -1,12 +1,19 @@
 package com.sf.healthylifestyle.view
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.sf.healthylifestyle.R
 import com.sf.healthylifestyle.databinding.ActivityMainBinding
+import com.sf.healthylifestyle.utils.uiextensions.hide
+import com.sf.healthylifestyle.utils.uiextensions.show
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,15 +22,22 @@ class MainActivity : AppCompatActivity() {
         NavHostFragment.findNavController(supportFragmentManager.findFragmentById(R.id.fragment_placeholder) as NavHostFragment)
     }
 
+    private val fragmentsWithoutToolbars = listOf(
+        R.id.authFragment, R.id.confirmFragment, R.id.registerFragment
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.bottomNavigation.setupWithNavController(navController)
 
         initMenu()
+        initShowOrHideMainBottomBar()
     }
 
     private fun initMenu() {
@@ -56,6 +70,23 @@ class MainActivity : AppCompatActivity() {
 
                 else -> false
             }
+        }
+    }
+
+    private fun initShowOrHideMainBottomBar() {
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                navController.addOnDestinationChangedListener { _, destination, _ ->
+                    with(binding) {
+                        if (fragmentsWithoutToolbars.contains(destination.id)) {
+                            bottomNavigation.hide()
+                        } else {
+                            bottomNavigation.show()
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

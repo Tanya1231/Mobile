@@ -1,35 +1,27 @@
-package com.sf.healthylifestyle.view.auth
+package com.sf.healthylifestyle.view.confirm
 
 import android.content.Context
-import androidx.fragment.app.viewModels
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.sf.healthylifestyle.R
-import com.sf.healthylifestyle.databinding.FragmentAuthBinding
-import com.sf.healthylifestyle.databinding.FragmentHomeBinding
-import com.sf.healthylifestyle.view.home.HomeViewModel
-import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasAndroidInjector
+import com.sf.healthylifestyle.databinding.FragmentConfirmBinding
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
-class AuthFragment : Fragment()
-    /*, HasAndroidInjector */
-{
+class ConfirmFragment : Fragment() {
 
-    private var _binding: FragmentAuthBinding? = null
+    private var _binding: FragmentConfirmBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var authFragmentViewModel: AuthViewModel
+    private lateinit var confirmFragmentViewModel: ConfirmViewModel
 
     @Inject
-    lateinit var vmFactory: AuthViewModel.Factory
+    lateinit var vmFactory: ConfirmViewModel.Factory
 
 //    @Inject
 //    lateinit var androidInjector: DispatchingAndroidInjector<Any>
@@ -46,7 +38,7 @@ class AuthFragment : Fragment()
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentAuthBinding.inflate(inflater, container, false)
+        _binding = FragmentConfirmBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -54,11 +46,11 @@ class AuthFragment : Fragment()
 
         super.onViewCreated(view, savedInstanceState)
 
-        authFragmentViewModel =
-            ViewModelProvider(this, vmFactory)[AuthViewModel::class.java]
+        confirmFragmentViewModel =
+            ViewModelProvider(this, vmFactory)[ConfirmViewModel::class.java]
 
         binding.submit.setOnClickListener{
-            findNavController().navigate(R.id.action_authFragment_to_confirmFragment)
+            findNavController().navigate(R.id.action_confirmFragment_to_homeFragment)
         }
     }
 
