@@ -11,32 +11,84 @@
         android:id="@+id/fragment_placeholder"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/bottom_card"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/navigation" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/bottom_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/black"
+        android:clickable="false"
+        android:focusable="true"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_placeholder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation_menu" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/black"
-            app:itemIconTint="@color/white"
-            app:itemTextColor="@color/white"
-            app:labelVisibilityMode="labeled"
-            app:menu="@menu/navigation_menu" />
-    </androidx.cardview.widget.CardView>
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/fab"-->
+    <!--        android:layout_width="125dp"-->
+    <!--        android:layout_height="125dp"-->
+    <!--        android:backgroundTint="@color/black"-->
+    <!--        android:clickable="true"-->
+    <!--        android:focusable="true"-->
+    <!--        android:src="@drawable/ic_baseline_home_24"-->
+    <!--        android:visibility="visible"-->
+    <!--        app:fabCustomSize="125dp"-->
+    <!--        app:itemRippleColor="#19FFFFFF"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/bottom_navigation"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/bottom_navigation"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/bottom_navigation"-->
+    <!--        app:maxImageSize="46dp"-->
+    <!--        app:shapeAppearanceOverlay="@style/FabOktagon"-->
+    <!--        app:tint="@color/white" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/black"
+        app:fabCustomSize="100dp"
+        android:src="@drawable/ic_baseline_home_24"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="@+id/bottom_navigation"
+        app:layout_constraintTop_toTopOf="@+id/bottom_navigation"
+        app:shapeAppearanceOverlay="@style/FabRound"
+        app:tint="@android:color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<style name="CircleActionButton" parent="Widget.MaterialComponents.FloatingActionButton">-->
+    <!--<item name="cornerSize">50%</item>-->
+    <!--<item name="shape">@drawable/shape_circle_sector</item>-->
+    <!--</style>-->
+
+    <!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:shape="arc">-->
+    <!--<size-->
+    <!--    android:width="56dp"-->
+    <!--    android:height="56dp" />-->
+    <!--<solid android:color="@color/colorPrimary" />-->
+    <!--<corners android:radius="28dp" />-->
+    <!--<gradient-->
+    <!--    android:endColor="@color/colorPrimary"-->
+    <!--    android:startColor="@color/colorPrimaryDark"-->
+    <!--    android:type="linear" />-->
+    <!--<padding-->
+    <!--    android:bottom="0dp"-->
+    <!--    android:left="0dp"-->
+    <!--    android:right="0dp"-->
+    <!--    android:top="0dp" />-->
+    <!--</shape>-->
