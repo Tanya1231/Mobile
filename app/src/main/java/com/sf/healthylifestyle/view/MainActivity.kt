@@ -80,8 +80,10 @@ class MainActivity : AppCompatActivity() {
                     with(binding) {
                         if (fragmentsWithoutToolbars.contains(destination.id)) {
                             bottomNavigation.hide()
+                            fab.hide()
                         } else {
                             bottomNavigation.show()
+                            fab.show()
                         }
                     }
                 }
