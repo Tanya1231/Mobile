@@ -49,8 +49,8 @@ class RemoteModule {
     @Singleton
     fun provideMaiboApi(retrofit: Retrofit): OttApi = retrofit.create(OttApi::class.java)*/
 
-//    companion object {
-//        private const val HALF_MINUTE_FOR_SLOW_INTERNET = 30L
-////        const val BASE_URL = "https://ott-details.p.rapidapi.com/"
-//    }
+    companion object {
+        private const val HALF_MINUTE_FOR_SLOW_INTERNET = 30L
+        const val BASE_URL = "https://grikoandrey.pythonanywhere.com/"
+    }
 }

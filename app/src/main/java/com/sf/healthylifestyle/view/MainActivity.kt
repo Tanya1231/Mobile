@@ -41,36 +41,42 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initMenu() {
-        binding.bottomNavigation.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.homeFragment -> {
-                    navController.navigate(R.id.homeFragment)
-                    true
-                }
+        with(binding) {
+            fab.setOnClickListener {
+                navController.navigate(R.id.mydishFragment)
+            }
+            bottomNavigation.setOnItemSelectedListener {
+                when (it.itemId) {
+                    R.id.homeFragment -> {
+                        navController.navigate(R.id.homeFragment)
+                        true
+                    }
 
-                R.id.bookFragment -> {
-                    navController.navigate(R.id.bookFragment)
-                    true
-                }
+                    R.id.bookFragment -> {
+                        navController.navigate(R.id.bookFragment)
+                        true
+                    }
 
-                R.id.mydishFragment -> {
-                    navController.navigate(R.id.mydishFragment)
-                    true
-                }
+                    R.id.mydishFragment -> {
+                        navController.navigate(R.id.mydishFragment)
+                        true
+                    }
 
-                R.id.catalogueFragment -> {
-                    navController.navigate(R.id.catalogueFragment)
-                    true
-                }
+                    R.id.catalogueFragment -> {
+                        navController.navigate(R.id.catalogueFragment)
+                        true
+                    }
 
-                R.id.profileFragment -> {
-                    navController.navigate(R.id.profileFragment)
-                    true
-                }
+                    R.id.profileFragment -> {
+                        navController.navigate(R.id.profileFragment)
+                        true
+                    }
 
-                else -> false
+                    else -> false
+                }
             }
         }
+
     }
 
     private fun initShowOrHideMainBottomBar() {
