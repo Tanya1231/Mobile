@@ -25,4 +25,9 @@
     <string name="sent_phone">Отправили на номер</string>
     <string name="code">code</string>
     <string name="have_account">Уже есть аккаунт?</string>
+    <string name="profile">Профиль</string>
+    <string name="back">назад</string>
+    <string name="search">поиск</string>
+    <string name="orders">Заказы</string>
+    <string name="favourites">Избранное</string>
 </resources>
