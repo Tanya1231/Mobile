@@ -30,4 +30,16 @@
     <string name="search">поиск</string>
     <string name="orders">Заказы</string>
     <string name="favourites">Избранное</string>
+    <string name="basket">Корзина</string>
+    <string name="sum_product">Сумма товаров</string>
+    <string name="sum">3 000 р</string>
+    <string name="title_dish">Куриная грудка с яйцами, рисом</string>
+    <string name="sum_two">1 000 р</string>
+    <string name="image_title">картинка блюда</string>
+    <string name="close">закрыть</string>
+    <string name="line">линия</string>
+    <string name="comment">Комментарий</string>
+    <string name="arrange">Оформить</string>
+    <string name="counter_number">- 1 +</string>
+    <string name="counter_info">counter</string>
 </resources>

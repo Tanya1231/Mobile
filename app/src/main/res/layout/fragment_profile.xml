@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_home"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".view.profile.ProfileFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
 
         <ImageView
             android:id="@+id/tollbarBack"
@@ -25,73 +28,346 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:text="@string/profile"
+            android:fontFamily="@font/rubik"
+            android:text="@string/basket"
             android:textColor="@color/black"
             android:textSize="24sp" />
 
         <ImageView
-            android:id="@+id/toolbarInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/toolbarClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
             android:layout_weight="1"
-            android:contentDescription="@string/search"
-            android:src="@drawable/icon_search" />
+            android:contentDescription="@string/close"
+            android:src="@drawable/close" />
 
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/salmon"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/rubik"
+            android:gravity="center_vertical"
+            android:text="@string/sum_product"
+            android:textColor="@color/bone"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:fontFamily="@font/rubik"
+            android:gravity="center_vertical"
+            android:text="@string/sum"
+            android:textColor="@color/sum"
+            android:textSize="24sp" />
+
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="70dp"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:cardBackgroundColor="@color/color_home"
+        app:cardElevation="0dp">
 
-        <android.widget.Button
-            android:id="@+id/btnOrderd"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_gravity="start"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/ic_button_profile"
-            android:padding="5dp"
-            android:text="@string/orders"
-            android:textSize="12sp"
-            tools:ignore="TouchTargetSizeCheck"
-            tools:textAllCaps="false">
+            android:layout_height="match_parent"
+            android:background="@color/color_home"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
 
-        </android.widget.Button>
+            <ImageView
+                android:id="@+id/imageDish"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/image_title"
+                android:src="@drawable/dish" />
 
-        <android.widget.Button
-            android:id="@+id/btnFavourites"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleDish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/rubik"
+                    android:maxWidth="113dp"
+                    android:text="@string/title_dish"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/sumDish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik"
+                    android:text="@string/sum_two"
+                    android:textColor="@color/sum"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|top"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/close"
+                    android:src="@drawable/close" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonСounterOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/button_basket"
+                    android:contentDescription="@string/counter_info"
+                    android:text="@string/counter_number"
+                    android:textColor="@color/sum"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginVertical="10dp"
+        android:contentDescription="@string/line"
+        android:layerType="software"
+        android:src="@drawable/line" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:cardBackgroundColor="@color/color_home"
+        app:cardElevation="0dp">
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/ic_button_profile"
-            android:padding="5dp"
-            android:singleLine="true"
-            android:text="@string/favourites"
-            android:textSize="12sp"
-            tools:ignore="TouchTargetSizeCheck">
+            android:layout_height="match_parent"
+            android:background="@color/color_home"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
 
-        </android.widget.Button>
+            <ImageView
+                android:id="@+id/imageDish_two"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/image_title"
+                android:src="@drawable/dish" />
 
-        <android.widget.Button
-            android:id="@+id/btnSetting"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleDish_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/manrope"
+                    android:maxWidth="113dp"
+                    android:text="@string/title_dish"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/sumDish_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope"
+                    android:text="@string/sum_two"
+                    android:textColor="@color/sum"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/close_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|top"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/close"
+                    android:src="@drawable/close" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonСounterTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/button_basket"
+                    android:contentDescription="@string/counter_info"
+                    android:text="@string/counter_number"
+                    android:textColor="@color/sum"
+                    android:textSize="20sp">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginVertical="10dp"
+        android:contentDescription="@string/line"
+        android:layerType="software"
+        android:src="@drawable/line" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:cardBackgroundColor="@color/color_home"
+        app:cardElevation="0dp">
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_gravity="end"
-            android:background="@drawable/ic_button_profile"
-            android:padding="5dp"
-            android:singleLine="true"
-            android:text="@string/menu_settings_title"
-            android:textSize="12sp"
-            tools:ignore="TouchTargetSizeCheck"
-            tools:textAllCaps="false">
+            android:layout_height="match_parent"
+            android:background="@color/color_home"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
 
-        </android.widget.Button>
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/imageDish_three"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/image_title"
+                android:src="@drawable/dish" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleDish_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/rubik"
+                    android:maxWidth="113dp"
+                    android:text="@string/title_dish"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/sumDish_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope"
+                    android:text="@string/sum_two"
+                    android:textColor="@color/sum"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/close_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|top"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/close"
+                    android:src="@drawable/close" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonСounterThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/button_basket"
+                    android:contentDescription="@string/counter_info"
+                    android:text="@string/counter_number"
+                    android:textColor="@color/sum"
+                    android:textSize="20sp">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/comment"
+        android:hint="@string/comment"
+        android:minHeight="40dp"
+        android:paddingStart="10dp"
+        android:textSize="16sp"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonArrange"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_arrange"
+        android:fontFamily="@font/rubik"
+        android:text="@string/arrange"
+        android:textColor="@color/sum"
+        android:textSize="20sp">
+
+    </androidx.appcompat.widget.AppCompatButton>
 
 </LinearLayout>
