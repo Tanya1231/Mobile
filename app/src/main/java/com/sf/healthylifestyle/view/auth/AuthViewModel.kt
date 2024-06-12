@@ -15,36 +15,36 @@ class AuthViewModel(
     private val loginUseCase: LoginUseCase
 ) : ViewModel() {
 
-    private var _token = MutableSharedFlow<String>()
-    val token: SharedFlow<String>
-        get() = _token.asSharedFlow()
+    private var _isEntry = MutableSharedFlow<Boolean>()
+    val isEntry: SharedFlow<Boolean>
+        get() = _isEntry.asSharedFlow()
 
     init {
-        login()
-        viewModelScope.launch {
+//        login()
+//        viewModelScope.launch {
 //            getTokenByPhone()
-        }
+//        }
     }
 
-    private fun login() {
+    fun login(login: String) {
         viewModelScope.launch {
-            loginUseCase("maevski.ed@gmail.com")
+            _isEntry.emit(loginUseCase(login))
         }
     }
 
-/*    suspend fun getTokenByPhone() {
+    /*    suspend fun getTokenByPhone() {
 
-        if (getTokenByPhone.execute()) _token.emit("token")
-        else _token.emit("null token")
+            if (getTokenByPhone.execute()) _token.emit("token")
+            else _token.emit("null token")
 
-    }
+        }
 
-    suspend fun getTokenByEmail() {
+        suspend fun getTokenByEmail() {
 
-        if (getTokenByEmail.execute()) _token.emit("token")
-        else _token.emit("null token")
+            if (getTokenByEmail.execute()) _token.emit("token")
+            else _token.emit("null token")
 
-    }*/
+        }*/
 
     class Factory(
         val loginUseCase: LoginUseCase

@@ -1,5 +1,6 @@
 package com.sf.healthylifestyle.di.modules
 
+import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
 import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
 import com.sf.healthylifestyle.domain.usecases.GetTokenByPhone
 import com.sf.healthylifestyle.domain.usecases.LoginUseCase
@@ -31,9 +32,9 @@ class AppModule() {
 
     @Provides
     fun provideConfirmViewModelFactory(
-
+        confirmUseCase: ConfirmUseCase,
         ) = ConfirmViewModel.Factory(
-
+        confirmUseCase = confirmUseCase,
     )
 
 }

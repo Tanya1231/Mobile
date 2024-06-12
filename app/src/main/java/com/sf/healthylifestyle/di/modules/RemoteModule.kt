@@ -1,6 +1,7 @@
 package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.data.api.AuthApi
+import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -31,6 +32,7 @@ class RemoteModule {
         .baseUrl(BASE_URL)
         //Добавляем конвертер
         .addConverterFactory(GsonConverterFactory.create())
+        .addCallAdapterFactory(ResultCallAdapterFactory.create())
         //Добавляем кастомный клиент
         .client(okHttpClient)
         .build()
