@@ -47,60 +47,87 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="+7 800 555 96 69"
+            android:text="на e-mail"
             android:textColor="#383838"
             android:textSize="16sp" />
 
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@id/layout_text"
-        android:layout_width="wrap_content"
+    <!--    <LinearLayout-->
+    <!--        android:id="@id/layout_text"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/submit"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/code_text">-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="26dp"-->
+    <!--            android:layout_height="26dp"-->
+    <!--            android:layout_marginEnd="5dp"-->
+    <!--            android:background="@drawable/ic_circles"-->
+    <!--            android:contentDescription="@string/code" />-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="26dp"-->
+    <!--            android:layout_height="26dp"-->
+    <!--            android:layout_marginEnd="5dp"-->
+    <!--            android:background="@drawable/ic_circles"-->
+    <!--            android:contentDescription="@string/code" />-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="26dp"-->
+    <!--            android:layout_height="26dp"-->
+    <!--            android:layout_marginEnd="5dp"-->
+    <!--            android:background="@drawable/ic_circles"-->
+    <!--            android:contentDescription="@string/code" />-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="26dp"-->
+    <!--            android:layout_height="26dp"-->
+    <!--            android:layout_marginEnd="5dp"-->
+    <!--            android:background="@drawable/ic_circles"-->
+    <!--            android:contentDescription="@string/code" />-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="26dp"-->
+    <!--            android:layout_height="26dp"-->
+    <!--            android:layout_marginEnd="5dp"-->
+    <!--            android:background="@drawable/ic_circles"-->
+    <!--            android:contentDescription="@string/code" />-->
+
+
+    <!--    </LinearLayout>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_code"
+        android:layout_width="262dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginBottom="200dp"
+        app:hintTextColor="#808080"
         app:layout_constraintBottom_toTopOf="@+id/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/code_text">
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/ic_circles"
-            android:contentDescription="@string/code" />
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/ic_circles"
-            android:contentDescription="@string/code" />
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="code"
+            android:background="@drawable/ic_button_login"
+            android:hint="@string/input_code"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:ignore="RtlSymmetry" />
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/ic_circles"
-            android:contentDescription="@string/code" />
-
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/ic_circles"
-            android:contentDescription="@string/code" />
-
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/ic_circles"
-            android:contentDescription="@string/code" />
-
-
-    </LinearLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/submit"

@@ -16,13 +16,15 @@
     <string name="password">Пароль</string>
     <string name="next">Далее</string>
     <string name="nomer_phone">Введите номер телефона</string>
+    <string name="input_email">Введите свой email</string>
+    <string name="input_code">Введите код</string>
     <string name="entrance">Вход</string>
     <string name="create_entry">Создайте учётную запись или войдите в систему</string>
     <string name="done">Готово</string>
     <string name="no_account">Нет аккаунта?</string>
     <string name="register">Зарегистрироваться</string>
-    <string name="enter_code">Введите код из СМС</string>
-    <string name="sent_phone">Отправили на номер</string>
+    <string name="enter_code">Введите код</string>
+    <string name="sent_phone">Высланный вам </string>
     <string name="code">code</string>
     <string name="have_account">Уже есть аккаунт?</string>
     <string name="profile">Профиль</string>

@@ -7,10 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.sf.healthylifestyle.R
 import com.sf.healthylifestyle.databinding.FragmentConfirmBinding
 import dagger.android.support.AndroidSupportInjection
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class ConfirmFragment : Fragment() {
@@ -49,8 +52,24 @@ class ConfirmFragment : Fragment() {
         confirmFragmentViewModel =
             ViewModelProvider(this, vmFactory)[ConfirmViewModel::class.java]
 
+        viewLifecycleOwner.lifecycleScope.launch {
+            confirmFragmentViewModel.isEntry.collect {
+                if (it) {
+                    findNavController().navigate(R.id.action_confirmFragment_to_homeFragment)
+                }
+                else {
+                    Snackbar.make(
+                        binding.root,
+                        "Ошибка.",
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                }
+            }
+        }
+
         binding.submit.setOnClickListener{
-            findNavController().navigate(R.id.action_confirmFragment_to_homeFragment)
+
+            confirmFragmentViewModel.confirm(binding.code.text.toString())
         }
     }
 

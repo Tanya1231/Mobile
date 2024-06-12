@@ -1,3 +1,9 @@
 package com.sf.healthylifestyle.domain.irepository
 
-interface IAuthRepository {}
+import com.sf.healthylifestyle.data.dto.auth.response.DetailResponse
+
+interface IAuthRepository {
+    suspend fun login(login: String): Result<DetailResponse>
+
+    suspend fun verify(login: String): Result<DetailResponse>
+}

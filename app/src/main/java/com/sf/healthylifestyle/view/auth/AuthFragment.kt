@@ -8,7 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.sf.healthylifestyle.R
 import com.sf.healthylifestyle.databinding.FragmentAuthBinding
 import com.sf.healthylifestyle.databinding.FragmentHomeBinding
@@ -17,6 +19,7 @@ import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import dagger.android.support.AndroidSupportInjection
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class AuthFragment : Fragment()
@@ -57,8 +60,34 @@ class AuthFragment : Fragment()
         authFragmentViewModel =
             ViewModelProvider(this, vmFactory)[AuthViewModel::class.java]
 
+        viewLifecycleOwner.lifecycleScope.launch {
+            println("AuthFragment: запуск authFragmentViewModel.isEntry outside")
+            authFragmentViewModel.isEntry.collect {
+                println("AuthFragment: запуск authFragmentViewModel.isEntry inside")
+                if (it) {
+                    findNavController().navigate(R.id.action_authFragment_to_confirmFragment)
+                }
+                else {
+                    Snackbar.make(
+                        binding.root,
+                        "Ошибка сервера.",
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                }
+            }
+        }
+
         binding.submit.setOnClickListener{
-            findNavController().navigate(R.id.action_authFragment_to_confirmFragment)
+            if(!isEmailValid(binding.phone.text.toString())) {
+                Snackbar.make(
+                    binding.root,
+                    "E-mail содержит не допустимые символы. Или не верный формат записи.",
+                    Snackbar.LENGTH_LONG
+                ).show()
+                return@setOnClickListener
+            }
+
+            authFragmentViewModel.login(binding.phone.text.toString())
         }
 
         binding.tvReg.setOnClickListener{
@@ -69,5 +98,10 @@ class AuthFragment : Fragment()
     override fun onDestroyView() {
         _binding = null
         super.onDestroyView()
+    }
+
+    fun isEmailValid(email: String): Boolean {
+        val emailRegex = Regex("^([A-Za-z0-9._%+-]+)@([A-Za-z0-9-]+)\\.([A-Za-z]{2,})$")
+        return emailRegex.matches(email)
     }
 }
