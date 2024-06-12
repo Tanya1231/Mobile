@@ -1,13 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light"
+    android:scrollbars="none"
     tools:context=".view.book.BookFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Book Fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/topTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_home"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fontFamily="@font/rubik"
+                android:text="@string/zozhnik"
+                android:textColor="@color/sum"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:contentDescription="@string/profile"
+                android:src="@drawable/profile" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/plateMethod"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_home"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:contentDescription="@string/plate_method"
+                android:src="@drawable/method" />
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/rubik"
+                android:lines="2"
+                android:text="@string/electronic_book"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:layout_gravity="end"
+                android:contentDescription="@string/autors"
+                android:src="@drawable/autors" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_home"
+            android:padding="16dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonBuy"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/button_arrange"
+                android:fontFamily="@font/rubik"
+                android:text="@string/buy_book"
+                android:textColor="@color/sum"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="@string/isItNecessary"
+                android:textColor="@color/sum"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="@string/info_book_one"
+                android:textColor="@color/sum"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/button_content"
+                android:fontFamily="@font/rubik"
+                android:text="@string/content"
+                android:textColor="@color/sum"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="@string/info_book_three"
+                android:textColor="@color/sum"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="@string/info_book_four"
+                android:textColor="@color/sum"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="@string/info_book_five"
+                android:textColor="@color/sum"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="@string/image"
+                android:src="@drawable/image_book" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="@string/info_book_six"
+                android:textColor="@color/sum"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="@string/info_book_seven"
+                android:textColor="@color/sum"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="@string/info_book_eight"
+                android:textColor="@color/sum"
+                android:textSize="14sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/rubik"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/point" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik"
+                        android:text="@string/list_book_one"
+                        android:textColor="@color/sum"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/point" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik"
+                        android:text="@string/list_book_two"
+                        android:textColor="@color/sum"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/point" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik"
+                        android:text="@string/list_book_three"
+                        android:textColor="@color/sum"
+                        android:textSize="14sp" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:text="@string/info_book_nine"
+                android:textColor="@color/sum"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="@string/info_book_ten"
+                android:textColor="@color/sum"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="@string/info_book_eleven"
+                android:textColor="@color/sum"
+                android:textSize="14sp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonNext"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/button_arrange"
+                android:fontFamily="@font/rubik"
+                android:text="@string/read_more"
+                android:textColor="@color/sum"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

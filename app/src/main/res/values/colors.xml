@@ -7,4 +7,7 @@
     <color name="sum">#2E3A45</color>
     <color name="salmon">#FE907A</color>
     <color name="greenaple">#E2DD01</color>
+    <color name="light">#fff</color>
+    <color name="light_blue">#AEDADE</color>
+    <color name="peach_light">#FE907A</color>
 </resources>
