@@ -2,6 +2,7 @@ package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
 import com.sf.healthylifestyle.domain.usecases.GetTokenByPhone
+import com.sf.healthylifestyle.domain.usecases.LoginUseCase
 import com.sf.healthylifestyle.domain.usecases.RegisterUser
 import com.sf.healthylifestyle.view.auth.AuthViewModel
 import com.sf.healthylifestyle.view.confirm.ConfirmViewModel
@@ -14,12 +15,9 @@ import dagger.Provides
 class AppModule() {
     @Provides
     fun provideAuthViewModelFactory(
-        getTokenByPhone: GetTokenByPhone,
-        getTokenByEmail: GetTokenByEmail,
-
+        loginUseCase: LoginUseCase,
         ) = AuthViewModel.Factory(
-        getTokenByPhone = getTokenByPhone,
-        getTokenByEmail = getTokenByEmail,
+        loginUseCase = loginUseCase,
     )
 
 

@@ -1,15 +1,18 @@
 package com.sf.healthylifestyle.di.modules
 
+import com.sf.healthylifestyle.data.api.AuthApi
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
 class RemoteModule {
-/*    @Provides
+    @Provides
     @Singleton
     fun provideTestOkHttpClient(): OkHttpClient = OkHttpClient.Builder()
         //Настраиваем таймауты для медленного интернета
@@ -19,22 +22,9 @@ class RemoteModule {
             HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BODY
             })
-        .addInterceptor { chain ->
-            chain.proceed(
-                chain.request()
-                    .newBuilder().apply {
-                        addHeader(
-                            "X-RapidAPI-Key",
-                            "efe0254885msh3087de471ebfdfdp1d3674jsn5e68aebd177d"
-                        )
-                        addHeader("X-RapidAPI-Host", "ott-details.p.rapidapi.com")
-                    }
-                    .build()
-            )
-        }
-        .build()*/
+        .build()
 
-/*    @Provides
+    @Provides
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
         //Указываем базовый URL из констант
@@ -43,11 +33,11 @@ class RemoteModule {
         .addConverterFactory(GsonConverterFactory.create())
         //Добавляем кастомный клиент
         .client(okHttpClient)
-        .build()*/
+        .build()
 
-/*    @Provides
+    @Provides
     @Singleton
-    fun provideMaiboApi(retrofit: Retrofit): OttApi = retrofit.create(OttApi::class.java)*/
+    fun provideAuthApi(retrofit: Retrofit): AuthApi = retrofit.create(AuthApi::class.java)
 
     companion object {
         private const val HALF_MINUTE_FOR_SLOW_INTERNET = 30L

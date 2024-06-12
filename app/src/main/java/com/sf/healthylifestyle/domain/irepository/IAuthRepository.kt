@@ -1,3 +1,5 @@
 package com.sf.healthylifestyle.domain.irepository
 
-interface IAuthRepository {}
+interface IAuthRepository {
+    suspend fun login(login: String): Boolean
+}

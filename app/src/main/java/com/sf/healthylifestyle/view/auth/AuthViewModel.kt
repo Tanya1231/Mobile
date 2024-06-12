@@ -5,14 +5,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
 import com.sf.healthylifestyle.domain.usecases.GetTokenByPhone
+import com.sf.healthylifestyle.domain.usecases.LoginUseCase
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
 class AuthViewModel(
-    private val getTokenByPhone: GetTokenByPhone,
-    private val getTokenByEmail: GetTokenByEmail,
+    private val loginUseCase: LoginUseCase
 ) : ViewModel() {
 
     private var _token = MutableSharedFlow<String>()
@@ -20,12 +20,19 @@ class AuthViewModel(
         get() = _token.asSharedFlow()
 
     init {
+        login()
         viewModelScope.launch {
-            getTokenByPhone()
+//            getTokenByPhone()
         }
     }
 
-    suspend fun getTokenByPhone() {
+    private fun login() {
+        viewModelScope.launch {
+            loginUseCase("maevski.ed@gmail.com")
+        }
+    }
+
+/*    suspend fun getTokenByPhone() {
 
         if (getTokenByPhone.execute()) _token.emit("token")
         else _token.emit("null token")
@@ -37,18 +44,16 @@ class AuthViewModel(
         if (getTokenByEmail.execute()) _token.emit("token")
         else _token.emit("null token")
 
-    }
+    }*/
 
     class Factory(
-        val getTokenByPhone: GetTokenByPhone,
-        val getTokenByEmail: GetTokenByEmail,
+        val loginUseCase: LoginUseCase
     ) : ViewModelProvider.Factory {
 
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(AuthViewModel::class.java)) {
                 return AuthViewModel(
-                    getTokenByPhone = getTokenByPhone,
-                    getTokenByEmail = getTokenByEmail
+                    loginUseCase = loginUseCase
                 ) as T
             }
             throw IllegalArgumentException("Unknown ViewModel class")
