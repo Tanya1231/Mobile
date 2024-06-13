@@ -366,7 +366,8 @@
         android:fontFamily="@font/rubik"
         android:text="@string/arrange"
         android:textColor="@color/sum"
-        android:textSize="20sp">
+        android:textSize="20sp"
+        >
 
     </androidx.appcompat.widget.AppCompatButton>
 

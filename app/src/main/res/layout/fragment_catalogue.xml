@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_home"
-    android:padding="16dp"
     android:scrollbars="none"
     tools:context=".view.book.BookFragment">
 
@@ -18,7 +17,7 @@
             android:id="@+id/topTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
+            android:padding="16dp"
             tools:ignore="UseCompoundDrawables">
 
             <TextView
@@ -40,201 +39,151 @@
 
         </FrameLayout>
 
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scrollbars="none">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:gravity="center">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardOne"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    app:cardCornerRadius="22dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/stories"
-                        android:src="@drawable/stories" />
-
-                    <TextView
-                        android:layout_width="126dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/rubik"
-                        android:text="@string/collect_table"
-                        android:textColor="@color/sum"
-                        android:textSize="16sp" />
-
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardTwo"
-                    android:layout_width="148dp"
-                    android:layout_height="134dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_toEndOf="@+id/cardOne"
-                    app:cardCornerRadius="20dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/stories"
-                        android:src="@drawable/stories_one" />
-
-                    <TextView
-                        android:layout_width="126dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/rubik"
-                        android:text="@string/recommendations_week"
-                        android:textColor="@color/sum"
-                        android:textSize="16sp" />
-
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardThree"
-                    android:layout_width="148dp"
-                    android:layout_height="134dp"
-                    android:layout_toEndOf="@+id/cardTwo"
-                    app:cardBackgroundColor="@color/peach_light"
-                    app:cardCornerRadius="20dp">
-
-                    <TextView
-                        android:layout_width="126dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/rubik"
-                        android:text="@string/stories_image"
-                        android:textColor="@color/sum"
-                        android:textSize="16sp" />
-
-                </androidx.cardview.widget.CardView>
-            </RelativeLayout>
-        </HorizontalScrollView>
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginVertical="30dp">
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="30dp"
+            android:background="@drawable/radius_input"
+            android:paddingHorizontal="4dp">
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:autofillHints="text"
-                android:background="@drawable/button_content"
+                android:background="@drawable/radius_input"
                 android:drawableStart="@drawable/search"
+                android:drawableEnd="@drawable/filter"
                 android:drawablePadding="10dp"
                 android:hint="@string/search"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
-                android:minWidth="240dp"
                 android:padding="10dp"
-                android:textColorHint="#502E3A45" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:contentDescription="@string/filter"
-                android:src="@drawable/filter" />
+                android:textColorHint="#502E3A45"
+                android:textSize="18sp" />
 
         </FrameLayout>
 
-        <LinearLayout
+        <HorizontalScrollView
+            android:id="@+id/horizontalScroll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:scrollbars="none">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="116dp"
-                android:layout_height="48dp"
-                android:layout_gravity="start"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/button_filter"
-                android:fontFamily="@font/rubik"
-                android:text="@string/no_gluten"
-                android:textAllCaps="false"
-                android:textColor="@color/bone"
-                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="105dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/button_filter"
-                android:fontFamily="@font/rubik"
-                android:text="@string/no_sugar"
-                android:textAllCaps="false"
-                android:textColor="@color/bone"
-                android:textSize="16sp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="87dp"
-                android:layout_height="48dp"
-                android:layout_gravity="end"
-                android:background="@drawable/button_filter" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp">
 
 
-        </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/gluten_free" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="60dp"
+                        android:fontFamily="@font/rubik"
+                        android:text="@string/gluten"
+                        android:textColor="@color/sum"
+                        android:textSize="12sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="154dp"
-                android:layout_height="48dp"
-                android:layout_gravity="start"
-                android:background="@drawable/button_filter_one"
-                android:fontFamily="@font/rubik"
-                android:text="@string/vegitarian"
-                android:textAllCaps="false"
-                android:textColor="@color/sum"
-                android:textSize="16sp" />
+                </FrameLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="123dp"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="-5dp"
-                android:background="@drawable/button_filter_one"
-                android:fontFamily="@font/rubik"
-                android:text="@string/no_lactose"
-                android:textAllCaps="false"
-                android:textColor="@color/sum"
-                android:textSize="16sp" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="59dp"
-                android:layout_height="48dp"
-                android:layout_gravity="end"
-                android:layout_marginStart="-5dp"
-                android:background="@drawable/button_filter_one"
-                android:fontFamily="@font/rubik"
-                android:text="@string/more"
-                android:textAllCaps="false"
-                android:textColor="@color/sum"
-                android:textSize="16sp" />
-        </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/without_sugar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="60dp"
+                        android:fontFamily="@font/rubik"
+                        android:text="@string/without_sugar"
+                        android:textColor="@color/sum"
+                        android:textSize="12sp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/lactose_free" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="60dp"
+                        android:fontFamily="@font/rubik"
+                        android:text="@string/lactose_free"
+                        android:textColor="@color/sum"
+                        android:textSize="12sp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/without_meat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="60dp"
+                        android:fontFamily="@font/rubik"
+                        android:text="@string/without_meat"
+                        android:textColor="@color/sum"
+                        android:textSize="12sp" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
@@ -265,7 +214,7 @@
             android:id="@+id/horizontalScrollPopular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="35dp"
             android:orientation="horizontal"
             android:scrollbars="none">
 
@@ -273,7 +222,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:paddingStart="16dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -288,7 +238,8 @@
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical"
                         app:cardBackgroundColor="@color/light_blue"
-                        app:cardCornerRadius="20dp">
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -395,7 +346,7 @@
                         android:orientation="vertical"
                         app:cardBackgroundColor="@color/light_blue"
                         app:cardCornerRadius="20dp"
-                        tools:ignore="DuplicateIds">
+                        app:cardElevation="0dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -501,7 +452,7 @@
                         android:orientation="vertical"
                         app:cardBackgroundColor="@color/light_blue"
                         app:cardCornerRadius="20dp"
-                        tools:ignore="DuplicateIds">
+                        app:cardElevation="0dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -614,6 +565,376 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:fontFamily="@font/rubik"
+                android:text="@string/earlier"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:contentDescription="@string/next"
+                android:src="@drawable/next" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollWatchedBefore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    tools:ignore="UselessParent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardOneWatchedBefore"
+                        android:layout_width="122dp"
+                        android:layout_height="276dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@color/light_blue"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imageWatchedBeforeOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/stories"
+                                android:src="@drawable/desert"
+                                app:layout_constraintBottom_toTopOf="@id/sumWatchedBeforeOne"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/sumWatchedBeforeOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginVertical="7dp"
+                                android:fontFamily="@font/rubik"
+                                android:text="@string/price_desert"
+                                android:textColor="@color/sum"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@id/descriptionWatchedBeforeOne"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/imageDessertOne" />
+
+                            <TextView
+                                android:id="@+id/descriptionWatchedBeforeOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/description_desert"
+                                android:textColor="@color/sum"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toTopOf="@id/textWatchedBeforeOne"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/sumWatchedBeforeOne" />
+
+                            <LinearLayout
+                                android:id="@+id/textWatchedBeforeOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="7dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/descriptionDessertOne">
+
+                                <TextView
+                                    android:id="@+id/weightWatchedBeforeOne"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="@string/weightPopular"
+                                    android:textColor="@color/sum"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/caloriesWatchedBeforeOne"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:text="@string/calories_popular"
+                                    android:textColor="@color/sum"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/button_plus"
+                                android:fontFamily="@font/rubik"
+                                android:text="@string/plus"
+                                android:textColor="@color/sum"
+                                android:textSize="22sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/textWatchedBeforeOne" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardTwoWatchedBefore"
+                        android:layout_width="122dp"
+                        android:layout_height="276dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@color/salmon"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/imageWatchedBeforeTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/stories"
+                                android:src="@drawable/soup"
+                                app:layout_constraintBottom_toTopOf="@id/sumWatchedBeforeTwo"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/sumWatchedBeforeTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginVertical="7dp"
+                                android:fontFamily="@font/rubik"
+                                android:text="@string/price_soup"
+                                android:textColor="@color/sum"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@id/descriptionWatchedBeforeTwo"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/imageWatchedBeforeTwo" />
+
+                            <TextView
+                                android:id="@+id/descriptionWatchedBeforeTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/description_soup"
+                                android:textColor="@color/sum"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toTopOf="@id/textWatchedBeforeTwo"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/sumWatchedBeforeTwo" />
+
+                            <LinearLayout
+                                android:id="@+id/textWatchedBeforeTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="7dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/descriptionWatchedBeforeTwo">
+
+                                <TextView
+                                    android:id="@+id/weightWatchedBeforeTwo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="@string/weightPopular"
+                                    android:textColor="@color/sum"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/caloriesWatchedBeforeTwo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:text="@string/calories_popular"
+                                    android:textColor="@color/sum"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/button_plus"
+                                android:fontFamily="@font/rubik"
+                                android:text="@string/plus"
+                                android:textColor="@color/sum"
+                                android:textSize="22sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/textWatchedBeforeTwo" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardThreeWatchedBefore"
+                        android:layout_width="122dp"
+                        android:layout_height="276dp"
+                        android:layout_marginEnd="7dp"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@color/light_blue"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="4dp"
+                            tools:ignore="TooManyViews">
+
+                            <ImageView
+                                android:id="@+id/imageWatchedBeforeThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/stories"
+                                android:src="@drawable/plate_popular"
+                                app:layout_constraintBottom_toTopOf="@id/sumWatchedBeforeThree"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/sumWatchedBeforeThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginVertical="7dp"
+                                android:fontFamily="@font/rubik"
+                                android:text="@string/sum_two"
+                                android:textColor="@color/sum"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@id/descriptionWatchedBeforeThree"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/imageWatchedBeforeThree" />
+
+                            <TextView
+                                android:id="@+id/descriptionWatchedBeforeThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/description_popular"
+                                android:textColor="@color/sum"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toTopOf="@id/textSoupThree"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/sumDessertThree" />
+
+                            <LinearLayout
+                                android:id="@+id/textWatchedBeforeThree"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="7dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/descriptionDessertThree">
+
+                                <TextView
+                                    android:id="@+id/weightWatchedBeforeThree"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="@string/weightPopular"
+                                    android:textColor="@color/sum"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/caloriesWatchedBeforeThree"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:text="@string/calories_popular"
+                                    android:textColor="@color/sum"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/button_plus"
+                                android:fontFamily="@font/rubik"
+                                android:text="@string/plus"
+                                android:textColor="@color/sum"
+                                android:textSize="22sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/textWatchedBeforeThree" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/rubik"
                 android:text="@string/mainDishes"
                 android:textColor="@color/black"
                 android:textSize="24sp"
@@ -632,7 +953,7 @@
             android:id="@+id/horizontalMainDishes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="35dp"
             android:orientation="horizontal"
             android:scrollbars="none">
 
@@ -640,7 +961,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:paddingStart="16dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -655,7 +977,8 @@
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical"
                         app:cardBackgroundColor="@color/salmon"
-                        app:cardCornerRadius="20dp">
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -763,7 +1086,7 @@
                         android:orientation="vertical"
                         app:cardBackgroundColor="@color/salmon"
                         app:cardCornerRadius="20dp"
-                        tools:ignore="DuplicateIds">
+                        app:cardElevation="0dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -871,7 +1194,7 @@
                         android:orientation="vertical"
                         app:cardBackgroundColor="@color/salmon"
                         app:cardCornerRadius="20dp"
-                        tools:ignore="DuplicateIds">
+                        app:cardElevation="0dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -994,6 +1317,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="20dp"
                 android:contentDescription="@string/image"
+                android:paddingHorizontal="16dp"
                 android:src="@drawable/collect_plate" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -1036,7 +1360,7 @@
                 android:id="@+id/horizontalGarnish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="35dp"
                 android:orientation="horizontal"
                 android:scrollbars="none">
 
@@ -1044,7 +1368,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:paddingStart="16dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1058,8 +1383,9 @@
                             android:layout_height="222dp"
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
-                            app:cardCornerRadius="20dp">
+                            app:cardBackgroundColor="@color/salmon"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp">
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1166,8 +1492,9 @@
                             android:layout_height="222dp"
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
+                            app:cardBackgroundColor="@color/salmon"
                             app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
 
                             <LinearLayout
@@ -1273,8 +1600,9 @@
                             android:layout_height="222dp"
                             android:layout_marginEnd="7dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
+                            app:cardBackgroundColor="@color/salmon"
                             app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
 
                             <LinearLayout
@@ -1389,6 +1717,377 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:fontFamily="@font/rubik"
+                    android:text="@string/ready_meals"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:contentDescription="@string/next"
+                    android:src="@drawable/next" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollReadyMeals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:orientation="horizontal"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:paddingStart="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        tools:ignore="UselessParent">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardOneReadyMeals"
+                            android:layout_width="122dp"
+                            android:layout_height="276dp"
+                            android:layout_marginEnd="20dp"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="@color/light_blue"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+
+                                <ImageView
+                                    android:id="@+id/imageReadyMealsOne"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:contentDescription="@string/stories"
+                                    android:src="@drawable/plate_popular"
+                                    app:layout_constraintBottom_toTopOf="@id/sumReadyMealsOne"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <TextView
+                                    android:id="@+id/sumReadyMealsOne"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginVertical="7dp"
+                                    android:fontFamily="@font/rubik"
+                                    android:text="@string/sum_two"
+                                    android:textColor="@color/sum"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toTopOf="@id/descriptionReadyMealsOne"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/imagePopularOne" />
+
+                                <TextView
+                                    android:id="@+id/descriptionReadyMealsOne"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/description_popular"
+                                    android:textColor="@color/sum"
+                                    android:textSize="12sp"
+                                    app:layout_constraintBottom_toTopOf="@id/textReadyMealsOne"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/sumReadyMealsOne" />
+
+                                <LinearLayout
+                                    android:id="@+id/textReadyMealsOne"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="7dp"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/descriptionReadyMealsOne">
+
+                                    <TextView
+                                        android:id="@+id/weightReadyMealsOne"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginEnd="10dp"
+                                        android:text="@string/weightPopular"
+                                        android:textColor="@color/sum"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/caloriesReadyMealsOne"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="end"
+                                        android:text="@string/calories_popular"
+                                        android:textColor="@color/sum"
+                                        android:textSize="12sp" />
+
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/button_plus"
+                                    android:fontFamily="@font/rubik"
+                                    android:text="@string/plus"
+                                    android:textColor="@color/sum"
+                                    android:textSize="22sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/textReadyMealsOne" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardTwoReadyMeals"
+                            android:layout_width="122dp"
+                            android:layout_height="276dp"
+                            android:layout_marginEnd="20dp"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="@color/light_blue"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            tools:ignore="DuplicateIds">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+
+                                <ImageView
+                                    android:id="@+id/imageReadyMealsTwo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:contentDescription="@string/stories"
+                                    android:src="@drawable/plate_popular"
+                                    app:layout_constraintBottom_toTopOf="@id/sumReadyMealsTwo"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <TextView
+                                    android:id="@+id/sumReadyMealsTwo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginVertical="7dp"
+                                    android:fontFamily="@font/rubik"
+                                    android:text="@string/sum_two"
+                                    android:textColor="@color/sum"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toTopOf="@id/descriptionReadyMealsTwo"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/imageReadyMealsTwo" />
+
+                                <TextView
+                                    android:id="@+id/descriptionReadyMealsTwo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/description_popular"
+                                    android:textColor="@color/sum"
+                                    android:textSize="12sp"
+                                    app:layout_constraintBottom_toTopOf="@id/textReadyMealsTwo"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/sumReadyMealsTwo" />
+
+                                <LinearLayout
+                                    android:id="@+id/textReadyMealsTwo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="7dp"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/descriptionReadyMealsTwo">
+
+                                    <TextView
+                                        android:id="@+id/weightReadyMealsTwo"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginEnd="10dp"
+                                        android:text="@string/weightPopular"
+                                        android:textColor="@color/sum"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/caloriesReadyMealsTwo"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="end"
+                                        android:text="@string/calories_popular"
+                                        android:textColor="@color/sum"
+                                        android:textSize="12sp" />
+
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/button_plus"
+                                    android:fontFamily="@font/rubik"
+                                    android:text="@string/plus"
+                                    android:textColor="@color/sum"
+                                    android:textSize="22sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/textReadyMealsTwo" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardThreeReadyMeals"
+                            android:layout_width="122dp"
+                            android:layout_height="276dp"
+                            android:layout_marginEnd="7dp"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="@color/light_blue"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
+                            tools:ignore="DuplicateIds">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+
+                                <ImageView
+                                    android:id="@+id/imageReadyMealsThree"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:contentDescription="@string/stories"
+                                    android:src="@drawable/plate_popular"
+                                    app:layout_constraintBottom_toTopOf="@id/sumReadyMealsThree"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <TextView
+                                    android:id="@+id/sumReadyMealsThree"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginVertical="7dp"
+                                    android:fontFamily="@font/rubik"
+                                    android:text="@string/sum_two"
+                                    android:textColor="@color/sum"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toTopOf="@id/descriptionReadyMealsThree"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/imageReadyMealsThree" />
+
+                                <TextView
+                                    android:id="@+id/descriptionReadyMealsThree"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/description_popular"
+                                    android:textColor="@color/sum"
+                                    android:textSize="12sp"
+                                    app:layout_constraintBottom_toTopOf="@id/textReadyMealsThree"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/sumReadyMealsThree" />
+
+                                <LinearLayout
+                                    android:id="@+id/textReadyMealsThree"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="7dp"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/descriptionReadyMealsThree">
+
+                                    <TextView
+                                        android:id="@+id/weightReadyMealsThree"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginEnd="10dp"
+                                        android:text="@string/weightPopular"
+                                        android:textColor="@color/sum"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/caloriesReadyMealsThree"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="end"
+                                        android:text="@string/calories_popular"
+                                        android:textColor="@color/sum"
+                                        android:textSize="12sp" />
+
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/button_plus"
+                                    android:fontFamily="@font/rubik"
+                                    android:text="@string/plus"
+                                    android:textColor="@color/sum"
+                                    android:textSize="22sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/textReadyMealsThree" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/rubik"
                     android:text="@string/soups"
                     android:textColor="@color/black"
                     android:textSize="24sp"
@@ -1407,7 +2106,7 @@
                 android:id="@+id/horizontalScrollSoup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="35dp"
                 android:orientation="horizontal"
                 android:scrollbars="none">
 
@@ -1415,7 +2114,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:paddingStart="16dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1430,7 +2130,8 @@
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
                             app:cardBackgroundColor="@color/salmon"
-                            app:cardCornerRadius="20dp">
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp">
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1537,6 +2238,7 @@
                             android:orientation="vertical"
                             app:cardBackgroundColor="@color/salmon"
                             app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
 
                             <LinearLayout
@@ -1643,7 +2345,7 @@
                             android:orientation="vertical"
                             app:cardBackgroundColor="@color/salmon"
                             app:cardCornerRadius="20dp"
-                            tools:ignore="DuplicateIds">
+                            app:cardElevation="0dp">
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1745,22 +2447,6 @@
                 </RelativeLayout>
             </HorizontalScrollView>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/image"
-                android:src="@drawable/method" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonBuyMethod"
-                android:layout_width="200dp"
-                android:layout_height="48dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:background="@drawable/button_arrange"
-                android:fontFamily="@font/rubik"
-                android:text="@string/buy"
-                android:textColor="@color/sum"
-                android:textSize="20sp" />
 
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
@@ -1799,7 +2485,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:paddingStart="16dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1814,7 +2501,8 @@
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
                             app:cardBackgroundColor="@color/light_blue"
-                            app:cardCornerRadius="20dp">
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp">
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -1921,6 +2609,7 @@
                             android:orientation="vertical"
                             app:cardBackgroundColor="@color/light_blue"
                             app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
 
                             <LinearLayout
@@ -2027,6 +2716,7 @@
                             android:orientation="vertical"
                             app:cardBackgroundColor="@color/light_blue"
                             app:cardCornerRadius="20dp"
+                            app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
 
                             <LinearLayout
@@ -2122,373 +2812,6 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@id/textDessertThree" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                    </LinearLayout>
-                </RelativeLayout>
-            </HorizontalScrollView>
-
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:fontFamily="@font/rubik"
-                    android:text="Смотрели ранее"
-                    android:textColor="@color/black"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:contentDescription="@string/next"
-                    android:src="@drawable/next" />
-
-            </androidx.appcompat.widget.Toolbar>
-
-            <HorizontalScrollView
-                android:id="@+id/horizontalScrollWatchedBefore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
-                android:orientation="horizontal"
-                android:scrollbars="none">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        tools:ignore="UselessParent">
-
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/cardOneWatchedBefore"
-                            android:layout_width="122dp"
-                            android:layout_height="276dp"
-                            android:layout_marginEnd="20dp"
-                            android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
-                            app:cardCornerRadius="20dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="4dp">
-
-                                <ImageView
-                                    android:id="@+id/imageWatchedBeforeOne"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:contentDescription="@string/stories"
-                                    android:src="@drawable/desert"
-                                    app:layout_constraintBottom_toTopOf="@id/sumWatchedBeforeOne"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                                <TextView
-                                    android:id="@+id/sumWatchedBeforeOne"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_marginVertical="7dp"
-                                    android:fontFamily="@font/rubik"
-                                    android:text="@string/price_desert"
-                                    android:textColor="@color/sum"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    app:layout_constraintBottom_toTopOf="@id/descriptionWatchedBeforeOne"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/imageDessertOne" />
-
-                                <TextView
-                                    android:id="@+id/descriptionWatchedBeforeOne"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="@string/description_desert"
-                                    android:textColor="@color/sum"
-                                    android:textSize="12sp"
-                                    app:layout_constraintBottom_toTopOf="@id/textWatchedBeforeOne"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/sumWatchedBeforeOne" />
-
-                                <LinearLayout
-                                    android:id="@+id/textWatchedBeforeOne"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginVertical="7dp"
-                                    android:gravity="center_horizontal"
-                                    android:orientation="horizontal"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/descriptionDessertOne">
-
-                                    <TextView
-                                        android:id="@+id/weightWatchedBeforeOne"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="start"
-                                        android:layout_marginEnd="10dp"
-                                        android:text="@string/weightPopular"
-                                        android:textColor="@color/sum"
-                                        android:textSize="12sp" />
-
-                                    <TextView
-                                        android:id="@+id/caloriesWatchedBeforeOne"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="end"
-                                        android:text="@string/calories_popular"
-                                        android:textColor="@color/sum"
-                                        android:textSize="12sp" />
-
-
-                                </LinearLayout>
-
-                                <androidx.appcompat.widget.AppCompatButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
-                                    android:fontFamily="@font/rubik"
-                                    android:text="@string/plus"
-                                    android:textColor="@color/sum"
-                                    android:textSize="22sp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/textWatchedBeforeOne" />
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/cardTwoWatchedBefore"
-                            android:layout_width="122dp"
-                            android:layout_height="276dp"
-                            android:layout_marginEnd="20dp"
-                            android:orientation="vertical"
-                            app:cardBackgroundColor="@color/salmon"
-                            app:cardCornerRadius="20dp"
-                            tools:ignore="DuplicateIds">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="4dp">
-
-                                <ImageView
-                                    android:id="@+id/imageWatchedBeforeTwo"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:contentDescription="@string/stories"
-                                    android:src="@drawable/soup"
-                                    app:layout_constraintBottom_toTopOf="@id/sumWatchedBeforeTwo"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                                <TextView
-                                    android:id="@+id/sumWatchedBeforeTwo"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_marginVertical="7dp"
-                                    android:fontFamily="@font/rubik"
-                                    android:text="@string/price_soup"
-                                    android:textColor="@color/sum"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    app:layout_constraintBottom_toTopOf="@id/descriptionWatchedBeforeTwo"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/imageWatchedBeforeTwo" />
-
-                                <TextView
-                                    android:id="@+id/descriptionWatchedBeforeTwo"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="@string/description_soup"
-                                    android:textColor="@color/sum"
-                                    android:textSize="12sp"
-                                    app:layout_constraintBottom_toTopOf="@id/textWatchedBeforeTwo"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/sumWatchedBeforeTwo" />
-
-                                <LinearLayout
-                                    android:id="@+id/textWatchedBeforeTwo"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginVertical="7dp"
-                                    android:gravity="center_horizontal"
-                                    android:orientation="horizontal"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/descriptionWatchedBeforeTwo">
-
-                                    <TextView
-                                        android:id="@+id/weightWatchedBeforeTwo"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="start"
-                                        android:layout_marginEnd="10dp"
-                                        android:text="@string/weightPopular"
-                                        android:textColor="@color/sum"
-                                        android:textSize="12sp" />
-
-                                    <TextView
-                                        android:id="@+id/caloriesWatchedBeforeTwo"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="end"
-                                        android:text="@string/calories_popular"
-                                        android:textColor="@color/sum"
-                                        android:textSize="12sp" />
-
-
-                                </LinearLayout>
-
-                                <androidx.appcompat.widget.AppCompatButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
-                                    android:fontFamily="@font/rubik"
-                                    android:text="@string/plus"
-                                    android:textColor="@color/sum"
-                                    android:textSize="22sp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/textWatchedBeforeTwo" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/cardThreeWatchedBefore"
-                            android:layout_width="122dp"
-                            android:layout_height="276dp"
-                            android:layout_marginEnd="7dp"
-                            android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
-                            app:cardCornerRadius="20dp"
-                            tools:ignore="DuplicateIds">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="4dp">
-
-                                <ImageView
-                                    android:id="@+id/imageWatchedBeforeThree"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:contentDescription="@string/stories"
-                                    android:src="@drawable/plate_popular"
-                                    app:layout_constraintBottom_toTopOf="@id/sumWatchedBeforeThree"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                                <TextView
-                                    android:id="@+id/sumWatchedBeforeThree"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_marginVertical="7dp"
-                                    android:fontFamily="@font/rubik"
-                                    android:text="@string/sum_two"
-                                    android:textColor="@color/sum"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    app:layout_constraintBottom_toTopOf="@id/descriptionWatchedBeforeThree"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/imageWatchedBeforeThree" />
-
-                                <TextView
-                                    android:id="@+id/descriptionWatchedBeforeThree"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="@string/description_popular"
-                                    android:textColor="@color/sum"
-                                    android:textSize="12sp"
-                                    app:layout_constraintBottom_toTopOf="@id/textSoupThree"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/sumDessertThree" />
-
-                                <LinearLayout
-                                    android:id="@+id/textWatchedBeforeThree"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginVertical="7dp"
-                                    android:gravity="center_horizontal"
-                                    android:orientation="horizontal"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/descriptionDessertThree">
-
-                                    <TextView
-                                        android:id="@+id/weightWatchedBeforeThree"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="start"
-                                        android:layout_marginEnd="10dp"
-                                        android:text="@string/weightPopular"
-                                        android:textColor="@color/sum"
-                                        android:textSize="12sp" />
-
-                                    <TextView
-                                        android:id="@+id/caloriesWatchedBeforeThree"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="end"
-                                        android:text="@string/calories_popular"
-                                        android:textColor="@color/sum"
-                                        android:textSize="12sp" />
-
-
-                                </LinearLayout>
-
-                                <androidx.appcompat.widget.AppCompatButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
-                                    android:fontFamily="@font/rubik"
-                                    android:text="@string/plus"
-                                    android:textColor="@color/sum"
-                                    android:textSize="22sp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/textWatchedBeforeThree" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
 
