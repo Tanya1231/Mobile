@@ -68,7 +68,6 @@ class ConfirmFragment : Fragment() {
         }
 
         binding.submit.setOnClickListener{
-
             confirmFragmentViewModel.confirm(binding.code.text.toString())
         }
     }

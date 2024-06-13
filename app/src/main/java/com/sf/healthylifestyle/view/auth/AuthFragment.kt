@@ -23,8 +23,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class AuthFragment : Fragment()
-    /*, HasAndroidInjector */
-{
+/*, HasAndroidInjector */ {
 
     private var _binding: FragmentAuthBinding? = null
     private val binding get() = _binding!!
@@ -66,8 +65,7 @@ class AuthFragment : Fragment()
                 println("AuthFragment: запуск authFragmentViewModel.isEntry inside")
                 if (it) {
                     findNavController().navigate(R.id.action_authFragment_to_confirmFragment)
-                }
-                else {
+                } else {
                     Snackbar.make(
                         binding.root,
                         "Ошибка сервера.",
@@ -77,20 +75,25 @@ class AuthFragment : Fragment()
             }
         }
 
-        binding.submit.setOnClickListener{
-            if(!isEmailValid(binding.phone.text.toString())) {
-                Snackbar.make(
-                    binding.root,
-                    "E-mail содержит не допустимые символы. Или не верный формат записи.",
-                    Snackbar.LENGTH_LONG
-                ).show()
-                return@setOnClickListener
+        binding.submit.setOnClickListener {
+            /*** На время тестов, чтобы не писать постоянно e-mail*/
+            if (binding.phone.text.toString().isNotEmpty()) {
+                /*** На время тестов, чтобы не писать постоянно e-mail*/
+                if (!isEmailValid(binding.phone.text.toString())) {
+                    Snackbar.make(
+                        binding.root,
+                        "E-mail содержит не допустимые символы. Или не верный формат записи.",
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                    return@setOnClickListener
+                }
             }
 
             authFragmentViewModel.login(binding.phone.text.toString())
         }
 
-        binding.tvReg.setOnClickListener{
+
+        binding.tvReg.setOnClickListener {
             findNavController().navigate(R.id.action_authFragment_to_registerFragment)
         }
     }
