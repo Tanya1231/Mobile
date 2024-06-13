@@ -28,7 +28,12 @@ class AuthViewModel(
 
     fun login(login: String) {
         viewModelScope.launch {
-            _isEntry.emit(loginUseCase(login))
+            /*** На время разработки пропускаем пустую строку*/
+            if (login.isEmpty()) {
+                _isEntry.emit(true)
+            } else {
+                _isEntry.emit(loginUseCase(login))
+            }
         }
     }
 

@@ -17,16 +17,24 @@ class ConfirmViewModel(private val confirmUseCase: ConfirmUseCase) : ViewModel()
 
     fun confirm(code: String) {
         viewModelScope.launch {
-            _isEntry.emit(confirmUseCase(code))
+            /*** На время разработки не проверяем код 000000*/
+            if (code == "000000") {
+                _isEntry.emit(true)
+            }
+            else {
+                _isEntry.emit(confirmUseCase(code))
+            }
         }
     }
 
-    class Factory(val confirmUseCase: ConfirmUseCase
+    class Factory(
+        val confirmUseCase: ConfirmUseCase
     ) : ViewModelProvider.Factory {
 
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(ConfirmViewModel::class.java)) {
-                return ConfirmViewModel(confirmUseCase = confirmUseCase
+                return ConfirmViewModel(
+                    confirmUseCase = confirmUseCase
                 ) as T
             }
             throw IllegalArgumentException("Unknown ViewModel class")
