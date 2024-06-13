@@ -5,9 +5,9 @@
     <color name="color_home">#F7F4E8</color>
     <color name="bone">#F7F4E8</color>
     <color name="sum">#2E3A45</color>
-    <color name="salmon">#FE907A</color>
+    <color name="salmon">#60FE907A</color>
     <color name="greenaple">#E2DD01</color>
     <color name="light">#fff</color>
-    <color name="light_blue">#AEDADE</color>
-    <color name="peach_light">#FE907A</color>
+    <color name="light_blue">#60AEDADE</color>
+    <color name="shadow">#246E6464</color>
 </resources>

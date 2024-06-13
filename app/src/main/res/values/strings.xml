@@ -98,4 +98,22 @@
     <string name="desert">Десерты</string>
     <string name="price_desert">700 р</string>
     <string name="description_desert">Кекс из овсяных хлопьев и банана</string>
+    <string name="gluten">без глютена</string>
+    <string name="without_sugar">без сахара</string>
+    <string name="lactose_free">без лактозы</string>
+    <string name="without_meat">без мяса</string>
+    <string name="earlier">Смотрели ранее</string>
+    <string name="ready_meals">Готовые блюда</string>
+    <string name="catalog">Каталог</string>
+    <string name="compilation">Лучшая подборка блюд</string>
+    <string name="selection_description">Уникальная подборка блюд на основные рейтинга выставленного нашими пользователями</string>
+    <string name="go_over">перейти</string>
+    <string name="ideology_description">ИДЕОЛОГИЯ ЗДОРОВОГО ПИТАНИЯ ПО НАУКЕ</string>
+    <string name="to_read">читать</string>
+    <string name="compilation_title">Подборка</string>
+    <string name="the_diet">рациона на день</string>
+    <string name="borch">Постный борщ</string>
+    <string name="turkey">Индейка по-домашнему</string>
+    <string name="stewed_beef">Томлёная говядина</string>
+    <string name="detox_description">ЧТО НЕЛЬЗЯ ЕСТЬ ПО УТРАМ? ДЕТОКС</string>
 </resources>
