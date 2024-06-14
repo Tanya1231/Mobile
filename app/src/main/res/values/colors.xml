@@ -11,4 +11,6 @@
     <color name="light">#fff</color>
     <color name="light_blue">#60AEDADE</color>
     <color name="shadow">#246E6464</color>
+    <color name="main_home">#828282</color>
+    <color name="justwhite">#FFFEFE</color>
 </resources>

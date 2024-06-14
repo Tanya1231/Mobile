@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/back_button"
-        style="@style/MaiboBackButton"
+        style="@style/HealthyLifeBackButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
