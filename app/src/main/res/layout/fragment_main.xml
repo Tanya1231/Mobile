@@ -27,7 +27,7 @@
                 android:layout_gravity="start"
                 android:fontFamily="@font/rubik"
                 android:text="@string/zozhnik"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
@@ -73,7 +73,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/rubik"
                         android:text="@string/collect_table"
-                        android:textColor="@color/sum"
+                        android:textColor="@color/text_main"
                         android:textSize="16sp" />
 
 
@@ -100,7 +100,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/rubik"
                         android:text="@string/recommendations_week"
-                        android:textColor="@color/sum"
+                        android:textColor="@color/text_main"
                         android:textSize="16sp" />
 
 
@@ -121,7 +121,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/rubik"
                         android:text="@string/stories_image"
-                        android:textColor="@color/sum"
+                        android:textColor="@color/text_main"
                         android:textSize="16sp" />
 
                 </androidx.cardview.widget.CardView>
@@ -251,7 +251,7 @@
                     android:layout_marginVertical="8dp"
                     android:fontFamily="@font/rubik"
                     android:text="@string/compilation"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -263,7 +263,7 @@
                     android:gravity="center"
                     android:paddingHorizontal="10dp"
                     android:text="@string/selection_description"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -274,7 +274,7 @@
                     android:background="@drawable/button_arrange"
                     android:fontFamily="@font/rubik"
                     android:text="@string/go_over"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="20sp"
                     tools:textAllCaps="false">
 
@@ -310,7 +310,7 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/ideology_description"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -323,7 +323,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/to_read"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -397,7 +397,7 @@
                     android:layout_marginVertical="8dp"
                     android:fontFamily="@font/rubik"
                     android:text="@string/the_diet"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -426,7 +426,7 @@
                             android:fontFamily="@font/rubik"
                             android:gravity="center"
                             android:text="@string/borch"
-                            android:textColor="@color/sum"
+                            android:textColor="@color/text_main"
                             android:textSize="14sp" />
 
 
@@ -451,7 +451,7 @@
                             android:fontFamily="@font/rubik"
                             android:gravity="center"
                             android:text="@string/turkey"
-                            android:textColor="@color/sum"
+                            android:textColor="@color/text_main"
                             android:textSize="14sp" />
 
 
@@ -476,7 +476,7 @@
                             android:fontFamily="@font/rubik"
                             android:gravity="center"
                             android:text="@string/stewed_beef"
-                            android:textColor="@color/sum"
+                            android:textColor="@color/text_main"
                             android:textSize="14sp" />
 
 
@@ -490,7 +490,7 @@
                     android:background="@drawable/button_arrange"
                     android:fontFamily="@font/rubik"
                     android:text="@string/sum_two"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="20sp"
                     tools:textAllCaps="false">
 
@@ -526,7 +526,7 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/detox_description"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/imageDetox"
@@ -538,7 +538,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/to_read"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -565,7 +565,7 @@
             android:background="@drawable/button_arrange"
             android:fontFamily="@font/rubik"
             android:text="@string/buy"
-            android:textColor="@color/sum"
+            android:textColor="@color/text_main"
             android:textSize="20sp" />
 
         <androidx.appcompat.widget.Toolbar
@@ -615,7 +615,7 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardOneWatchedBefore"
+                        android:id="@+id/cardWatchedBefore"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
@@ -635,11 +635,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/stories"
-                                android:src="@drawable/desert"
-                                app:layout_constraintBottom_toTopOf="@id/sumWatchedBeforeOne"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                android:src="@drawable/desert" />
 
 
                             <TextView
@@ -650,13 +646,9 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/price_desert"
-                                android:textColor="@color/sum"
+                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toTopOf="@id/descriptionWatchedBeforeOne"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/imageDessertOne" />
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/descriptionWatchedBeforeOne"
@@ -664,12 +656,8 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_desert"
-                                android:textColor="@color/sum"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toTopOf="@id/textWatchedBeforeOne"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/sumWatchedBeforeOne" />
+                                android:textColor="@color/text_main"
+                                android:textSize="12sp" />
 
                             <LinearLayout
                                 android:id="@+id/textWatchedBeforeOne"
@@ -677,11 +665,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
                                 android:gravity="center_horizontal"
-                                android:orientation="horizontal"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/descriptionDessertOne">
+                                android:orientation="horizontal">
 
                                 <TextView
                                     android:id="@+id/weightWatchedBeforeOne"
@@ -690,7 +674,7 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/sum"
+                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -699,7 +683,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/sum"
+                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -711,12 +695,8 @@
                                 android:background="@drawable/button_plus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/sum"
-                                android:textSize="22sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/textWatchedBeforeOne" />
+                                android:textColor="@color/text_main"
+                                android:textSize="22sp" />
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -742,11 +722,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/stories"
-                                android:src="@drawable/soup"
-                                app:layout_constraintBottom_toTopOf="@id/sumWatchedBeforeTwo"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                android:src="@drawable/soup" />
 
 
                             <TextView
@@ -757,13 +733,9 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/price_soup"
-                                android:textColor="@color/sum"
+                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toTopOf="@id/descriptionWatchedBeforeTwo"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/imageWatchedBeforeTwo" />
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/descriptionWatchedBeforeTwo"
@@ -771,12 +743,8 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_soup"
-                                android:textColor="@color/sum"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toTopOf="@id/textWatchedBeforeTwo"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/sumWatchedBeforeTwo" />
+                                android:textColor="@color/text_main"
+                                android:textSize="12sp" />
 
                             <LinearLayout
                                 android:id="@+id/textWatchedBeforeTwo"
@@ -784,11 +752,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
                                 android:gravity="center_horizontal"
-                                android:orientation="horizontal"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/descriptionWatchedBeforeTwo">
+                                android:orientation="horizontal">
 
                                 <TextView
                                     android:id="@+id/weightWatchedBeforeTwo"
@@ -797,7 +761,7 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/sum"
+                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -806,7 +770,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/sum"
+                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -818,12 +782,8 @@
                                 android:background="@drawable/button_plus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/sum"
-                                android:textSize="22sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/textWatchedBeforeTwo" />
+                                android:textColor="@color/text_main"
+                                android:textSize="22sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -849,11 +809,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/stories"
-                                android:src="@drawable/plate_popular"
-                                app:layout_constraintBottom_toTopOf="@id/sumWatchedBeforeThree"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                android:src="@drawable/plate_popular" />
 
 
                             <TextView
@@ -864,13 +820,9 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/sum_two"
-                                android:textColor="@color/sum"
+                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toTopOf="@id/descriptionWatchedBeforeThree"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/imageWatchedBeforeThree" />
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/descriptionWatchedBeforeThree"
@@ -878,12 +830,8 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_popular"
-                                android:textColor="@color/sum"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toTopOf="@id/textSoupThree"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/sumDessertThree" />
+                                android:textColor="@color/text_main"
+                                android:textSize="12sp" />
 
                             <LinearLayout
                                 android:id="@+id/textWatchedBeforeThree"
@@ -891,11 +839,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
                                 android:gravity="center_horizontal"
-                                android:orientation="horizontal"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/descriptionDessertThree">
+                                android:orientation="horizontal">
 
                                 <TextView
                                     android:id="@+id/weightWatchedBeforeThree"
@@ -904,7 +848,7 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/sum"
+                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -913,7 +857,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/sum"
+                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -925,12 +869,8 @@
                                 android:background="@drawable/button_plus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/sum"
-                                android:textSize="22sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/textWatchedBeforeThree" />
+                                android:textColor="@color/text_main"
+                                android:textSize="22sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 

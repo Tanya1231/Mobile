@@ -34,9 +34,9 @@
     <string name="favourites">Избранное</string>
     <string name="basket">Корзина</string>
     <string name="sum_product">Сумма товаров</string>
-    <string name="sum">3 000 р</string>
+    <string name="sum">3 000 ₽</string>
     <string name="title_dish">Куриная грудка с яйцами, рисом</string>
-    <string name="sum_two">1 000 р</string>
+    <string name="sum_two">1 000 ₽</string>
     <string name="image_title">картинка блюда</string>
     <string name="close">закрыть</string>
     <string name="line">линия</string>
@@ -84,19 +84,19 @@
     <string name="calories_popular">675 ккал</string>
     <string name="plus">+</string>
     <string name="mainDishes">Основные блюда</string>
-    <string name="five_hundred">500 р</string>
+    <string name="five_hundred">500 ₽</string>
     <string name="description_main">Печень с гречкой и помидорами</string>
     <string name="сollect_plate">Собери свою тарелку</string>
     <string name="to_try">попробовать</string>
     <string name="side_dishes">Гарниры</string>
-    <string name="two_hundred">250 р</string>
+    <string name="two_hundred">250 ₽</string>
     <string name="description_garnish">Свежий салат с огурцами</string>
     <string name="soups">Супы</string>
-    <string name="price_soup">450 р</string>
+    <string name="price_soup">450 ₽</string>
     <string name="description_soup">Суп из щавеля и шпинат</string>
     <string name="buy">купить</string>
     <string name="desert">Десерты</string>
-    <string name="price_desert">700 р</string>
+    <string name="price_desert">700 ₽</string>
     <string name="description_desert">Кекс из овсяных хлопьев и банана</string>
     <string name="gluten">без глютена</string>
     <string name="without_sugar">без сахара</string>
@@ -116,4 +116,9 @@
     <string name="turkey">Индейка по-домашнему</string>
     <string name="stewed_beef">Томлёная говядина</string>
     <string name="detox_description">ЧТО НЕЛЬЗЯ ЕСТЬ ПО УТРАМ? ДЕТОКС</string>
+    <string name="popular_dishes">Популярные блюда</string>
+    <string name="title_popular">Томлёная \n говядина и салат</string>
+    <string name="popular_description">в томатном соусе\nс молодым картофелем \nв укропе</string>
+    <string name="desert_text">с добавлением моркови\nи мед,\nбез лактозы и муки</string>
+    <string name="hundred">100 ₽</string>
 </resources>
