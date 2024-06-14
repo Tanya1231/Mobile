@@ -68,7 +68,7 @@
             android:fontFamily="@font/rubik"
             android:gravity="center_vertical"
             android:text="@string/sum"
-            android:textColor="@color/sum"
+            android:textColor="@color/text_main"
             android:textSize="24sp" />
 
     </FrameLayout>
@@ -119,7 +119,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/sum_two"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -148,7 +148,7 @@
                     android:background="@drawable/button_basket"
                     android:contentDescription="@string/counter_info"
                     android:text="@string/counter_number"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="20sp" />
 
 
@@ -212,7 +212,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/manrope"
                     android:text="@string/sum_two"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -241,7 +241,7 @@
                     android:background="@drawable/button_basket"
                     android:contentDescription="@string/counter_info"
                     android:text="@string/counter_number"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="20sp">
 
                 </androidx.appcompat.widget.AppCompatButton>
@@ -306,7 +306,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/manrope"
                     android:text="@string/sum_two"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -335,7 +335,7 @@
                     android:background="@drawable/button_basket"
                     android:contentDescription="@string/counter_info"
                     android:text="@string/counter_number"
-                    android:textColor="@color/sum"
+                    android:textColor="@color/text_main"
                     android:textSize="20sp">
 
                 </androidx.appcompat.widget.AppCompatButton>
@@ -365,7 +365,7 @@
         android:background="@drawable/button_arrange"
         android:fontFamily="@font/rubik"
         android:text="@string/arrange"
-        android:textColor="@color/sum"
+        android:textColor="@color/text_main"
         android:textSize="20sp"
         >
 

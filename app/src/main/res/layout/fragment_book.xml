@@ -28,7 +28,7 @@
                 android:layout_gravity="start"
                 android:fontFamily="@font/rubik"
                 android:text="@string/zozhnik"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
@@ -89,7 +89,7 @@
                 android:background="@drawable/button_arrange"
                 android:fontFamily="@font/rubik"
                 android:text="@string/buy_book"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="20sp" />
 
         </FrameLayout>
@@ -109,7 +109,7 @@
                 android:layout_marginVertical="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/isItNecessary"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="16sp" />
 
             <TextView
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_one"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -128,7 +128,7 @@
                 android:background="@drawable/button_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/content"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="20sp" />
 
             <TextView
@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_three"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -145,7 +145,7 @@
                 android:layout_marginVertical="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_four"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -154,7 +154,7 @@
                 android:layout_marginVertical="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_five"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <ImageView
@@ -170,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_six"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -179,7 +179,7 @@
                 android:layout_marginVertical="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_seven"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -187,7 +187,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_eight"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TableLayout
@@ -212,7 +212,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/rubik"
                         android:text="@string/list_book_one"
-                        android:textColor="@color/sum"
+                        android:textColor="@color/text_main"
                         android:textSize="14sp" />
                 </TableRow>
 
@@ -227,7 +227,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/rubik"
                         android:text="@string/list_book_two"
-                        android:textColor="@color/sum"
+                        android:textColor="@color/text_main"
                         android:textSize="14sp" />
                 </TableRow>
 
@@ -242,7 +242,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/rubik"
                         android:text="@string/list_book_three"
-                        android:textColor="@color/sum"
+                        android:textColor="@color/text_main"
                         android:textSize="14sp" />
                 </TableRow>
             </TableLayout>
@@ -252,7 +252,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_nine"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -261,7 +261,7 @@
                 android:layout_marginVertical="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_ten"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -270,7 +270,7 @@
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_eleven"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
 
@@ -283,7 +283,7 @@
                 android:background="@drawable/button_arrange"
                 android:fontFamily="@font/rubik"
                 android:text="@string/read_more"
-                android:textColor="@color/sum"
+                android:textColor="@color/text_main"
                 android:textSize="20sp" />
 
 
