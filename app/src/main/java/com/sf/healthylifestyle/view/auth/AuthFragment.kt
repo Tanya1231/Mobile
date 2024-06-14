@@ -75,10 +75,12 @@ class AuthFragment : Fragment()
             }
         }
 
-        binding.submit.setOnClickListener {
-            /*** На время тестов, чтобы не писать постоянно e-mail*/
+        /*        binding.submit.setOnClickListener {
+                    */
+        /*** На время тестов, чтобы не писать постоянно e-mail*//*
             if (binding.phone.text.toString().isNotEmpty()) {
-                /*** На время тестов, чтобы не писать постоянно e-mail*/
+                */
+        /*** На время тестов, чтобы не писать постоянно e-mail*//*
                 if (!isEmailValid(binding.phone.text.toString())) {
                     Snackbar.make(
                         binding.root,
@@ -90,8 +92,11 @@ class AuthFragment : Fragment()
             }
 
             authFragmentViewModel.login(binding.phone.text.toString())
-        }
+        }*/
 
+        binding.btnGetCode.setOnClickListener {
+            authFragmentViewModel.login("")
+        }
 
         binding.tvReg.setOnClickListener {
             findNavController().navigate(R.id.action_authFragment_to_registerFragment)
