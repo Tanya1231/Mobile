@@ -232,7 +232,6 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardPopular"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
@@ -248,7 +247,6 @@
                             android:padding="4dp">
 
                             <ImageView
-                                android:id="@+id/imagePopular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/stories"
@@ -256,7 +254,6 @@
 
 
                             <TextView
-                                android:id="@+id/sumPopular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -268,7 +265,6 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/descriptionPopular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -277,7 +273,6 @@
                                 android:textSize="12sp" />
 
                             <LinearLayout
-                                android:id="@+id/textPopular"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
@@ -285,7 +280,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/weightPopular"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="start"
@@ -295,7 +289,6 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/caloriesPopular"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
@@ -319,7 +312,6 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@id/cardPopular"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
@@ -335,7 +327,6 @@
                             android:padding="4dp">
 
                             <ImageView
-                                android:id="@id/imagePopular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/stories"
@@ -343,7 +334,6 @@
 
 
                             <TextView
-                                android:id="@id/sumPopular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -355,7 +345,6 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@id/descriptionPopular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -364,7 +353,6 @@
                                 android:textSize="12sp" />
 
                             <LinearLayout
-                                android:id="@id/textPopular"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
@@ -372,7 +360,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@id/weightPopular"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="start"
@@ -382,7 +369,6 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@id/caloriesPopular"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
@@ -405,7 +391,6 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@id/cardPopular"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="7dp"
@@ -421,7 +406,6 @@
                             android:padding="4dp">
 
                             <ImageView
-                                android:id="@id/imagePopular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/stories"
@@ -429,7 +413,6 @@
 
 
                             <TextView
-                                android:id="@id/sumPopular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -441,7 +424,6 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@id/descriptionPopular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -450,7 +432,6 @@
                                 android:textSize="12sp" />
 
                             <LinearLayout
-                                android:id="@id/textPopular"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
@@ -458,7 +439,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@id/weightPopular"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="start"
@@ -468,7 +448,6 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@id/caloriesPopular"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
@@ -520,7 +499,6 @@
         </androidx.appcompat.widget.Toolbar>
 
         <HorizontalScrollView
-            android:id="@+id/horizontalScrollWatchedBefore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="35dp"
@@ -541,7 +519,6 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardWatchedBefore"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
@@ -557,7 +534,6 @@
                             android:padding="4dp">
 
                             <ImageView
-                                android:id="@+id/imageWatchedBefore"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/stories"
@@ -565,7 +541,6 @@
 
 
                             <TextView
-                                android:id="@+id/sumWatchedBefore"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -577,7 +552,6 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/descriptionWatchedBefore"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -586,7 +560,6 @@
                                 android:textSize="12sp" />
 
                             <LinearLayout
-                                android:id="@+id/textWatchedBefore"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
@@ -594,7 +567,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/weightWatchedBefore"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="start"
@@ -604,7 +576,6 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/caloriesWatchedBefore"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
@@ -628,7 +599,6 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@id/cardWatchedBefore"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
@@ -644,7 +614,6 @@
                             android:padding="4dp">
 
                             <ImageView
-                                android:id="@id/imageWatchedBefore"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/stories"
@@ -652,7 +621,6 @@
 
 
                             <TextView
-                                android:id="@id/sumWatchedBefore"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -664,7 +632,6 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@id/descriptionWatchedBefore"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -673,7 +640,6 @@
                                 android:textSize="12sp" />
 
                             <LinearLayout
-                                android:id="@id/textWatchedBefore"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
@@ -681,7 +647,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@id/weightWatchedBefore"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="start"
@@ -691,7 +656,6 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@id/caloriesWatchedBefore"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
@@ -714,7 +678,6 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@id/cardWatchedBefore"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="7dp"
@@ -731,7 +694,6 @@
                             tools:ignore="TooManyViews">
 
                             <ImageView
-                                android:id="@id/imageWatchedBefore"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/stories"
@@ -739,7 +701,6 @@
 
 
                             <TextView
-                                android:id="@id/sumWatchedBefore"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -751,7 +712,6 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@id/descriptionWatchedBefore"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -760,7 +720,6 @@
                                 android:textSize="12sp" />
 
                             <LinearLayout
-                                android:id="@id/textWatchedBefore"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
@@ -768,7 +727,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@id/weightWatchedBefore"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="start"
@@ -778,7 +736,6 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@id/caloriesWatchedBefore"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
@@ -830,7 +787,6 @@
         </androidx.appcompat.widget.Toolbar>
 
         <HorizontalScrollView
-            android:id="@+id/horizontalMainDishes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="35dp"
@@ -851,7 +807,6 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardMainDishes"
                         android:layout_width="122dp"
                         android:layout_height="222dp"
                         android:layout_marginEnd="20dp"
@@ -867,7 +822,6 @@
                             android:paddingHorizontal="4dp">
 
                             <ImageView
-                                android:id="@+id/imageMainDishes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="-5dp"
@@ -876,7 +830,6 @@
 
 
                             <TextView
-                                android:id="@+id/sumMainDishes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -888,7 +841,6 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/descriptionMainDishes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -897,7 +849,6 @@
                                 android:textSize="12sp" />
 
                             <LinearLayout
-                                android:id="@+id/textMainDishes"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
@@ -905,7 +856,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@+id/weightMainDishes"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="start"
@@ -915,7 +865,6 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@+id/caloriesMainDishes"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
@@ -939,7 +888,6 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@id/cardMainDishes"
                         android:layout_width="122dp"
                         android:layout_height="222dp"
                         android:layout_marginEnd="20dp"
@@ -955,7 +903,6 @@
                             android:paddingHorizontal="4dp">
 
                             <ImageView
-                                android:id="@id/imageMainDishes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="-5dp"
@@ -964,7 +911,6 @@
 
 
                             <TextView
-                                android:id="@id/sumMainDishes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -976,7 +922,6 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@id/descriptionMainDishes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -985,7 +930,6 @@
                                 android:textSize="12sp" />
 
                             <LinearLayout
-                                android:id="@id/textMainDishes"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
@@ -993,7 +937,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@id/weightMainDishes"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="start"
@@ -1003,7 +946,6 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@id/caloriesMainDishes"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
@@ -1026,7 +968,6 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardMainDishesMainDishes"
                         android:layout_width="122dp"
                         android:layout_height="222dp"
                         android:layout_marginEnd="7dp"
@@ -1042,7 +983,6 @@
                             android:paddingHorizontal="4dp">
 
                             <ImageView
-                                android:id="@id/imageMainDishes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="-5dp"
@@ -1051,7 +991,6 @@
 
 
                             <TextView
-                                android:id="@id/sumMainDishes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
@@ -1063,7 +1002,6 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@id/descriptionMainDishes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -1072,7 +1010,6 @@
                                 android:textSize="12sp" />
 
                             <LinearLayout
-                                android:id="@id/textMainDishes"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginVertical="7dp"
@@ -1080,7 +1017,6 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:id="@id/weightMainDishes"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="start"
@@ -1090,7 +1026,6 @@
                                     android:textSize="12sp" />
 
                                 <TextView
-                                    android:id="@id/caloriesMainDishes"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
@@ -1176,7 +1111,6 @@
             </androidx.appcompat.widget.Toolbar>
 
             <HorizontalScrollView
-                android:id="@+id/horizontalGarnish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="35dp"
@@ -1197,7 +1131,6 @@
 
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/cardGarnish"
                             android:layout_width="122dp"
                             android:layout_height="222dp"
                             android:layout_marginEnd="20dp"
@@ -1213,7 +1146,6 @@
                                 android:paddingHorizontal="4dp">
 
                                 <ImageView
-                                    android:id="@+id/imageGarnish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="-5dp"
@@ -1222,7 +1154,6 @@
 
 
                                 <TextView
-                                    android:id="@+id/sumGarnish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -1234,7 +1165,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@+id/descriptionGarnish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -1243,7 +1173,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@+id/textGarnish"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -1251,7 +1180,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@+id/weightGarnish"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -1262,7 +1190,6 @@
                                         tools:ignore="TooDeepLayout" />
 
                                     <TextView
-                                        android:id="@+id/caloriesGarnish"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -1286,7 +1213,6 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:id="@id/cardGarnish"
                             android:layout_width="122dp"
                             android:layout_height="222dp"
                             android:layout_marginEnd="20dp"
@@ -1303,7 +1229,6 @@
                                 android:paddingHorizontal="4dp">
 
                                 <ImageView
-                                    android:id="@id/imageGarnish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="-5dp"
@@ -1312,7 +1237,6 @@
 
 
                                 <TextView
-                                    android:id="@id/sumGarnish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -1324,7 +1248,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@id/descriptionGarnish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -1333,7 +1256,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@id/textGarnish"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -1341,7 +1263,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@id/weightGarnish"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -1351,7 +1272,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@id/caloriesGarnish"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -1374,7 +1294,6 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:id="@id/cardGarnish"
                             android:layout_width="122dp"
                             android:layout_height="222dp"
                             android:layout_marginEnd="7dp"
@@ -1391,7 +1310,6 @@
                                 android:paddingHorizontal="4dp">
 
                                 <ImageView
-                                    android:id="@id/imageGarnish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="-5dp"
@@ -1400,7 +1318,6 @@
 
 
                                 <TextView
-                                    android:id="@id/sumGarnish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -1412,7 +1329,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@id/descriptionGarnish"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -1421,7 +1337,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@id/textGarnish"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -1429,7 +1344,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@id/weightGarnish"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -1439,7 +1353,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@id/caloriesGarnish"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -1491,7 +1404,6 @@
             </androidx.appcompat.widget.Toolbar>
 
             <HorizontalScrollView
-                android:id="@+id/horizontalScrollReadyMeals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="35dp"
@@ -1512,7 +1424,6 @@
 
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/cardReadyMeals"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
@@ -1528,7 +1439,6 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:id="@+id/imageReadyMeals"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:contentDescription="@string/stories"
@@ -1536,7 +1446,6 @@
 
 
                                 <TextView
-                                    android:id="@+id/sumReadyMeals"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -1548,7 +1457,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@+id/descriptionReadyMeals"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -1557,7 +1465,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@+id/textReadyMeals"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -1565,7 +1472,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@+id/weightReadyMeals"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -1575,7 +1481,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@+id/caloriesReadyMeals"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -1599,7 +1504,6 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:id="@id/cardReadyMeals"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
@@ -1616,7 +1520,6 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:id="@id/imageReadyMeals"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:contentDescription="@string/stories"
@@ -1624,7 +1527,6 @@
 
 
                                 <TextView
-                                    android:id="@id/sumReadyMeals"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -1636,7 +1538,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@id/descriptionReadyMeals"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -1645,7 +1546,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@id/textReadyMeals"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -1653,7 +1553,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@id/weightReadyMeals"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -1663,7 +1562,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@id/caloriesReadyMeals"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -1686,7 +1584,6 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:id="@id/cardReadyMeals"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="7dp"
@@ -1703,7 +1600,6 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:id="@id/imageReadyMeals"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:contentDescription="@string/stories"
@@ -1711,7 +1607,6 @@
 
 
                                 <TextView
-                                    android:id="@id/sumReadyMeals"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -1723,7 +1618,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@id/descriptionReadyMeals"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -1732,7 +1626,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@id/textReadyMeals"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -1740,7 +1633,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@id/weightReadyMeals"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -1750,7 +1642,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@id/caloriesReadyMeals"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -1802,7 +1693,6 @@
             </androidx.appcompat.widget.Toolbar>
 
             <HorizontalScrollView
-                android:id="@+id/horizontalScrollSoup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="35dp"
@@ -1823,7 +1713,6 @@
 
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/cardSoup"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
@@ -1839,7 +1728,6 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:id="@+id/imageSoup"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:contentDescription="@string/stories"
@@ -1847,7 +1735,6 @@
 
 
                                 <TextView
-                                    android:id="@+id/sumSoup"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -1859,7 +1746,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@+id/descriptionSoup"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -1868,7 +1754,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@id/textSoup"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -1876,7 +1761,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@+id/weightSoup"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -1886,7 +1770,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@+id/caloriesSoup"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -1910,7 +1793,6 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:id="@id/cardSoup"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
@@ -1927,7 +1809,6 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:id="@id/imageSoup"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:contentDescription="@string/stories"
@@ -1935,7 +1816,6 @@
 
 
                                 <TextView
-                                    android:id="@id/sumSoup"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -1947,7 +1827,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@id/descriptionSoup"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -1956,7 +1835,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@+id/textSoupTwo"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -1964,7 +1842,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@id/weightSoup"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -1974,7 +1851,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@id/caloriesSoup"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -1997,7 +1873,6 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:id="@id/cardSoup"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="7dp"
@@ -2013,7 +1888,6 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:id="@id/imageSoup"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:contentDescription="@string/stories"
@@ -2021,7 +1895,6 @@
 
 
                                 <TextView
-                                    android:id="@id/sumSoup"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -2033,7 +1906,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@id/descriptionSoup"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -2042,7 +1914,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@id/textSoup"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -2050,7 +1921,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@id/weightSoup"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -2060,7 +1930,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@id/caloriesSoup"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -2113,7 +1982,6 @@
             </androidx.appcompat.widget.Toolbar>
 
             <HorizontalScrollView
-                android:id="@+id/horizontalScrollDessert"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="50dp"
@@ -2134,7 +2002,6 @@
 
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/cardDessert"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
@@ -2150,7 +2017,6 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:id="@+id/imageDessert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:contentDescription="@string/stories"
@@ -2158,7 +2024,6 @@
 
 
                                 <TextView
-                                    android:id="@+id/sumDessert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -2170,7 +2035,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@+id/descriptionDessert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -2179,7 +2043,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@+id/textDessert"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -2187,7 +2050,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@+id/weightDessert"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -2197,7 +2059,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@+id/caloriesDessert"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -2221,7 +2082,6 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:id="@id/cardDessert"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
@@ -2238,7 +2098,6 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:id="@id/imageDessert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:contentDescription="@string/stories"
@@ -2246,7 +2105,6 @@
 
 
                                 <TextView
-                                    android:id="@id/sumDessert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -2258,7 +2116,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@id/descriptionDessert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -2267,7 +2124,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@id/textDessert"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -2275,7 +2131,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@id/weightDessert"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -2285,7 +2140,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@id/caloriesDessert"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
@@ -2308,7 +2162,6 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:id="@id/cardDessert"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="7dp"
@@ -2325,7 +2178,6 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:id="@id/imageDessert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:contentDescription="@string/stories"
@@ -2333,7 +2185,6 @@
 
 
                                 <TextView
-                                    android:id="id/sumDessert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
@@ -2345,7 +2196,6 @@
                                     android:textStyle="bold" />
 
                                 <TextView
-                                    android:id="@id/descriptionDessert"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
@@ -2354,7 +2204,6 @@
                                     android:textSize="12sp" />
 
                                 <LinearLayout
-                                    android:id="@id/textDessert"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginVertical="7dp"
@@ -2362,7 +2211,6 @@
                                     android:orientation="horizontal">
 
                                     <TextView
-                                        android:id="@id/weightDessert"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="start"
@@ -2372,7 +2220,6 @@
                                         android:textSize="12sp" />
 
                                     <TextView
-                                        android:id="@id/caloriesDessert"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
