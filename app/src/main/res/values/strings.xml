@@ -121,4 +121,8 @@
     <string name="popular_description">в томатном соусе\nс молодым картофелем \nв укропе</string>
     <string name="desert_text">с добавлением моркови\nи мед,\nбез лактозы и муки</string>
     <string name="hundred">100 ₽</string>
+    <string name="profile_title">Профиль</string>
+    <string name="support">Поддержка</string>
+    <string name="setting">Настройки</string>
+    <string name="exit">выйти</string>
 </resources>
