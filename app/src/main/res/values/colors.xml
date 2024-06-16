@@ -13,4 +13,5 @@
     <color name="shadow">#246E6464</color>
     <color name="main_home">#828282</color>
     <color name="justwhite">#FFFEFE</color>
+    <color name="onboarding_text">#93C2C7</color>
 </resources>
