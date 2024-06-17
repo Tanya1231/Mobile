@@ -5,7 +5,7 @@ import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
 import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
 import com.sf.healthylifestyle.domain.usecases.GetTokenByPhone
 import com.sf.healthylifestyle.domain.usecases.LoginUseCase
-import com.sf.healthylifestyle.domain.usecases.RegisterUser
+import com.sf.healthylifestyle.domain.usecases.RegisterUseCase
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -27,8 +27,8 @@ class DomainModule {
 
     @Singleton
     @Provides
-    fun provideRegisterUser(repository: AuthRepository): RegisterUser {
-        return RegisterUser(repository = repository)
+    fun provideRegisterUser(repository: AuthRepository): RegisterUseCase {
+        return RegisterUseCase(repository = repository)
     }
 
     @Singleton

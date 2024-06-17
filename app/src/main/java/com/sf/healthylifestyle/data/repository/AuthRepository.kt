@@ -8,7 +8,7 @@ import com.sf.healthylifestyle.domain.irepository.IAuthRepository
 
 class AuthRepository(private val authApi: AuthApi) : IAuthRepository {
     override suspend fun login(login: String): Result<DetailResponse> {
-        val x = authApi.login(LoginRequest(login, ""))
+        val x = authApi.login(LoginRequest(login))
         println("Result: $x")
         return x
     }

@@ -15,7 +15,7 @@ class AuthViewModel(
     private val loginUseCase: LoginUseCase
 ) : ViewModel() {
 
-    private var _isEntry = MutableSharedFlow<Boolean>()
+/*    private var _isEntry = MutableSharedFlow<Boolean>()
     val isEntry: SharedFlow<Boolean>
         get() = _isEntry.asSharedFlow()
 
@@ -30,7 +30,7 @@ class AuthViewModel(
 
     fun login(login: String) {
         viewModelScope.launch {
-            /*** На время разработки пропускаем пустую строку*/
+            *//*** На время разработки пропускаем пустую строку*//*
             if (login.isEmpty()) {
                 _isEntry.emit(true)
             } else {
@@ -57,7 +57,7 @@ class AuthViewModel(
         }
     }
 
-    /*    suspend fun getTokenByPhone() {
+    *//*    suspend fun getTokenByPhone() {
 
             if (getTokenByPhone.execute()) _token.emit("token")
             else _token.emit("null token")
