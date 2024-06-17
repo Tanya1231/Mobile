@@ -125,4 +125,15 @@
     <string name="support">Поддержка</string>
     <string name="setting">Настройки</string>
     <string name="exit">выйти</string>
+    <string name="miss"><u>пропустить</u></string>
+    <string name="method">МЕТОД СБАЛАНСИРОВАННОЙ</string>
+    <string name="plates">ТАРЕЛКИ</string>
+    <string name="onboarding_description_one">Тарелки собираются с расчетом\nнеобходимых калорий, белков,\nжиров, углеводов, а так же\nмикроэлементов</string>
+    <string name="resume">продолжить</string>
+    <string name="method_two">СОБЕРИ СВОЮ ЗДОРОВУЮ</string>
+    <string name="plates_two">ТАРЕЛКУ</string>
+    <string name="onboarding_description_two">Собери тарелку из двух половинок с\nлюбимыми ингредиентами на свой вкус ,\nможно исключить свои аллергены с\nпомощью тегов</string>
+    <string name="onboarding_description_three">Современные рекомендации по\nправильному сбалансированному\nпитанию на научной основе</string>
+    <string name="method_three">ИДЕОЛОГИЯ ЗДОРОВОГО ПИТАНИЯ</string>
+    <string name="method_title">ПИТАНИЯ</string>
 </resources>
