@@ -14,4 +14,8 @@
     <color name="main_home">#828282</color>
     <color name="justwhite">#FFFEFE</color>
     <color name="onboarding_text">#93C2C7</color>
+    <color name="not_milk">#FFFCF2</color>
+    <color name="gray">#B3B3B3</color>
+    <color name="gray_light">#696969</color>
+    <color name="comment">#FCFCFC</color>
 </resources>
