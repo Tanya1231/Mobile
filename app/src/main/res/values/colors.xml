@@ -6,11 +6,16 @@
     <color name="bone">#F7F4E8</color>
     <color name="text_main">#2E3A45</color>
     <color name="sum">#502E3A45</color>
-    <color name="salmon">#60FE907A</color>
+    <color name="salmon">#FE907A</color>
     <color name="greenaple">#E2DD01</color>
     <color name="light">#fff</color>
-    <color name="light_blue">#60AEDADE</color>
+    <color name="light_blue">#AEDADE</color>
     <color name="shadow">#246E6464</color>
     <color name="main_home">#828282</color>
     <color name="justwhite">#FFFEFE</color>
+    <color name="onboarding_text">#93C2C7</color>
+    <color name="not_milk">#FFFCF2</color>
+    <color name="gray">#B3B3B3</color>
+    <color name="gray_light">#696969</color>
+    <color name="comment">#FCFCFC</color>
 </resources>
