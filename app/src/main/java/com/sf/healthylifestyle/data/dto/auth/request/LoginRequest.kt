@@ -5,5 +5,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class LoginRequest(
+    @SerialName("username") val username: String,
     @SerialName("login") val login: String,
  )

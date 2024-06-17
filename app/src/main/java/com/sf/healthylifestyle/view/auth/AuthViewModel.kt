@@ -3,11 +3,11 @@ package com.sf.healthylifestyle.view.auth
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
-import com.sf.healthylifestyle.domain.usecases.GetTokenByPhone
 import com.sf.healthylifestyle.domain.usecases.LoginUseCase
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
@@ -19,11 +19,13 @@ class AuthViewModel(
     val isEntry: SharedFlow<Boolean>
         get() = _isEntry.asSharedFlow()
 
+    private val _authState = MutableStateFlow<AuthState>(AuthState.Loading)
+    val authState: StateFlow<AuthState> = _authState
+
     init {
-//        login()
-//        viewModelScope.launch {
-//            getTokenByPhone()
-//        }
+        viewModelScope.launch {
+            _authState.emit(AuthState.Reg(AuthState.PHONE_OR_EMAIL))
+        }
     }
 
     fun login(login: String) {
@@ -34,6 +36,24 @@ class AuthViewModel(
             } else {
                 _isEntry.emit(loginUseCase(login))
             }
+        }
+    }
+
+    fun switch(){
+        viewModelScope.launch {
+            _authState.emit(AuthState.Reg(AuthState.PHONE_OR_EMAIL))
+        }
+    }
+
+    fun reg(){
+        viewModelScope.launch {
+            _authState.emit(AuthState.Confirm(null))
+        }
+    }
+
+    fun confirm(){
+        viewModelScope.launch {
+            _authState.emit(AuthState.Done(null))
         }
     }
 
