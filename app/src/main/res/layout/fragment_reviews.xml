@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/not_milk"
     android:orientation="vertical">
 
     <LinearLayout
@@ -33,7 +32,6 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/rubik"
                 android:text="@string/reviews"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -66,11 +64,10 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="21dp"
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/rubik"
                 android:text="@string/estimation"
-                android:textColor="@color/text_main"
                 android:textSize="20sp" />
 
 
@@ -88,7 +85,6 @@
                     android:layout_marginEnd="11dp"
                     android:fontFamily="@font/rubik"
                     android:text="@string/Leave_review"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp" />
 
                 <ImageView
@@ -128,7 +124,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/name_surname"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -144,7 +139,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/delicious"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -197,7 +191,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/name_surname"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -213,7 +206,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/delicious"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -266,7 +258,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/name_surname"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -282,7 +273,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/delicious"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -335,7 +325,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/name_surname"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -351,7 +340,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/delicious"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp" />
 
             </LinearLayout>

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_home"
     android:scrollbars="none"
     tools:context=".view.book.BookFragment">
 
@@ -21,15 +20,12 @@
             android:paddingTop="16dp"
             tools:ignore="UseCompoundDrawables">
 
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:fontFamily="@font/rubik"
-                android:text="@string/zozhnik"
-                android:textColor="@color/text_main"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+                android:contentDescription="@string/image"
+                android:src="@drawable/logo" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -133,7 +129,6 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="30dp"
-            android:background="@drawable/radius_input"
             android:paddingHorizontal="4dp">
 
             <EditText
@@ -580,7 +575,6 @@
                 android:layout_gravity="start"
                 android:fontFamily="@font/rubik"
                 android:text="@string/catalog"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -806,8 +800,8 @@
 
                             <ImageView
                                 android:id="@+id/imageWatchedBeforeThree"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="114dp"
+                                android:layout_height="114dp"
                                 android:contentDescription="@string/stories"
                                 android:src="@drawable/plate_popular" />
 

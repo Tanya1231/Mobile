@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_home"
     android:scrollbars="none"
     tools:context=".view.book.BookFragment">
 
@@ -20,15 +19,12 @@
             android:padding="16dp"
             tools:ignore="UseCompoundDrawables">
 
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:fontFamily="@font/rubik"
-                android:text="@string/zozhnik"
-                android:textColor="@color/text_main"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+                android:contentDescription="@string/image"
+                android:src="@drawable/logo" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -44,7 +40,6 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="30dp"
-            android:background="@drawable/radius_input"
             android:paddingHorizontal="4dp">
 
             <EditText
@@ -98,7 +93,6 @@
                         android:layout_marginTop="60dp"
                         android:fontFamily="@font/rubik"
                         android:text="@string/gluten"
-                        android:textColor="@color/text_main"
                         android:textSize="12sp" />
 
                 </FrameLayout>
@@ -123,7 +117,6 @@
                         android:layout_marginTop="60dp"
                         android:fontFamily="@font/rubik"
                         android:text="@string/without_sugar"
-                        android:textColor="@color/text_main"
                         android:textSize="12sp" />
 
                 </FrameLayout>
@@ -148,7 +141,6 @@
                         android:layout_marginTop="60dp"
                         android:fontFamily="@font/rubik"
                         android:text="@string/lactose_free"
-                        android:textColor="@color/text_main"
                         android:textSize="12sp" />
 
                 </FrameLayout>
@@ -173,7 +165,6 @@
                         android:layout_marginTop="60dp"
                         android:fontFamily="@font/rubik"
                         android:text="@string/without_meat"
-                        android:textColor="@color/text_main"
                         android:textSize="12sp" />
 
                 </FrameLayout>
@@ -197,7 +188,6 @@
                 android:layout_gravity="start"
                 android:fontFamily="@font/rubik"
                 android:text="@string/popular"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -205,6 +195,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
                 android:contentDescription="@string/next"
                 android:src="@drawable/next" />
 
@@ -247,8 +238,8 @@
                             android:padding="4dp">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="114dp"
+                                android:layout_height="114dp"
                                 android:contentDescription="@string/stories"
                                 android:src="@drawable/plate_popular" />
 
@@ -305,7 +296,6 @@
                                 android:background="@drawable/button_plus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
 
@@ -327,8 +317,8 @@
                             android:padding="4dp">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="114dp"
+                                android:layout_height="114dp"
                                 android:contentDescription="@string/stories"
                                 android:src="@drawable/plate_popular" />
 
@@ -406,8 +396,8 @@
                             android:padding="4dp">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="114dp"
+                                android:layout_height="114dp"
                                 android:contentDescription="@string/stories"
                                 android:src="@drawable/plate_popular" />
 
@@ -464,7 +454,6 @@
                                 android:background="@drawable/button_plus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -485,7 +474,6 @@
                 android:layout_gravity="start"
                 android:fontFamily="@font/rubik"
                 android:text="@string/earlier"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -493,6 +481,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
                 android:contentDescription="@string/next"
                 android:src="@drawable/next" />
 
@@ -694,8 +683,8 @@
                             tools:ignore="TooManyViews">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="114dp"
+                                android:layout_height="114dp"
                                 android:contentDescription="@string/stories"
                                 android:src="@drawable/plate_popular" />
 
@@ -773,7 +762,6 @@
                 android:layout_gravity="start"
                 android:fontFamily="@font/rubik"
                 android:text="@string/mainDishes"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -781,6 +769,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
                 android:contentDescription="@string/next"
                 android:src="@drawable/next" />
 
@@ -962,7 +951,6 @@
                                 android:background="@drawable/button_plus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -1062,7 +1050,6 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/rubik"
                 android:text="@string/сollect_plate"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -1097,7 +1084,6 @@
                     android:layout_gravity="start"
                     android:fontFamily="@font/rubik"
                     android:text="@string/side_dishes"
-                    android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -1105,6 +1091,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
                     android:contentDescription="@string/next"
                     android:src="@drawable/next" />
 
@@ -1390,7 +1377,6 @@
                     android:layout_gravity="start"
                     android:fontFamily="@font/rubik"
                     android:text="@string/ready_meals"
-                    android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -1398,8 +1384,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
                     android:contentDescription="@string/next"
-                    android:src="@drawable/next" />
+                    android:src="@drawable/next"
+                    />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -1439,8 +1427,8 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="114dp"
+                                    android:layout_height="114dp"
                                     android:contentDescription="@string/stories"
                                     android:src="@drawable/plate_popular" />
 
@@ -1520,8 +1508,8 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="114dp"
+                                    android:layout_height="114dp"
                                     android:contentDescription="@string/stories"
                                     android:src="@drawable/plate_popular" />
 
@@ -1600,8 +1588,8 @@
                                 android:padding="4dp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="114dp"
+                                    android:layout_height="114dp"
                                     android:contentDescription="@string/stories"
                                     android:src="@drawable/plate_popular" />
 
@@ -1679,7 +1667,6 @@
                     android:layout_gravity="start"
                     android:fontFamily="@font/rubik"
                     android:text="@string/soups"
-                    android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -1687,6 +1674,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
                     android:contentDescription="@string/next"
                     android:src="@drawable/next" />
 
@@ -1968,7 +1956,6 @@
                     android:layout_gravity="start"
                     android:fontFamily="@font/rubik"
                     android:text="@string/desert"
-                    android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -1976,6 +1963,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
                     android:contentDescription="@string/next"
                     android:src="@drawable/next" />
 
