@@ -120,19 +120,9 @@ class AuthFragment : Fragment()
                     authFragmentViewModel.login(login = LoginRequest(""))
                 }
                 is AuthState.Confirm<*> -> {
-//                    Snackbar.make(
-//                        binding.root,
-//                        "${authFragmentViewModel.authState.value}",
-//                        Snackbar.LENGTH_LONG
-//                    ).show()
                     authFragmentViewModel.confirm(code = CodeRequest(""))
                 }
                 is AuthState.Done<*> -> {
-//                    Snackbar.make(
-//                        binding.root,
-//                        "${authFragmentViewModel.authState.value}",
-//                        Snackbar.LENGTH_LONG
-//                    ).show()
                 }
                 is AuthState.Error -> TODO()
                 AuthState.Loading -> TODO()

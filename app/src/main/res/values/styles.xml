@@ -24,4 +24,11 @@
         <item name="android:translationY">-0.8sp</item>
         <item name="android:textStyle">normal</item>
     </style>
+
+    <style name="HealthyLifestyleBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">@color/text_main</item>
+        <item name="itemTextColor">@color/bone</item>
+        <item name="itemIconTint">@color/bone</item>
+        <item name="itemIconSize">48dp</item>
+    </style>
 </resources>
