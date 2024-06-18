@@ -1,7 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.HealthyLifestyle" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <style name="Theme.HealthyLifestyle" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textColor">@color/bone</item>
+        <item name="colorPrimaryDark">@color/text_main</item>
+        <item name="cardViewStyle">@style/MyCardViewStyle</item>
+    </style>
+
+    <style name="MyCardViewStyle">
+        <item name="cardBackgroundColor">@color/text_main</item>
     </style>
 </resources>

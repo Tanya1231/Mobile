@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/not_milk"
     android:orientation="vertical"
     tools:context=".view.profile.ProfileFragment">
 
@@ -101,15 +100,6 @@
 
             </LinearLayout>
 
-
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/switch1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:checked="false"
-                android:thumb="@drawable/resource_switch"
-                app:track="@drawable/switch_themes" />
         </LinearLayout>
 
     </LinearLayout>

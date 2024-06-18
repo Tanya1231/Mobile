@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_home"
     android:scrollbars="none">
 
     <LinearLayout
@@ -31,7 +30,6 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/rubik"
                 android:text="@string/popular_dishes"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -152,7 +150,6 @@
                     android:fontFamily="@font/rubik"
                     android:gravity="start|center_vertical"
                     android:text="@string/title_popular"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -162,7 +159,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/popular_description"
-                    android:textColor="@color/text_main"
                     android:textSize="12sp" />
 
                 <LinearLayout
@@ -287,7 +283,6 @@
                     android:fontFamily="@font/rubik"
                     android:gravity="start|center_vertical"
                     android:text="@string/title_popular"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -296,7 +291,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/popular_description"
-                    android:textColor="@color/text_main"
                     android:textSize="12sp" />
 
 
@@ -422,7 +416,6 @@
                     android:fontFamily="@font/rubik"
                     android:gravity="start|center_vertical"
                     android:text="@string/title_popular"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -431,7 +424,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/popular_description"
-                    android:textColor="@color/text_main"
                     android:textSize="12sp" />
 
 
@@ -447,7 +439,6 @@
                         android:layout_gravity="start"
                         android:layout_marginEnd="16dp"
                         android:text="@string/weightPopular"
-                        android:textColor="@color/sum"
                         android:textSize="12sp" />
 
                     <TextView
@@ -456,7 +447,6 @@
                         android:layout_gravity="end"
                         android:layout_marginTop="10dp"
                         android:text="@string/calories_popular"
-                        android:textColor="@color/sum"
                         android:textSize="12sp" />
 
 
@@ -557,7 +547,6 @@
                     android:fontFamily="@font/rubik"
                     android:gravity="start|center_vertical"
                     android:text="@string/title_popular"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -566,7 +555,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/popular_description"
-                    android:textColor="@color/text_main"
                     android:textSize="12sp" />
 
 
