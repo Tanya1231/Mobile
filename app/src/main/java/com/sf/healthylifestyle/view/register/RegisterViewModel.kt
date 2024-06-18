@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.sf.healthylifestyle.domain.usecases.LoginUseCase
-import com.sf.healthylifestyle.view.auth.AuthState
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -18,12 +17,12 @@ class RegisterViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
     val isEntry: SharedFlow<Boolean>
         get() = _isEntry.asSharedFlow()
 
-    private val _authState = MutableStateFlow<AuthState>(AuthState.Loading)
-    val authState: StateFlow<AuthState> = _authState
+    private val _regState = MutableStateFlow<RegState>(RegState.Loading)
+    val regState: StateFlow<RegState> = _regState
 
     init {
         viewModelScope.launch {
-            _authState.emit(AuthState.Reg(AuthState.PHONE_OR_EMAIL))
+            _regState.emit(RegState.Reg(RegState.PHONE_OR_EMAIL))
         }
     }
 
@@ -40,19 +39,19 @@ class RegisterViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
 
     fun switch() {
         viewModelScope.launch {
-            _authState.emit(AuthState.Reg(AuthState.PHONE_OR_EMAIL))
+            _regState.emit(RegState.Reg(RegState.PHONE_OR_EMAIL))
         }
     }
 
     fun reg() {
         viewModelScope.launch {
-            _authState.emit(AuthState.Confirm(null))
+            _regState.emit(RegState.Confirm(null))
         }
     }
 
     fun confirm() {
         viewModelScope.launch {
-            _authState.emit(AuthState.Done(null))
+            _regState.emit(RegState.Done(null))
         }
     }
 

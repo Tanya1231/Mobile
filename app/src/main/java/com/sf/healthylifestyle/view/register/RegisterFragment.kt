@@ -14,7 +14,6 @@ import com.sf.healthylifestyle.R
 import com.sf.healthylifestyle.databinding.FragmentRegisterBinding
 import com.sf.healthylifestyle.utils.uiextensions.hide
 import com.sf.healthylifestyle.utils.uiextensions.show
-import com.sf.healthylifestyle.view.auth.AuthState
 import dagger.android.support.AndroidSupportInjection
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -59,7 +58,7 @@ class RegisterFragment : Fragment() {
 
         viewLifecycleOwner.lifecycleScope.launch {
             println("AuthFragment: запуск authFragmentViewModel.authState outside")
-            registerFragmentViewModel.authState.collect {
+            registerFragmentViewModel.regState.collect {
                 println("AuthFragment: запуск authFragmentViewModel.authState = $it inside")
                 renderData(it)
             }
@@ -113,16 +112,16 @@ class RegisterFragment : Fragment() {
         return emailRegex.matches(email)
     }
 
-    private fun renderData(authState: AuthState) {
-        when (authState) {
-            is AuthState.Loading -> {
+    private fun renderData(regState: RegState) {
+        when (regState) {
+            is RegState.Loading -> {
             }
 
-            is AuthState.Reg<*> -> {
+            is RegState.Reg<*> -> {
 
-                binding.btnSubmit.text = getString(R.string.fragment_auth_btn_submit_get_code)
+                binding.btnSubmit.text = getString(R.string.btn_submit_get_code)
 
-                when (AuthState.PHONE_OR_EMAIL) {
+                when (RegState.PHONE_OR_EMAIL) {
                     "phone" -> {
                         with(binding) {
                             tilEmail.hide()
@@ -147,11 +146,11 @@ class RegisterFragment : Fragment() {
                 }
             }
 
-            is AuthState.Confirm<*> -> {
+            is RegState.Confirm<*> -> {
 
-                binding.btnSubmit.text = getString(R.string.fragment_auth_btn_submit_confirm)
+                binding.btnSubmit.text = getString(R.string.btn_submit_confirm)
 
-                when (AuthState.PHONE_OR_EMAIL) {
+                when (RegState.PHONE_OR_EMAIL) {
                     "phone" -> {
                         with(binding) {
                             tilName.hide()
@@ -194,8 +193,8 @@ class RegisterFragment : Fragment() {
                 }
             }
 
-            is AuthState.Done<*> -> {
-                binding.btnSubmit.text = getString(R.string.fragment_auth_btn_submit_to_main)
+            is RegState.Done<*> -> {
+                binding.btnSubmit.text = getString(R.string.btn_submit_to_main)
                 with(binding) {
                     tvReg.hide()
                     tilName.hide()
@@ -219,8 +218,8 @@ class RegisterFragment : Fragment() {
                 }
             }
 
-            is AuthState.Auth<*> -> TODO()
-            is AuthState.Error -> TODO()
+            is RegState.Auth<*> -> TODO()
+            is RegState.Error -> TODO()
         }
     }
 
@@ -232,22 +231,21 @@ class RegisterFragment : Fragment() {
         btnPhone.setOnClickListener {
             btnPhone.isSelected = true
             btnEmail.isSelected = false
-            AuthState.PHONE_OR_EMAIL = "phone"
+            RegState.PHONE_OR_EMAIL = "phone"
             registerFragmentViewModel.switch()
         }
 
         btnEmail.setOnClickListener {
             btnEmail.isSelected = true
             btnPhone.isSelected = false
-            AuthState.PHONE_OR_EMAIL = "email"
+            RegState.PHONE_OR_EMAIL = "email"
             registerFragmentViewModel.switch()
         }
 
         btnSubmit.setOnClickListener {
-//            authFragmentViewModel.login("")
-            when (registerFragmentViewModel.authState.value) {
-                is AuthState.Reg<*> -> {
-                    when (AuthState.PHONE_OR_EMAIL) {
+            when (registerFragmentViewModel.regState.value) {
+                is RegState.Reg<*> -> {
+                    when (RegState.PHONE_OR_EMAIL) {
                         "phone" -> {
                             /*** На время тестов, чтобы не писать постоянно e-mail*/
                             if (binding.etPhone.text.toString().isNotEmpty()) {
@@ -290,17 +288,17 @@ class RegisterFragment : Fragment() {
                     registerFragmentViewModel.reg()
                 }
 
-                is AuthState.Confirm<*> -> {
+                is RegState.Confirm<*> -> {
                     registerFragmentViewModel.confirm()
                 }
 
-                is AuthState.Done<*> -> {
+                is RegState.Done<*> -> {
                     findNavController().navigate(R.id.action_authFragment_to_homeFragment)
                 }
 
-                is AuthState.Auth<*> -> TODO()
-                is AuthState.Error -> TODO()
-                is AuthState.Loading -> TODO()
+                is RegState.Auth<*> -> TODO()
+                is RegState.Error -> TODO()
+                is RegState.Loading -> TODO()
             }
 
         }

@@ -160,9 +160,10 @@
     <string name="_1_000">1 000 р</string>
     <string name="without">без лука\nбез чеснока</string>
 
-    <!-- fragment auth -->
-    <string name="fragment_auth_btn_submit_reg">зарегистрироваться</string>
-    <string name="fragment_auth_btn_submit_get_code">получить код</string>
-    <string name="fragment_auth_btn_submit_to_main">перейти на главную</string>
-    <string name="fragment_auth_btn_submit_confirm">подтвердить</string>
+    <!-- fragment auth register -->
+    <string name="btn_submit_reg">зарегистрироваться</string>
+    <string name="btn_submit_get_code">получить код</string>
+    <string name="btn_submit_to_main">перейти на главную</string>
+    <string name="btn_submit_confirm">подтвердить</string>
+    <string name="btn_submit_enter">вход</string>
 </resources>
