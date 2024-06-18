@@ -144,6 +144,11 @@ class RegisterFragment : Fragment() {
                         TODO("Invalid ...")
                     }
                 }
+                Snackbar.make(
+                    binding.root,
+                    "${registerFragmentViewModel.regState.value}",
+                    Snackbar.LENGTH_LONG
+                ).show()
             }
 
             is RegState.Confirm<*> -> {
@@ -191,6 +196,11 @@ class RegisterFragment : Fragment() {
                         TODO("Invalid ...")
                     }
                 }
+                Snackbar.make(
+                    binding.root,
+                    "${registerFragmentViewModel.regState.value}",
+                    Snackbar.LENGTH_LONG
+                ).show()
             }
 
             is RegState.Done<*> -> {
@@ -213,9 +223,18 @@ class RegisterFragment : Fragment() {
                     tvConfirmEmail.hide()
                     tilConfirmEmail.hide()
                     etConfirmEmail.hide()
+                    chbAgree.hide()
+                    tvAgree.hide()
+                    chbAd.hide()
+                    tvAd.hide()
                     tvRegDone.show()
                     imgRegDone.show()
                 }
+                Snackbar.make(
+                    binding.root,
+                    "${registerFragmentViewModel.regState.value}",
+                    Snackbar.LENGTH_LONG
+                ).show()
             }
 
             is RegState.Auth<*> -> TODO()
@@ -293,7 +312,7 @@ class RegisterFragment : Fragment() {
                 }
 
                 is RegState.Done<*> -> {
-                    findNavController().navigate(R.id.action_authFragment_to_homeFragment)
+                    findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
                 }
 
                 is RegState.Auth<*> -> TODO()

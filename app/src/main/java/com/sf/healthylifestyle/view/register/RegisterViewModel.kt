@@ -55,20 +55,6 @@ class RegisterViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
         }
     }
 
-//    suspend fun getTokenByPhone() {
-//
-//        if (getTokenByPhone.execute()) _token.emit("token")
-//        else _token.emit("null token")
-//
-//    }
-//
-//    suspend fun getTokenByEmail() {
-//
-//        if (getTokenByEmail.execute()) _token.emit("token")
-//        else _token.emit("null token")
-//
-//    }
-
     class Factory(
         val loginUseCase: LoginUseCase
     ) : ViewModelProvider.Factory {
@@ -82,22 +68,4 @@ class RegisterViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
             throw IllegalArgumentException("Unknown ViewModel class")
         }
     }
-
-    /*    @Suppress("UNCHECKED_CAST")
-        class Factory(
-            val registerUser: RegisterUser,
-        ) : ViewModelProvider.Factory {
-            override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                if (modelClass.isAssignableFrom(
-                        RegisterViewModel::
-                        class.java
-                    )
-                ) {
-                    return RegisterViewModel(
-                        registerUser = registerUser,
-                    ) as T
-                }
-                throw IllegalArgumentException("Unknown ViewModel class")
-            }
-        }*/
 }

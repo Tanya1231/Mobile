@@ -24,4 +24,18 @@
         <item name="android:translationY">-0.8sp</item>
         <item name="android:textStyle">normal</item>
     </style>
+
+    <style name="HealthyLifestyleBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@drawable/bottom_navigation_background</item>
+<!--        <item name="backgroundTint">@color/text_main</item>-->
+<!--        <item name="itemTextColor">@color/bone</item>-->
+        <item name="itemIconTint">@color/nav_color</item>
+        <item name="itemIconSize">48dp</item>
+    </style>
+
+
+    <style name="HealthyLifestyleFloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+<!--        <item name="android:backgroundTint">@color/greenaple</item>-->
+        <item name="background">@drawable/img_dish</item>
+    </style>
 </resources>
