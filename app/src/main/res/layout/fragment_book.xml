@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light"
     android:scrollbars="none"
     tools:context=".view.book.BookFragment">
 
@@ -16,28 +15,24 @@
         <FrameLayout
             android:id="@+id/topTitle"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/color_home"
+            android:layout_height="wrap_content"
             android:paddingHorizontal="16dp"
             android:paddingTop="16dp"
             tools:ignore="UseCompoundDrawables">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:fontFamily="@font/rubik"
-                android:text="@string/zozhnik"
-                android:textColor="@color/text_main"
-                android:textSize="32sp"
-                android:textStyle="bold" />
-
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:contentDescription="@string/image"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
                 android:layout_gravity="end"
                 android:contentDescription="@string/profile"
-                android:src="@drawable/profile" />
+                android:src="@drawable/profile_green" />
 
         </FrameLayout>
 
@@ -45,16 +40,90 @@
             android:id="@+id/plateMethod"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/color_home"
             android:orientation="horizontal"
             android:padding="16dp">
 
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:layout_gravity="start"
-                android:contentDescription="@string/plate_method"
-                android:src="@drawable/method" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik"
+                        android:text="@string/MET"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="2dp"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/table_mini" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik"
+                        android:text="@string/OD"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/pepper_two" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="2dp"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/pepper" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik"
+                        android:text="@string/PLATES"
+                        android:textColor="@color/salmon"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_marginStart="50dp"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/greenery" />
+
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="140dp"
@@ -66,19 +135,44 @@
                 android:text="@string/electronic_book"
                 android:textSize="12sp" />
 
-            <ImageView
+            <FrameLayout
                 android:layout_width="170dp"
-                android:layout_height="150dp"
-                android:layout_gravity="end"
-                android:contentDescription="@string/autors"
-                android:src="@drawable/autors" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/autors"
+                    android:src="@drawable/figure" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="start"
+                    android:contentDescription="@string/autors"
+                    android:src="@drawable/men" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="92dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/the_curve" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="end"
+                    android:contentDescription="@string/autors"
+                    android:src="@drawable/women" />
+            </FrameLayout>
 
         </FrameLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/color_home"
             android:padding="16dp">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -89,7 +183,6 @@
                 android:background="@drawable/button_arrange"
                 android:fontFamily="@font/rubik"
                 android:text="@string/buy_book"
-                android:textColor="@color/text_main"
                 android:textSize="20sp" />
 
         </FrameLayout>
@@ -98,7 +191,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/light"
             android:orientation="vertical"
             android:padding="16dp"
             android:useDefaultMargins="true">
@@ -109,7 +201,6 @@
                 android:layout_marginVertical="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/isItNecessary"
-                android:textColor="@color/text_main"
                 android:textSize="16sp" />
 
             <TextView
@@ -117,7 +208,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_one"
-                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -128,7 +218,6 @@
                 android:background="@drawable/button_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/content"
-                android:textColor="@color/text_main"
                 android:textSize="20sp" />
 
             <TextView
@@ -136,7 +225,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_three"
-                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -145,7 +233,6 @@
                 android:layout_marginVertical="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_four"
-                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -154,7 +241,6 @@
                 android:layout_marginVertical="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_five"
-                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <ImageView
@@ -170,7 +256,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_six"
-                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -179,7 +264,6 @@
                 android:layout_marginVertical="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_seven"
-                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -187,7 +271,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_eight"
-                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TableLayout
@@ -212,7 +295,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/rubik"
                         android:text="@string/list_book_one"
-                        android:textColor="@color/text_main"
                         android:textSize="14sp" />
                 </TableRow>
 
@@ -227,7 +309,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/rubik"
                         android:text="@string/list_book_two"
-                        android:textColor="@color/text_main"
                         android:textSize="14sp" />
                 </TableRow>
 
@@ -242,7 +323,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/rubik"
                         android:text="@string/list_book_three"
-                        android:textColor="@color/text_main"
                         android:textSize="14sp" />
                 </TableRow>
             </TableLayout>
@@ -252,7 +332,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_nine"
-                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -261,7 +340,6 @@
                 android:layout_marginVertical="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_ten"
-                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
             <TextView
@@ -270,7 +348,6 @@
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/info_book_eleven"
-                android:textColor="@color/text_main"
                 android:textSize="14sp" />
 
 
@@ -283,7 +360,6 @@
                 android:background="@drawable/button_arrange"
                 android:fontFamily="@font/rubik"
                 android:text="@string/read_more"
-                android:textColor="@color/text_main"
                 android:textSize="20sp" />
 
 

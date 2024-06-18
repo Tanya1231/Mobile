@@ -159,4 +159,7 @@
     <string name="to_send">Отправить</string>
     <string name="_1_000">1 000 р</string>
     <string name="without">без лука\nбез чеснока</string>
+    <string name="MET">МЕТ</string>
+    <string name="OD">ОД</string>
+    <string name="PLATES">ТАРЕЛКИ</string>
 </resources>

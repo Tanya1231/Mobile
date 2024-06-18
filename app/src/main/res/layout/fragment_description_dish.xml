@@ -29,7 +29,6 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/rubik"
                 android:text="@string/stewed_beef_title"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -186,7 +185,6 @@
                     android:layout_marginBottom="16dp"
                     android:fontFamily="@font/rubik"
                     android:text="@string/description"
-                    android:textColor="@color/text_main"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -196,7 +194,6 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/rubik"
                     android:text="@string/description_plates"
-                    android:textColor="@color/text_main"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -228,7 +225,6 @@
                         android:fontFamily="@font/rubik"
                         android:text="@string/structure"
                         android:textAllCaps="false"
-                        android:textColor="@color/text_main"
                         android:textSize="12sp" />
 
                     <androidx.appcompat.widget.AppCompatButton
@@ -239,7 +235,6 @@
                         android:fontFamily="@font/rubik"
                         android:text="@string/Kbzhu"
                         android:textAllCaps="false"
-                        android:textColor="@color/text_main"
                         android:textSize="12sp" />
 
 
