@@ -3,11 +3,14 @@ package com.sf.healthylifestyle.view.auth
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
-import com.sf.healthylifestyle.domain.usecases.GetTokenByPhone
+import com.sf.healthylifestyle.data.dto.auth.request.CodeRequest
+import com.sf.healthylifestyle.data.dto.auth.request.LoginRequest
 import com.sf.healthylifestyle.domain.usecases.LoginUseCase
+import com.sf.healthylifestyle.view.register.RegState
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
@@ -15,41 +18,31 @@ class AuthViewModel(
     private val loginUseCase: LoginUseCase
 ) : ViewModel() {
 
-    private var _isEntry = MutableSharedFlow<Boolean>()
-    val isEntry: SharedFlow<Boolean>
-        get() = _isEntry.asSharedFlow()
+    private val _authState = MutableStateFlow<AuthState>(AuthState.Loading)
+    val authState: StateFlow<AuthState> = _authState
 
     init {
-//        login()
-//        viewModelScope.launch {
-//            getTokenByPhone()
-//        }
+        viewModelScope.launch {
+            _authState.emit(AuthState.Auth(null))
+        }
     }
 
-    fun login(login: String) {
+    fun login(login: LoginRequest) {
         viewModelScope.launch {
             /*** На время разработки пропускаем пустую строку*/
-            if (login.isEmpty()) {
-                _isEntry.emit(true)
+            if (login.login.isEmpty()) {
+                _authState.emit(AuthState.Confirm(true))
             } else {
-                _isEntry.emit(loginUseCase(login))
+                _authState.emit(AuthState.Confirm(loginUseCase(login.login)))
             }
         }
     }
 
-    /*    suspend fun getTokenByPhone() {
-
-            if (getTokenByPhone.execute()) _token.emit("token")
-            else _token.emit("null token")
-
+    fun confirm(code: CodeRequest) {
+        viewModelScope.launch {
+            _authState.emit(AuthState.Done(code))
         }
-
-        suspend fun getTokenByEmail() {
-
-            if (getTokenByEmail.execute()) _token.emit("token")
-            else _token.emit("null token")
-
-        }*/
+    }
 
     class Factory(
         val loginUseCase: LoginUseCase

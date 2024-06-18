@@ -1,13 +1,9 @@
 package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
-import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
-import com.sf.healthylifestyle.domain.usecases.GetTokenByPhone
 import com.sf.healthylifestyle.domain.usecases.LoginUseCase
-import com.sf.healthylifestyle.domain.usecases.RegisterUser
 import com.sf.healthylifestyle.view.auth.AuthViewModel
 import com.sf.healthylifestyle.view.confirm.ConfirmViewModel
-import com.sf.healthylifestyle.view.profile.ProfileViewModel
 import com.sf.healthylifestyle.view.register.RegisterViewModel
 import dagger.Module
 import dagger.Provides
@@ -24,10 +20,10 @@ class AppModule() {
 
     @Provides
     fun provideRegisterViewModelFactory(
-        registerUser: RegisterUser,
+        loginUseCase: LoginUseCase,
 
         ) = RegisterViewModel.Factory(
-        registerUser = registerUser,
+        loginUseCase = loginUseCase,
     )
 
     @Provides

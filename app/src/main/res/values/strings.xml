@@ -7,21 +7,21 @@
     <string name="menu_mydish_title">моя тарелка</string>
     <string name="menu_catalogue_title">каталог</string>
     <string name="menu_profile_text">профиль</string>
-    <string name="register_text">Регистрация</string>
-    <string name="register_next">Далее</string>
+<!--    <string name="register_text">Регистрация</string>-->
+<!--    <string name="register_next">Далее</string>-->
     <string name="name">Имя</string>
     <string name="email">Почта</string>
     <string name="phone">Номер телефона</string>
     <string name="data">Дата рождения</string>
     <string name="password">Пароль</string>
     <string name="next">Далее</string>
-    <string name="nomer_phone">Введите номер телефона</string>
-    <string name="input_email">Введите свой email</string>
+<!--    <string name="nomer_phone">Введите номер телефона</string>-->
+<!--    <string name="input_email">Введите свой email</string>-->
     <string name="input_code">Введите код</string>
     <string name="entrance">Вход</string>
-    <string name="create_entry">Создайте учётную запись или войдите в систему</string>
+<!--    <string name="create_entry">Создайте учётную запись или войдите в систему</string>-->
     <string name="done">Готово</string>
-    <string name="no_account">Нет аккаунта?</string>
+<!--    <string name="no_account">Нет аккаунта?</string>-->
     <string name="register">Зарегистрироваться</string>
     <string name="enter_code">Введите код</string>
     <string name="sent_phone">Высланный вам </string>
@@ -162,4 +162,11 @@
     <string name="MET">МЕТ</string>
     <string name="OD">ОД</string>
     <string name="PLATES">ТАРЕЛКИ</string>
+
+    <!-- fragment auth register -->
+    <string name="btn_submit_reg">зарегистрироваться</string>
+    <string name="btn_submit_get_code">получить код</string>
+    <string name="btn_submit_to_main">перейти на главную</string>
+    <string name="btn_submit_confirm">подтвердить</string>
+    <string name="btn_submit_enter">вход</string>
 </resources>
