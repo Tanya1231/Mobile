@@ -15,6 +15,39 @@
         <item name="cardBackgroundColor">@color/not_milk</item>
     </style>
 
+    <style name="ImageLogo">
+        <item name="android:src">@drawable/logo</item>
+    </style>
+
+    <style name="ImageNext">
+        <item name="android:src">@drawable/next</item>
+    </style>
+
+    <style name="ImageProfile">
+        <item name="android:src">@drawable/profile_green</item>
+    </style>
+
+
+    <style name="SalmonBackground">
+        <item name="android:background">@color/salmon</item>
+    </style>
+
+    <style name="cardSalmonBackground">
+        <item name="cardBackgroundColor">@color/salmon</item>
+    </style>
+
+    <style name="cardBlueBackground">
+        <item name="cardBackgroundColor">@color/light_blue</item>
+    </style>
+
+
+    <style name="ButtonPlus">
+        <item name="android:background">@drawable/button_plus</item>
+    </style>
+
+    <style name="filter">
+        <item name="android:src">@drawable/filter</item>
+    </style>
 
     <style name="FabRound">
         <item name="cornerSize">50%</item>

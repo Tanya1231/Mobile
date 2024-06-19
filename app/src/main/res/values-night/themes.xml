@@ -9,4 +9,39 @@
     <style name="MyCardViewStyle">
         <item name="cardBackgroundColor">@color/text_main</item>
     </style>
+
+
+    <style name="ImageLogo">
+        <item name="android:src">@drawable/logo_dark</item>
+    </style>
+
+    <style name="ImageNext">
+        <item name="android:src">@drawable/next_dark</item>
+    </style>
+
+    <style name="ImageProfile">
+        <item name="android:src">@drawable/profile_dark</item>
+    </style>
+
+    <style name="SalmonBackground">
+        <item name="android:background">@color/salmon_dark</item>
+    </style>
+
+    <style name="cardSalmonBackground">
+        <item name="cardBackgroundColor">@color/salmon_dark</item>
+    </style>
+
+    <style name="cardBlueBackground">
+        <item name="cardBackgroundColor">@color/blue_card_dark</item>
+    </style>
+
+    <style name="ButtonPlus">
+        <item name="android:background">@drawable/button_plus_dark</item>
+    </style>
+
+    <style name="filter">
+        <item name="android:src">@drawable/filter_dark</item>
+    </style>
+
+
 </resources>

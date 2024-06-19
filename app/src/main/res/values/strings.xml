@@ -169,4 +169,5 @@
     <string name="btn_submit_to_main">перейти на главную</string>
     <string name="btn_submit_confirm">подтвердить</string>
     <string name="btn_submit_enter">вход</string>
+    <string name="method_plates">Метод тарелки</string>
 </resources>
