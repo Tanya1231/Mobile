@@ -20,45 +20,57 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                style="@style/ImageLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:contentDescription="@string/image"
-                android:src="@drawable/logo" />
+                android:contentDescription="@string/image" />
 
             <ImageView
+                style="@style/ImageProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
-                android:contentDescription="@string/profile"
-                android:src="@drawable/profile_green" />
+                android:contentDescription="@string/profile" />
 
         </FrameLayout>
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="16dp"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="30dp"
-            android:paddingHorizontal="4dp">
+            android:paddingHorizontal="16dp">
 
-            <EditText
-                android:layout_width="match_parent"
+            <FrameLayout
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:autofillHints="text"
-                android:background="@drawable/radius_input"
-                android:drawableStart="@drawable/search"
-                android:drawableEnd="@drawable/filter"
-                android:drawablePadding="10dp"
-                android:hint="@string/search"
-                android:imeOptions="actionSearch"
-                android:inputType="text"
-                android:padding="10dp"
-                android:textColorHint="#502E3A45"
-                android:textSize="18sp" />
+                android:background="@drawable/radius_input">
 
-        </FrameLayout>
+                <EditText
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="text"
+                    android:background="@drawable/radius_input"
+                    android:drawableStart="@drawable/search"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColorHint="#502E3A45"
+                    android:textSize="18sp" />
+
+            </FrameLayout>
+
+            <ImageView
+                style="@style/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="40dp"
+                android:contentDescription="@string/image" />
+
+        </LinearLayout>
 
         <HorizontalScrollView
             android:id="@+id/horizontalScroll"
@@ -192,12 +204,12 @@
                 android:textStyle="bold" />
 
             <ImageView
+                style="@style/ImageNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="@string/next"
-                android:src="@drawable/next" />
+                android:contentDescription="@string/next" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -223,11 +235,11 @@
 
 
                     <androidx.cardview.widget.CardView
+                        style="@style/cardBlueBackground"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/light_blue"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -251,7 +263,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/sum_two"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -260,7 +271,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_popular"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -276,7 +286,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -284,7 +293,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -293,7 +301,7 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -302,11 +310,11 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        style="@style/cardBlueBackground"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/light_blue"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -330,7 +338,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/sum_two"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -339,7 +346,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_popular"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -355,7 +361,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -363,7 +368,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -372,20 +376,19 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        style="@style/cardBlueBackground"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="7dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/light_blue"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -409,7 +412,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/sum_two"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -418,7 +420,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_popular"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -434,7 +435,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -442,7 +442,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -451,7 +450,7 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -478,12 +477,12 @@
                 android:textStyle="bold" />
 
             <ImageView
+                style="@style/ImageNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="@string/next"
-                android:src="@drawable/next" />
+                android:contentDescription="@string/next" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -508,11 +507,11 @@
 
 
                     <androidx.cardview.widget.CardView
+                        style="@style/cardBlueBackground"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/light_blue"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -536,7 +535,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/price_desert"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -545,7 +543,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_desert"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -561,7 +558,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -569,7 +565,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -578,21 +573,20 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        style="@style/cardSalmonBackground"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/salmon"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -616,7 +610,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/price_soup"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -625,7 +618,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_soup"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -641,7 +633,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -649,7 +640,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -658,20 +648,19 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        style="@style/cardBlueBackground"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="7dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/light_blue"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -696,7 +685,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/sum_two"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -705,7 +693,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_popular"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -721,7 +708,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -729,7 +715,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -738,10 +723,9 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -766,12 +750,12 @@
                 android:textStyle="bold" />
 
             <ImageView
+                style="@style/ImageNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="@string/next"
-                android:src="@drawable/next" />
+                android:contentDescription="@string/next" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -796,11 +780,11 @@
 
 
                     <androidx.cardview.widget.CardView
+                        style="@style/cardSalmonBackground"
                         android:layout_width="122dp"
                         android:layout_height="222dp"
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/salmon"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -825,7 +809,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/five_hundred"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -834,7 +817,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_main"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -850,7 +832,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -858,7 +839,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -867,21 +847,20 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        style="@style/cardSalmonBackground"
                         android:layout_width="122dp"
                         android:layout_height="222dp"
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/salmon"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -906,7 +885,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/five_hundred"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -915,7 +893,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_main"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -931,7 +908,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -939,7 +915,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -948,7 +923,7 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -956,11 +931,11 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        style="@style/cardSalmonBackground"
                         android:layout_width="122dp"
                         android:layout_height="222dp"
                         android:layout_marginEnd="7dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/salmon"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -985,7 +960,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/five_hundred"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -994,7 +968,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_main"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -1010,7 +983,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -1018,7 +990,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -1027,10 +998,9 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -1056,10 +1026,10 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginVertical="20dp"
                 android:contentDescription="@string/image"
-                android:paddingHorizontal="16dp"
-                android:src="@drawable/collect_plate" />
+                android:src="@drawable/designer" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonBuy"
@@ -1088,12 +1058,12 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    style="@style/ImageNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/next"
-                    android:src="@drawable/next" />
+                    android:contentDescription="@string/next" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -1118,11 +1088,11 @@
 
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardSalmonBackground"
                             android:layout_width="122dp"
                             android:layout_height="222dp"
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/salmon"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp">
 
@@ -1147,7 +1117,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/two_hundred"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -1156,7 +1125,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_garnish"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -1172,7 +1140,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp"
                                         tools:ignore="TooDeepLayout" />
 
@@ -1181,7 +1148,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -1190,21 +1156,20 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardSalmonBackground"
                             android:layout_width="122dp"
                             android:layout_height="222dp"
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/salmon"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
@@ -1230,7 +1195,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/two_hundred"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -1239,7 +1203,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_garnish"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -1255,7 +1218,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -1263,7 +1225,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -1272,20 +1233,19 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardSalmonBackground"
                             android:layout_width="122dp"
                             android:layout_height="222dp"
                             android:layout_marginEnd="7dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/salmon"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
@@ -1320,7 +1280,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_garnish"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -1336,7 +1295,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -1344,7 +1302,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -1353,10 +1310,9 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
@@ -1381,13 +1337,12 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    style="@style/ImageNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/next"
-                    android:src="@drawable/next"
-                    />
+                    android:contentDescription="@string/next" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -1412,11 +1367,11 @@
 
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardBlueBackground"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp">
 
@@ -1440,7 +1395,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/sum_two"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -1449,7 +1403,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -1465,7 +1418,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -1473,7 +1425,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -1482,21 +1433,20 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardBlueBackground"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
@@ -1521,7 +1471,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/sum_two"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -1530,7 +1479,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -1546,7 +1494,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -1554,7 +1501,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -1563,20 +1509,19 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardBlueBackground"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="7dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
@@ -1601,7 +1546,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/sum_two"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -1610,7 +1554,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -1626,7 +1569,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -1634,7 +1576,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -1643,10 +1584,9 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
@@ -1671,12 +1611,12 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    style="@style/ImageNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/next"
-                    android:src="@drawable/next" />
+                    android:contentDescription="@string/next" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -1701,11 +1641,11 @@
 
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardSalmonBackground"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/salmon"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp">
 
@@ -1729,7 +1669,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/price_soup"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -1738,7 +1677,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_soup"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -1754,7 +1692,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -1762,7 +1699,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -1771,21 +1707,20 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardSalmonBackground"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/salmon"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
@@ -1810,7 +1745,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/price_soup"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -1819,7 +1753,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_soup"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -1835,7 +1768,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -1843,7 +1775,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -1852,20 +1783,19 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardSalmonBackground"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="7dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/salmon"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp">
 
@@ -1889,7 +1819,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/price_soup"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -1898,7 +1827,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_soup"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -1914,7 +1842,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -1922,7 +1849,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -1931,10 +1857,9 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
@@ -1960,12 +1885,12 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    style="@style/ImageNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/next"
-                    android:src="@drawable/next" />
+                    android:contentDescription="@string/next" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -1990,11 +1915,11 @@
 
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardBlueBackground"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp">
 
@@ -2018,7 +1943,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/price_desert"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -2027,7 +1951,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_desert"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -2043,7 +1966,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -2051,7 +1973,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -2060,21 +1981,20 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardBlueBackground"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="20dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
@@ -2099,7 +2019,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/price_desert"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -2108,7 +2027,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_desert"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -2124,7 +2042,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -2132,7 +2049,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -2141,20 +2057,19 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            style="@style/cardBlueBackground"
                             android:layout_width="122dp"
                             android:layout_height="276dp"
                             android:layout_marginEnd="7dp"
                             android:orientation="vertical"
-                            app:cardBackgroundColor="@color/light_blue"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="0dp"
                             tools:ignore="DuplicateIds">
@@ -2179,7 +2094,6 @@
                                     android:layout_marginVertical="7dp"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/price_desert"
-                                    android:textColor="@color/text_main"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
 
@@ -2188,7 +2102,6 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text="@string/description_desert"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <LinearLayout
@@ -2204,7 +2117,6 @@
                                         android:layout_gravity="start"
                                         android:layout_marginEnd="10dp"
                                         android:text="@string/weightPopular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
                                     <TextView
@@ -2212,7 +2124,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="end"
                                         android:text="@string/calories_popular"
-                                        android:textColor="@color/text_main"
                                         android:textSize="12sp" />
 
 
@@ -2221,10 +2132,9 @@
                                 <androidx.appcompat.widget.AppCompatButton
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    android:background="@drawable/button_plus"
+                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
-                                    android:textColor="@color/text_main"
                                     android:textSize="22sp" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>

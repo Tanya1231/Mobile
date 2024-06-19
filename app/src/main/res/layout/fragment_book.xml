@@ -21,18 +21,18 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                style="@style/ImageLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:contentDescription="@string/image"
-                android:src="@drawable/logo" />
+                android:contentDescription="@string/image" />
 
             <ImageView
+                style="@style/ImageProfile"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
                 android:layout_gravity="end"
-                android:contentDescription="@string/profile"
-                android:src="@drawable/profile_green" />
+                android:contentDescription="@string/profile" />
 
         </FrameLayout>
 
