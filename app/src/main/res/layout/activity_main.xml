@@ -43,111 +43,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/navigation_menu" />
 
-    <!--    <ImageButton-->
-    <!--        android:id="@+id/fab"-->
-    <!--        android:layout_width="96dp"-->
-    <!--        android:layout_height="96dp"-->
-    <!--        android:src="@drawable/img_dish"-->
-    <!--        app:elevation="20dp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintEnd_toEndOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/bottom_navigation"-->
-    <!--        android:contentDescription="TODO" />-->
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:backgroundTint="@color/greenaple"
             android:clickable="true"
             android:focusable="true"
             android:visibility="visible"
             app:elevation="10dp"
-            app:tint="@android:color/black"
-            android:src="@drawable/ic_dish3"
             app:fabCustomSize="96dp"
+            android:backgroundTint="@color/greenaple"
             app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
             app:layout_constraintEnd_toEndOf="@+id/bottom_navigation"
             app:layout_constraintStart_toStartOf="@+id/bottom_navigation"
-            app:shapeAppearanceOverlay="@style/FabRound" />
+            app:shapeAppearanceOverlay="@style/FabRound"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_upper"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="visible"
+        app:elevation="16dp"
+        app:fabCustomSize="64dp"
+        android:backgroundTint="@color/white"
+        app:tint="@color/text_main"
+        app:maxImageSize="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fab"
+        app:layout_constraintTop_toTopOf="@+id/fab"
+        app:layout_constraintEnd_toEndOf="@+id/fab"
+        app:layout_constraintStart_toStartOf="@+id/fab"
+        app:shapeAppearanceOverlay="@style/FabRound"
+        app:srcCompat="@drawable/ic_dish3"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--        android:backgroundTint="@color/greenaple"-->
-
-
-    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-    <!--        android:id="@+id/fab"-->
-    <!--        style="@style/HealthyLifestyleFloatingActionButton"-->
-    <!--        android:layout_width="96dp"-->
-    <!--        android:layout_height="96dp"-->
-    <!--        android:src="@drawable/ic_dish"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintEnd_toEndOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintTop_toTopOf="@+id/bottom_navigation"-->
-    <!--        app:shapeAppearanceOverlay="@style/FabRound"-->
-    <!--        app:elevation="8dp" />-->
-
-    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-    <!--        android:id="@+id/fab"-->
-    <!--        android:layout_width="100dp"-->
-    <!--        android:layout_height="100dp"-->
-    <!--        android:layout_marginEnd="16dp"-->
-    <!--        android:layout_marginBottom="16dp"-->
-    <!--        android:background="@drawable/img_dish2"-->
-    <!--        android:src="@drawable/img_dish2"-->
-    <!--        app:fabCustomSize="100dp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintEnd_toEndOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintTop_toTopOf="@+id/bottom_navigation"-->
-    <!--        app:shapeAppearanceOverlay="@style/FabRound"-->
-    <!--        app:elevation="8dp"-->
-    <!--        app:tint="@android:color/white"-->
-    <!--        />-->
-
-    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-    <!--        android:id="@+id/fab"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_gravity="bottom|end"-->
-    <!--        android:layout_margin="16dp"-->
-    <!--        android:backgroundTint="@color/bone"-->
-    <!--        android:src="@drawable/ic_dish"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintEnd_toEndOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/bottom_navigation"-->
-    <!--        app:layout_constraintTop_toTopOf="@+id/bottom_navigation"-->
-    <!--        app:tint="@android:color/white" />-->
-
-    <!--android:backgroundTint="@color/greenaple"    -->
-
-
-    <!--    -->
-    <!--    android:src="@drawable/ic_baseline_home_24"-->
-    <!--    app:tint="@android:color/white"-->
-
-
-    <!--<style name="CircleActionButton" parent="Widget.MaterialComponents.FloatingActionButton">-->
-    <!--<item name="cornerSize">50%</item>-->
-    <!--<item name="shape">@drawable/shape_circle_sector</item>-->
-    <!--</style>-->
-
-    <!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--android:shape="arc">-->
-    <!--<size-->
-    <!--    android:width="56dp"-->
-    <!--    android:height="56dp" />-->
-    <!--<solid android:color="@color/colorPrimary" />-->
-    <!--<corners android:radius="28dp" />-->
-    <!--<gradient-->
-    <!--    android:endColor="@color/colorPrimary"-->
-    <!--    android:startColor="@color/colorPrimaryDark"-->
-    <!--    android:type="linear" />-->
-    <!--<padding-->
-    <!--    android:bottom="0dp"-->
-    <!--    android:left="0dp"-->
-    <!--    android:right="0dp"-->
-    <!--    android:top="0dp" />-->
-    <!--</shape>-->

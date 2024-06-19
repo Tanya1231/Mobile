@@ -1,11 +1,13 @@
 package com.sf.healthylifestyle.view
 
 import android.content.pm.ActivityInfo
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.widget.Switch
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -51,6 +53,11 @@ class MainActivity : AppCompatActivity() {
                 delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_NO
             }
         }
+
+//        binding.fab.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.img_dish2))
+//        binding.fab.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.img_dish))
+//        binding.fab.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_dish3))
+//        binding.fab.setImageResource(R.drawable.ic_dish3)
     }
 
         private fun initMenu() {
@@ -100,9 +107,11 @@ class MainActivity : AppCompatActivity() {
                             if (fragmentsWithoutToolbars.contains(destination.id)) {
                                 bottomNavigation.hide()
                                 fab.hide()
+                                fabUpper.hide()
                             } else {
                                 bottomNavigation.show()
                                 fab.show()
+                                fabUpper.show()
                             }
                         }
                     }

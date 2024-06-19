@@ -36,8 +36,7 @@
 
 
     <style name="HealthyLifestyleFloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
-        <!--        <item name="android:backgroundTint">@color/greenaple</item>-->
-        <item name="background">@drawable/img_dish</item>
+        <item name="android:backgroundTint">@color/greenaple</item>
     </style>
 
 </resources>
