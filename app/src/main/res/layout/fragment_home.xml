@@ -21,18 +21,19 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
+                style="@style/ImageLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:contentDescription="@string/image"
-                android:src="@drawable/logo" />
+                android:showAsAction="always" />
 
             <ImageView
+                style="@style/ImageProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
-                android:contentDescription="@string/profile"
-                android:src="@drawable/profile_green" />
+                android:contentDescription="@string/profile" />
 
         </FrameLayout>
 
@@ -47,7 +48,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:gravity="center"
-                android:paddingStart="16dp">
+                android:paddingStart="16dp"
+                tools:ignore="RtlSymmetry">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardOne"
@@ -104,10 +106,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardThree"
+                    style="@style/cardSalmonBackground"
                     android:layout_width="148dp"
                     android:layout_height="134dp"
                     android:layout_toEndOf="@+id/cardTwo"
-                    app:cardBackgroundColor="@color/salmon"
                     app:cardCornerRadius="20dp">
 
                     <TextView
@@ -124,30 +126,42 @@
             </RelativeLayout>
         </HorizontalScrollView>
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginVertical="30dp"
-            android:paddingHorizontal="4dp">
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:paddingHorizontal="16dp">
 
-            <EditText
-                android:layout_width="match_parent"
+            <FrameLayout
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:autofillHints="text"
-                android:background="@drawable/radius_input"
-                android:drawableStart="@drawable/search"
-                android:drawableEnd="@drawable/filter"
-                android:drawablePadding="10dp"
-                android:hint="@string/search"
-                android:imeOptions="actionSearch"
-                android:inputType="text"
-                android:padding="10dp"
-                android:textColorHint="#502E3A45"
-                android:textSize="18sp" />
+                android:background="@drawable/radius_input">
 
-        </FrameLayout>
+                <EditText
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="text"
+                    android:background="@drawable/radius_input"
+                    android:drawableStart="@drawable/search"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColorHint="#502E3A45"
+                    android:textSize="18sp" />
+
+            </FrameLayout>
+
+            <ImageView
+                style="@style/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="40dp"
+                android:contentDescription="@string/image" />
+
+        </LinearLayout>
 
         <HorizontalScrollView
             android:id="@+id/horizontalScroll"
@@ -218,10 +232,8 @@
             android:layout_width="328dp"
             android:layout_height="349dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="15dp"
+            android:layout_marginVertical="10dp"
             android:background="@color/shadow"
-            android:padding="10dp"
-            app:cardBackgroundColor="@color/color_home"
             app:cardCornerRadius="20dp">
 
             <LinearLayout
@@ -235,7 +247,6 @@
                     android:layout_width="308dp"
                     android:layout_height="160dp"
                     android:layout_gravity="center_horizontal"
-                    android:background="@color/color_home"
                     android:contentDescription="@string/image"
                     android:src="@drawable/plates" />
 
@@ -246,7 +257,6 @@
                     android:layout_marginVertical="8dp"
                     android:fontFamily="@font/rubik"
                     android:text="@string/compilation"
-                    android:textColor="@color/text_main"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -258,7 +268,6 @@
                     android:gravity="center"
                     android:paddingHorizontal="10dp"
                     android:text="@string/selection_description"
-                    android:textColor="@color/text_main"
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -281,10 +290,10 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/SalmonBackground"
             android:layout_width="match_parent"
             android:layout_height="145dp"
-            android:layout_marginVertical="10dp"
-            android:background="@color/salmon">
+            android:layout_marginVertical="10dp">
 
             <ImageView
                 android:id="@+id/imageIdeology"
@@ -305,7 +314,6 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/ideology_description"
-                android:textColor="@color/text_main"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -318,7 +326,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/to_read"
-                android:textColor="@color/text_main"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -343,7 +350,6 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/rubik"
                 android:text="@string/сollect_plate"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -353,8 +359,9 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginVertical="20dp"
                 android:contentDescription="@string/image"
-                android:src="@drawable/collect_plate" />
+                android:src="@drawable/designer" />
         </LinearLayout>
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="328dp"
@@ -363,7 +370,6 @@
             android:layout_marginVertical="15dp"
             android:background="@color/shadow"
             android:padding="10dp"
-            app:cardBackgroundColor="@color/color_home"
             app:cardCornerRadius="20dp">
 
             <LinearLayout
@@ -392,7 +398,6 @@
                     android:layout_marginVertical="8dp"
                     android:fontFamily="@font/rubik"
                     android:text="@string/the_diet"
-                    android:textColor="@color/text_main"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -421,7 +426,6 @@
                             android:fontFamily="@font/rubik"
                             android:gravity="center"
                             android:text="@string/borch"
-                            android:textColor="@color/text_main"
                             android:textSize="14sp" />
 
 
@@ -446,7 +450,6 @@
                             android:fontFamily="@font/rubik"
                             android:gravity="center"
                             android:text="@string/turkey"
-                            android:textColor="@color/text_main"
                             android:textSize="14sp" />
 
 
@@ -471,7 +474,6 @@
                             android:fontFamily="@font/rubik"
                             android:gravity="center"
                             android:text="@string/stewed_beef"
-                            android:textColor="@color/text_main"
                             android:textSize="14sp" />
 
 
@@ -521,7 +523,6 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/rubik"
                 android:text="@string/detox_description"
-                android:textColor="@color/text_main"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/imageDetox"
@@ -533,7 +534,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik"
                 android:text="@string/to_read"
-                android:textColor="@color/text_main"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -545,12 +545,80 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/image"
-            android:paddingHorizontal="16dp"
-            android:src="@drawable/method" />
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/method_plates"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginVertical="12dp">
+
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="start"
+                        android:contentDescription="@string/autors"
+                        android:src="@drawable/men" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="92dp"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/the_curve" />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="end"
+                        android:contentDescription="@string/autors"
+                        android:src="@drawable/women" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginVertical="12dp">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|top"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/salmon_oval" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/book" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonBuyMethod"
@@ -579,11 +647,11 @@
                 android:textStyle="bold" />
 
             <ImageView
+                style="@style/ImageNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:contentDescription="@string/next"
-                android:src="@drawable/next" />
+                android:contentDescription="@string/next" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -594,13 +662,15 @@
             android:layout_marginBottom="35dp"
             android:orientation="horizontal"
             android:paddingStart="16dp"
-            android:scrollbars="none">
+            android:scrollbars="none"
+            tools:ignore="RtlSymmetry">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_marginBottom="50dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -610,11 +680,11 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardWatchedBefore"
+                        style="@style/cardBlueBackground"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/light_blue"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -640,7 +710,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/price_desert"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -650,7 +719,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_desert"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -668,7 +736,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -677,7 +744,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -686,10 +752,9 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
 
@@ -697,11 +762,11 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardTwoWatchedBefore"
+                        style="@style/cardSalmonBackground"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="20dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/salmon"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -727,7 +792,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/price_soup"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -737,7 +801,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_soup"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -755,7 +818,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -764,7 +826,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -773,21 +834,20 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardThreeWatchedBefore"
+                        style="@style/cardBlueBackground"
                         android:layout_width="122dp"
                         android:layout_height="276dp"
                         android:layout_marginEnd="7dp"
                         android:orientation="vertical"
-                        app:cardBackgroundColor="@color/light_blue"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="0dp">
 
@@ -814,7 +874,6 @@
                                 android:layout_marginVertical="7dp"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/sum_two"
-                                android:textColor="@color/text_main"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -824,7 +883,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="@string/description_popular"
-                                android:textColor="@color/text_main"
                                 android:textSize="12sp" />
 
                             <LinearLayout
@@ -842,7 +900,6 @@
                                     android:layout_gravity="start"
                                     android:layout_marginEnd="10dp"
                                     android:text="@string/weightPopular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
                                 <TextView
@@ -851,7 +908,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="end"
                                     android:text="@string/calories_popular"
-                                    android:textColor="@color/text_main"
                                     android:textSize="12sp" />
 
 
@@ -860,10 +916,9 @@
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_plus"
+                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
-                                android:textColor="@color/text_main"
                                 android:textSize="22sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>

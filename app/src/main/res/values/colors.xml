@@ -7,9 +7,11 @@
     <color name="text_main">#2E3A45</color>
     <color name="sum">#502E3A45</color>
     <color name="salmon">#FE907A</color>
+    <color name="salmon_dark">#80E5674F</color>
     <color name="greenaple">#E2DD01</color>
     <color name="light">#fff</color>
     <color name="light_blue">#AEDADE</color>
+    <color name="blue_card_dark">#59A2A9</color>
     <color name="shadow">#246E6464</color>
     <color name="main_home">#828282</color>
     <color name="justwhite">#FFFEFE</color>

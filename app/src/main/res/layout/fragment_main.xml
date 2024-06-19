@@ -347,13 +347,6 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginVertical="20dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/collect_plate" />
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
@@ -545,12 +538,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/image"
-            android:paddingHorizontal="16dp"
-            android:src="@drawable/method" />
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonBuyMethod"
