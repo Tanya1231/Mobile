@@ -204,37 +204,53 @@ class RegisterFragment : Fragment() {
             }
 
             is RegState.Done<*> -> {
-                binding.btnSubmit.text = getString(R.string.btn_submit_to_main)
-                with(binding) {
-                    tvReg.hide()
-                    tilName.hide()
-                    etName.hide()
-                    tilEmail.hide()
-                    etEmail.hide()
-                    tilPhone.hide()
-                    etPhone.hide()
-                    btnPhone.hide()
-                    btnEmail.hide()
-                    tvConfirmEmail.hide()
-                    etConfirmEmail.hide()
-                    tvConfirmPhone.hide()
-                    tilConfirmPhone.hide()
-                    etConfirmPhone.hide()
-                    tvConfirmEmail.hide()
-                    tilConfirmEmail.hide()
-                    etConfirmEmail.hide()
-                    chbAgree.hide()
-                    tvAgree.hide()
-                    chbAd.hide()
-                    tvAd.hide()
-                    tvRegDone.show()
-                    imgRegDone.show()
+                when(regState.data) {
+                    is Boolean -> {
+                        if (regState.data) {
+                            binding.btnSubmit.text = getString(R.string.btn_submit_to_main)
+                            with(binding) {
+                                tvReg.hide()
+                                tilName.hide()
+                                etName.hide()
+                                tilEmail.hide()
+                                etEmail.hide()
+                                tilPhone.hide()
+                                etPhone.hide()
+                                btnPhone.hide()
+                                btnEmail.hide()
+                                tvConfirmEmail.hide()
+                                etConfirmEmail.hide()
+                                tvConfirmPhone.hide()
+                                tilConfirmPhone.hide()
+                                etConfirmPhone.hide()
+                                tvConfirmEmail.hide()
+                                tilConfirmEmail.hide()
+                                etConfirmEmail.hide()
+                                chbAgree.hide()
+                                tvAgree.hide()
+                                chbAd.hide()
+                                tvAd.hide()
+                                tvRegDone.show()
+                                imgRegDone.show()
+                            }
+                            Snackbar.make(
+                                binding.root,
+                                "${registerFragmentViewModel.regState.value}",
+                                Snackbar.LENGTH_LONG
+                            ).show()
+                        } else {
+                            Snackbar.make(
+                                binding.root,
+                                "Вы ввели неверный код",
+                                Snackbar.LENGTH_LONG
+                            ).show()
+                        }
+                    }
+                    else -> {
+
+                    }
                 }
-                Snackbar.make(
-                    binding.root,
-                    "${registerFragmentViewModel.regState.value}",
-                    Snackbar.LENGTH_LONG
-                ).show()
+
             }
 
             is RegState.Auth<*> -> TODO()

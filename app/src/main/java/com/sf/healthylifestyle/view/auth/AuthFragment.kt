@@ -18,6 +18,7 @@ import com.sf.healthylifestyle.utils.uiextensions.hide
 import com.sf.healthylifestyle.utils.uiextensions.show
 import com.sf.healthylifestyle.view.register.RegState
 import dagger.android.support.AndroidSupportInjection
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -94,17 +95,53 @@ class AuthFragment : Fragment()
                     "${authFragmentViewModel.authState.value}",
                     Snackbar.LENGTH_LONG
                 ).show()
+
+
+
+                when(authState.data) {
+                    is Boolean -> {
+                        if (!authState.data)
+                            Snackbar.make(
+                                binding.root,
+                                "Вы ввели неверный код",
+                                Snackbar.LENGTH_LONG
+                            ).show()
+                    }
+                }
             }
             is AuthState.Done<*> -> {
-                Snackbar.make(
-                    binding.root,
-                    "${authFragmentViewModel.authState.value}",
-                    Snackbar.LENGTH_LONG
-                ).show()
-                findNavController().navigate(R.id.action_authFragment_to_homeFragment)
+                when(authState.data) {
+                    is Boolean -> {
+                        if (authState.data) {
+
+
+                            Snackbar.make(
+                                binding.root,
+                                "${authFragmentViewModel.authState.value}",
+                                Snackbar.LENGTH_LONG
+                            ).show()
+                            findNavController().navigate(R.id.action_authFragment_to_homeFragment)
+
+                        } else {
+//                            Snackbar.make(
+//                                binding.root,
+//                                "Вы ввели неверный код",
+//                                Snackbar.LENGTH_LONG
+//                            ).show()
+                        }
+                    }
+                    else -> {
+                        Snackbar.make(
+                            binding.root,
+                            "Ветка else - ${authFragmentViewModel.authState.value}",
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                        findNavController().navigate(R.id.action_authFragment_to_homeFragment)
+                    }
+                }
             }
             is AuthState.Error -> TODO()
-            AuthState.Loading -> TODO()
+            is AuthState.Loading -> TODO()
         }
     }
 
@@ -116,17 +153,36 @@ class AuthFragment : Fragment()
         btnSubmit.setOnClickListener {
             when (authFragmentViewModel.authState.value){
                 is AuthState.Auth<*> -> {
+                    println("Auth -> login: ${binding.etLogin.text.toString()}")
 
-                    authFragmentViewModel.login(login = LoginRequest(""))
+                    authFragmentViewModel.login(login = LoginRequest(binding.etLogin.text.toString()))
                 }
                 is AuthState.Confirm<*> -> {
-                    authFragmentViewModel.confirm(code = CodeRequest(""))
+
+                    println("Confirm -> code: ${binding.etConfirm.text.toString()}")
+
+                    authFragmentViewModel.confirm(code = CodeRequest(binding.etConfirm.text.toString()))
                 }
                 is AuthState.Done<*> -> {
+
                 }
-                is AuthState.Error -> TODO()
-                AuthState.Loading -> TODO()
+                is AuthState.Error -> {
+
+                }
+
+                AuthState.Loading -> {
+
+                }
+
             }
         }
+    }
+
+    fun message(){
+        Snackbar.make(
+            binding.root,
+            "${authFragmentViewModel.authState.value}",
+            Snackbar.LENGTH_LONG
+        ).show()
     }
 }

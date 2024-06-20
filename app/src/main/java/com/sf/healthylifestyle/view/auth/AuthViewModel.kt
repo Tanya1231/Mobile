@@ -30,19 +30,32 @@ class AuthViewModel(
     }
 
     fun login(login: LoginRequest) {
+        println("MVVM login: ${login.login}")
+
         viewModelScope.launch {
             /*** На время разработки пропускаем пустую строку*/
             if (login.login.isEmpty()) {
-                _authState.emit(AuthState.Confirm(true))
+                _authState.emit(AuthState.Confirm(null))
             } else {
-                _authState.emit(AuthState.Confirm(loginUseCase(login.login)))
+                val result = loginUseCase(login.login)
+                if (result) _authState.emit(AuthState.Confirm(true))
+                else _authState.emit(AuthState.Auth(false))
             }
         }
     }
 
     fun confirm(code: CodeRequest) {
+        println("MVVM confirm: ${code.code}")
+
         viewModelScope.launch {
-            _authState.emit(AuthState.Done(code))
+            if (code.code.isEmpty()) {
+                _authState.emit(AuthState.Done(null))
+            } else {
+                val result = confirmUseCase(code.code)
+                if (result) _authState.emit(AuthState.Done(true))
+                else _authState.emit(AuthState.Confirm(false))
+            }
+//            _authState.emit(AuthState.Done(code))
         }
     }
 
