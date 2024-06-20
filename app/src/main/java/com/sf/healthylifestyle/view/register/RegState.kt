@@ -9,6 +9,7 @@ sealed class RegState {
     data object Loading : RegState()
 
     companion object {
+
         var AGREE: Boolean = false
         var PHONE_OR_EMAIL = "phone"
     }

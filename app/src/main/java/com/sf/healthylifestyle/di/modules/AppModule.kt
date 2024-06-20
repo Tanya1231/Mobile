@@ -2,6 +2,7 @@ package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
 import com.sf.healthylifestyle.domain.usecases.LoginUseCase
+import com.sf.healthylifestyle.domain.usecases.RegisterUseCase
 import com.sf.healthylifestyle.view.auth.AuthViewModel
 import com.sf.healthylifestyle.view.confirm.ConfirmViewModel
 import com.sf.healthylifestyle.view.register.RegisterViewModel
@@ -13,17 +14,21 @@ class AppModule() {
     @Provides
     fun provideAuthViewModelFactory(
         loginUseCase: LoginUseCase,
+        confirmUseCase: ConfirmUseCase,
         ) = AuthViewModel.Factory(
         loginUseCase = loginUseCase,
+        confirmUseCase = confirmUseCase,
     )
 
 
     @Provides
     fun provideRegisterViewModelFactory(
-        loginUseCase: LoginUseCase,
+        regUseCase: RegisterUseCase,
+        confirmUseCase: ConfirmUseCase,
 
         ) = RegisterViewModel.Factory(
-        loginUseCase = loginUseCase,
+        regUseCase = regUseCase,
+        confirmUseCase = confirmUseCase,
     )
 
     @Provides
