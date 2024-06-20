@@ -3,6 +3,8 @@
     <style name="Theme.HealthyLifestyle" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:textColor">@color/bone</item>
         <item name="colorPrimaryDark">@color/text_main</item>
+        <item name="android:windowBackground">@color/text_main</item>
+        <item name="android:colorBackground">@color/text_main</item>
         <item name="cardViewStyle">@style/MyCardViewStyle</item>
     </style>
 
@@ -41,6 +43,15 @@
 
     <style name="filter">
         <item name="android:src">@drawable/filter_dark</item>
+    </style>
+
+    <style name="cardImage">
+        <item name="android:background">@drawable/shadow</item>
+        <item name="android:textColor">@color/bone</item>
+    </style>
+
+    <style name="input">
+        <item name="background">@drawable/radius_input_dark</item>
     </style>
 
 

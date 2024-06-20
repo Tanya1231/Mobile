@@ -6,7 +6,9 @@
     </style>
 
     <style name="Theme.HealthyLifestyle" parent="Base.Theme.HealthyLifestyle">
-        <item name="colorPrimary">@color/not_milk</item>
+        <item name="colorPrimaryDark">@color/not_milk</item>
+        <item name="android:windowBackground">@color/not_milk</item>
+        <item name="android:colorBackground">@color/not_milk</item>
         <item name="android:textColor">@color/text_main</item>
         <item name="cardViewStyle">@style/MyCardViewStyle</item>
     </style>
@@ -53,4 +55,15 @@
         <item name="cornerSize">50%</item>
         <item name="cornerFamily">rounded</item>
     </style>
+
+    <style name="cardImage">
+        <item name="android:background">@drawable/shadow_day</item>
+        <item name="android:textColor">@color/text_main</item>
+    </style>
+
+    <style name="input">
+        <item name="background">@drawable/radius_input</item>
+    </style>
+
+
 </resources>

@@ -176,50 +176,50 @@
 
 
                 <ImageView
+                    style="@style/cardImage"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:background="@drawable/shadow"
                     android:contentDescription="@string/image"
                     android:src="@drawable/best" />
 
                 <ImageView
+                    style="@style/cardImage"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:background="@drawable/shadow"
                     android:contentDescription="@string/image"
                     android:src="@drawable/basic" />
 
                 <ImageView
+                    style="@style/cardImage"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:background="@drawable/shadow"
                     android:contentDescription="@string/image"
                     android:src="@drawable/garnish" />
 
                 <ImageView
+                    style="@style/cardImage"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:background="@drawable/shadow"
                     android:contentDescription="@string/image"
                     android:src="@drawable/soup_icon" />
 
                 <ImageView
+                    style="@style/cardImage"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:background="@drawable/shadow"
                     android:contentDescription="@string/image"
                     android:src="@drawable/dessert_icon" />
 
                 <ImageView
+                    style="@style/cardImage"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:background="@drawable/shadow"
                     android:contentDescription="@string/image"
                     android:src="@drawable/breakfast_icon" />
 
@@ -230,17 +230,19 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="328dp"
-            android:layout_height="349dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="10dp"
-            android:background="@color/shadow"
             app:cardCornerRadius="20dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/cardImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="15dp"
                 android:orientation="vertical"
+                android:padding="10dp"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
@@ -365,7 +367,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="328dp"
-            android:layout_height="349dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="15dp"
             android:background="@color/shadow"
@@ -373,10 +375,13 @@
             app:cardCornerRadius="20dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/cardImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="15dp"
                 android:orientation="vertical"
+                android:padding="10dp"
                 tools:ignore="UseCompoundDrawables">
 
 
@@ -669,8 +674,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:layout_marginBottom="50dp">
+                android:layout_marginBottom="50dp"
+                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -750,9 +755,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -832,9 +837,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -914,9 +919,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
