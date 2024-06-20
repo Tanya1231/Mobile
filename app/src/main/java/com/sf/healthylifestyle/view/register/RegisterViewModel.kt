@@ -3,7 +3,9 @@ package com.sf.healthylifestyle.view.register
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
 import com.sf.healthylifestyle.domain.usecases.LoginUseCase
+import com.sf.healthylifestyle.domain.usecases.RegisterUseCase
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -11,7 +13,10 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
-class RegisterViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
+class RegisterViewModel(
+    private val regUseCase : RegisterUseCase,
+    private val confirmUseCase: ConfirmUseCase
+) : ViewModel() {
 
     private var _isEntry = MutableSharedFlow<Boolean>()
     val isEntry: SharedFlow<Boolean>
@@ -32,7 +37,7 @@ class RegisterViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
             if (login.isEmpty()) {
                 _isEntry.emit(true)
             } else {
-                _isEntry.emit(loginUseCase(login))
+                _isEntry.emit(regUseCase("",login))
             }
         }
     }
@@ -56,13 +61,15 @@ class RegisterViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
     }
 
     class Factory(
-        val loginUseCase: LoginUseCase
+        val regUseCase : RegisterUseCase,
+        val confirmUseCase: ConfirmUseCase
     ) : ViewModelProvider.Factory {
 
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(RegisterViewModel::class.java)) {
                 return RegisterViewModel(
-                    loginUseCase = loginUseCase
+                    regUseCase = regUseCase,
+                    confirmUseCase = confirmUseCase
                 ) as T
             }
             throw IllegalArgumentException("Unknown ViewModel class")
