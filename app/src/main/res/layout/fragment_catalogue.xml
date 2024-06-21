@@ -42,22 +42,20 @@
             android:paddingHorizontal="16dp">
 
             <FrameLayout
+                style="@style/input"
                 android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/radius_input">
+                android:layout_height="wrap_content">
 
                 <EditText
+                    style="@style/input"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:autofillHints="text"
-                    android:background="@drawable/radius_input"
-                    android:drawableStart="@drawable/search"
                     android:drawablePadding="10dp"
                     android:hint="@string/search"
                     android:imeOptions="actionSearch"
                     android:inputType="text"
                     android:padding="10dp"
-                    android:textColorHint="#502E3A45"
                     android:textSize="18sp" />
 
             </FrameLayout>
@@ -92,11 +90,11 @@
 
 
                     <ImageView
+                        style="@style/gluten_free"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|center_horizontal"
-                        android:contentDescription="@string/image"
-                        android:src="@drawable/gluten_free" />
+                        android:contentDescription="@string/image" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -116,11 +114,11 @@
 
 
                     <ImageView
+                        style="@style/without_sugar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:contentDescription="@string/image"
-                        android:src="@drawable/without_sugar" />
+                        android:contentDescription="@string/image" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -140,11 +138,11 @@
 
 
                     <ImageView
+                        style="@style/lactose_free"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:contentDescription="@string/image"
-                        android:src="@drawable/lactose_free" />
+                        android:contentDescription="@string/image" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -164,11 +162,11 @@
 
 
                     <ImageView
+                        style="@style/without_meat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:contentDescription="@string/image"
-                        android:src="@drawable/without_meat" />
+                        android:contentDescription="@string/image" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -299,9 +297,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -374,9 +372,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -448,9 +446,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -571,9 +569,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -646,9 +644,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -721,9 +719,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -845,9 +843,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -921,9 +919,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -996,9 +994,9 @@
                             </LinearLayout>
 
                             <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonPlus"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                style="@style/ButtonPlus"
                                 android:fontFamily="@font/rubik"
                                 android:text="@string/plus"
                                 android:textSize="22sp" />
@@ -1154,9 +1152,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -1231,9 +1229,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -1308,9 +1306,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -1431,9 +1429,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -1507,9 +1505,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -1582,9 +1580,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -1705,9 +1703,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -1781,9 +1779,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -1855,9 +1853,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -1897,7 +1895,7 @@
             <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="150dp"
                 android:orientation="horizontal"
                 android:scrollbars="none">
 
@@ -1979,9 +1977,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -2055,9 +2053,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />
@@ -2130,9 +2128,9 @@
                                 </LinearLayout>
 
                                 <androidx.appcompat.widget.AppCompatButton
+                                    style="@style/ButtonPlus"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
-                                    style="@style/ButtonPlus"
                                     android:fontFamily="@font/rubik"
                                     android:text="@string/plus"
                                     android:textSize="22sp" />

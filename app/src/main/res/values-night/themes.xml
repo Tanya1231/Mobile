@@ -29,6 +29,10 @@
         <item name="android:background">@color/salmon_dark</item>
     </style>
 
+    <style name="SalmonBackgroundBasket">
+        <item name="android:background">@color/salmon_dark_two</item>
+    </style>
+
     <style name="cardSalmonBackground">
         <item name="cardBackgroundColor">@color/salmon_dark</item>
     </style>
@@ -51,8 +55,104 @@
     </style>
 
     <style name="input">
-        <item name="background">@drawable/radius_input_dark</item>
+        <item name="android:background">@drawable/radius_input_dark</item>
+        <item name="android:drawableStart">@drawable/search_dark</item>
+        <item name="android:textColorHint">@color/day</item>
     </style>
 
+    <style name="gluten_free">
+        <item name="android:src">@drawable/gluten_free_dark</item>
+    </style>
+
+    <style name="without_sugar">
+        <item name="android:src">@drawable/without_sugar_dark</item>
+    </style>
+
+    <style name="lactose_free">
+        <item name="android:src">@drawable/lactose_free_dark</item>
+    </style>
+
+    <style name="without_meat">
+        <item name="android:src">@drawable/without_meat_dark</item>
+    </style>
+
+    <style name="text_basket">
+        <item name="android:textColor">@color/text_main</item>
+    </style>
+
+    <style name="icon_back">
+        <item name="android:src">@drawable/icon_back_dark</item>
+    </style>
+
+    <style name="close">
+        <item name="android:src">@drawable/close_dark</item>
+    </style>
+
+    <style name="comment">
+        <item name="android:background">@drawable/comment_dark</item>
+        <item name="android:textColorHint">@color/day</item>
+    </style>
+
+    <style name="button_basket">
+        <item name="android:background">@drawable/button_basket_dark</item>
+    </style>
+
+    <style name="background_book">
+        <item name="android:background">@color/not_milk</item>
+    </style>
+
+    <style name="salmon_oval">
+        <item name="android:src">@drawable/salmon_oval_dark</item>
+    </style>
+
+    <style name="background_blue">
+        <item name="android:background">@color/blue_dark</item>
+    </style>
+
+    <style name="designer">
+        <item name="android:src">@drawable/designer_dark</item>
+    </style>
+
+    <style name="stories">
+        <item name="android:src">@drawable/stories_dark</item>
+    </style>
+
+    <style name="stories_one">
+        <item name="android:src">@drawable/stories_one_dark</item>
+    </style>
+
+    <style name="best">
+        <item name="android:src">@drawable/best_dark</item>
+        <item name="android:background">@drawable/shadow</item>
+    </style>
+
+    <style name="basic">
+        <item name="android:src">@drawable/basic_dark</item>
+        <item name="android:background">@drawable/shadow</item>
+    </style>
+
+    <style name="soup">
+        <item name="android:src">@drawable/soup_dark</item>
+        <item name="android:background">@drawable/shadow</item>
+    </style>
+
+    <style name="dessert">
+        <item name="android:src">@drawable/dessert_dark</item>
+        <item name="android:background">@drawable/shadow</item>
+    </style>
+
+    <style name="breakfast">
+        <item name="android:src">@drawable/breakfast_dark</item>
+        <item name="android:background">@drawable/shadow</item>
+    </style>
+
+    <style name="garnish">
+        <item name="android:src">@drawable/garnish_dark</item>
+        <item name="android:background">@drawable/shadow</item>
+    </style>
+
+    <style name="the_curve">
+        <item name="android:src">@drawable/the_curve_dark</item>
+    </style>
 
 </resources>
