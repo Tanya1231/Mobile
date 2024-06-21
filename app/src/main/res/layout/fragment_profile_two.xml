@@ -28,7 +28,7 @@
                 android:layout_gravity="start"
                 android:layout_weight="1"
                 android:contentDescription="@string/back"
-                android:src="@drawable/icon_back" />
+                style="@style/icon_back" />
 
 
             <TextView
@@ -50,7 +50,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/close"
-                android:src="@drawable/close_blue" />
+                style="@style/close" />
 
         </androidx.appcompat.widget.Toolbar>
 

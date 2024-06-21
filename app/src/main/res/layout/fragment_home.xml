@@ -59,10 +59,10 @@
                     app:cardCornerRadius="22dp">
 
                     <ImageView
+                        style="@style/stories"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="@string/stories"
-                        android:src="@drawable/stories" />
+                        android:contentDescription="@string/stories" />
 
                     <TextView
                         android:layout_width="126dp"
@@ -86,10 +86,10 @@
                     app:cardCornerRadius="20dp">
 
                     <ImageView
+                        style="@style/stories_one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="@string/stories"
-                        android:src="@drawable/stories_one" />
+                        android:contentDescription="@string/stories" />
 
                     <TextView
                         android:layout_width="126dp"
@@ -133,22 +133,20 @@
             android:paddingHorizontal="16dp">
 
             <FrameLayout
+                style="@style/input"
                 android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/radius_input">
+                android:layout_height="wrap_content">
 
                 <EditText
+                    style="@style/input"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:autofillHints="text"
-                    android:background="@drawable/radius_input"
-                    android:drawableStart="@drawable/search"
                     android:drawablePadding="10dp"
                     android:hint="@string/search"
                     android:imeOptions="actionSearch"
                     android:inputType="text"
                     android:padding="10dp"
-                    android:textColorHint="#502E3A45"
                     android:textSize="18sp" />
 
             </FrameLayout>
@@ -176,52 +174,46 @@
 
 
                 <ImageView
-                    style="@style/cardImage"
+                    style="@style/best"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:contentDescription="@string/image"
-                    android:src="@drawable/best" />
+                    android:contentDescription="@string/image" />
 
                 <ImageView
-                    style="@style/cardImage"
+                    style="@style/basic"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:contentDescription="@string/image"
-                    android:src="@drawable/basic" />
+                    android:contentDescription="@string/image" />
 
                 <ImageView
-                    style="@style/cardImage"
+                    style="@style/garnish"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:contentDescription="@string/image"
-                    android:src="@drawable/garnish" />
+                    android:contentDescription="@string/image" />
 
                 <ImageView
-                    style="@style/cardImage"
+                    style="@style/soup"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:contentDescription="@string/image"
-                    android:src="@drawable/soup_icon" />
+                    android:contentDescription="@string/image" />
 
                 <ImageView
-                    style="@style/cardImage"
+                    style="@style/dessert"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:contentDescription="@string/image"
-                    android:src="@drawable/dessert_icon" />
+                    android:contentDescription="@string/image" />
 
                 <ImageView
-                    style="@style/cardImage"
+                    style="@style/breakfast"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="12dp"
-                    android:contentDescription="@string/image"
-                    android:src="@drawable/breakfast_icon" />
+                    android:contentDescription="@string/image" />
 
             </LinearLayout>
 
@@ -356,12 +348,12 @@
                 android:textStyle="bold" />
 
             <ImageView
+                style="@style/designer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginVertical="20dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/designer" />
+                android:contentDescription="@string/image" />
         </LinearLayout>
 
 
@@ -469,7 +461,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
-                            android:background="@color/color_home"
                             android:contentDescription="@string/image"
                             android:src="@drawable/stewed_beef" />
 
@@ -504,10 +495,10 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/background_blue"
             android:layout_width="match_parent"
             android:layout_height="145dp"
-            android:layout_marginVertical="10dp"
-            android:background="@color/light_blue">
+            android:layout_marginVertical="10dp">
 
             <ImageView
                 android:id="@+id/imageDetox"
@@ -564,38 +555,68 @@
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <FrameLayout
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginVertical="12dp">
 
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="80dp"
-                        android:layout_height="120dp"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="start"
                         android:contentDescription="@string/autors"
                         android:src="@drawable/men" />
 
-                    <ImageView
-                        android:layout_width="8dp"
-                        android:layout_height="92dp"
-                        android:layout_gravity="center_horizontal"
-                        android:contentDescription="@string/image"
-                        android:src="@drawable/the_curve" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/rubik"
+                        android:text="Максим Кудеров"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    style="@style/the_curve"
+                    android:layout_width="8dp"
+                    android:layout_height="92dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:contentDescription="@string/image" />
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/rubik"
+                        android:text="Лида Ланская"
+                        android:textSize="14sp" />
 
                     <ImageView
                         android:layout_width="80dp"
-                        android:layout_height="120dp"
-                        android:layout_gravity="end"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
                         android:contentDescription="@string/autors"
                         android:src="@drawable/women" />
-                </FrameLayout>
+
+
+                </LinearLayout>
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -604,11 +625,11 @@
 
 
                     <ImageView
+                        style="@style/salmon_oval"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end|top"
-                        android:contentDescription="@string/image"
-                        android:src="@drawable/salmon_oval" />
+                        android:contentDescription="@string/image" />
 
 
                     <ImageView
@@ -674,7 +695,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="100dp"
                 android:gravity="center">
 
                 <LinearLayout
