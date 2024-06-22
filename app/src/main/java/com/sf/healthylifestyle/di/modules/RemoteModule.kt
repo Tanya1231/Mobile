@@ -1,6 +1,7 @@
 package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.data.api.AuthApi
+import com.sf.healthylifestyle.data.api.ProductApi
 import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
 import dagger.Module
 import dagger.Provides
@@ -40,6 +41,10 @@ class RemoteModule {
     @Provides
     @Singleton
     fun provideAuthApi(retrofit: Retrofit): AuthApi = retrofit.create(AuthApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideProductApi(retrofit: Retrofit): ProductApi = retrofit.create(ProductApi::class.java)
 
     companion object {
         private const val HALF_MINUTE_FOR_SLOW_INTERNET = 30L
