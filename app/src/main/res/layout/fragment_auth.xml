@@ -60,9 +60,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_name"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="match_parent"
             android:background="@drawable/background_input_auth"
-            android:maxLines="1" />
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:padding="0dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -79,17 +81,19 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_login"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="match_parent"
             android:background="@drawable/background_input_auth"
-            android:maxLines="1" />
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:padding="0dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_confirm"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="242dp"
         android:layout_marginStart="33dp"
+        android:layout_marginTop="242dp"
         android:layout_marginEnd="33dp"
         android:hint="code"
         android:inputType="number"
@@ -102,7 +106,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_confirm"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="0dp"
             android:background="@drawable/background_input_auth"
             android:maxLines="1"
             android:visibility="invisible" />
@@ -127,8 +133,8 @@
         android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="405dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="405dp"
         android:layout_marginEnd="20dp"
         android:backgroundTint="@color/greenaple"
         android:fontFamily="@font/rubik"

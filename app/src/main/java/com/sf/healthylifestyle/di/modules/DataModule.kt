@@ -1,7 +1,9 @@
 package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.data.api.AuthApi
+import com.sf.healthylifestyle.data.api.ProductApi
 import com.sf.healthylifestyle.data.repository.AuthRepository
+import com.sf.healthylifestyle.data.repository.ProductRepository
 import com.sf.healthylifestyle.domain.irepository.IAuthRepository
 import dagger.Module
 import dagger.Provides
@@ -11,7 +13,11 @@ import javax.inject.Singleton
 class DataModule {
     @Provides
     @Singleton
-    fun provideRepository(authApi: AuthApi) = AuthRepository(authApi = authApi)
+    fun provideAuthRepository(authApi: AuthApi) = AuthRepository(authApi = authApi)
+
+    @Provides
+    @Singleton
+    fun provideProductRepository(productApi: ProductApi) = ProductRepository(productApi = productApi)
 
 /*    @Provides
     @Singleton

@@ -24,6 +24,8 @@ class AuthViewModel(
     val authState: StateFlow<AuthState> = _authState
 
     init {
+        println("Init AuthViewModel")
+
         viewModelScope.launch {
             _authState.emit(AuthState.Auth(null))
         }

@@ -79,4 +79,11 @@ dependencies {
     implementation(libs.okhttp.logging.interceptor)
     /** Retrofit - Adapter - Result */
     implementation(libs.retrofit.adapters.result)
+
+    /** Glide */
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
+
+    /** SnapHelper - выравнивание элементов recyclerview */
+    implementation ("com.github.rubensousa:gravitysnaphelper:2.2.2")
 }
