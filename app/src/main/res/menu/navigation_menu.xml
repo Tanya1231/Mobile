@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/menu_home_title"/>
+    <item
+        android:id="@+id/bookFragment"
+        android:icon="@drawable/ic_book"
+        android:title="@string/menu_book_title"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/mydishFragment"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/menu_mydish_title"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/catalogueFragment"
+        android:icon="@drawable/ic_catalogue"
+        android:title="@string/menu_catalogue_title"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_basket"
+        android:title="@string/menu_profile_text"
+        app:showAsAction="withText" />
+</menu>

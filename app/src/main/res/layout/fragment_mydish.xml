@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.mydish.MyDishFragment">
+
+    <ImageView
+        android:id="@+id/back_button"
+        style="@style/HealthyLifeBackButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TextTitleStyle"
+        android:layout_width="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:maxLines="1"
+        android:fontFamily="@font/rubik"
+        android:text="Идеальная тарелка"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+    <ImageView
+        android:id="@+id/iv_icon_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="90dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/icon_one_popular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_icon_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="12dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/icon_two_popular"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon_one"
+        app:layout_constraintTop_toTopOf="@+id/iv_icon_one" />
+
+    <ImageView
+        android:id="@+id/iv_icon_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="12dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/icon_three_popular"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon_two"
+        app:layout_constraintTop_toTopOf="@+id/iv_icon_two" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/like"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_icon_one" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_left_half"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cost"
+        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/iv_icon_one"
+        tools:listitem="@layout/item_left_dishes"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_right_half"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cost"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/iv_icon_one"
+        tools:listitem="@layout/item_right_dishes"/>
+
+    <TextView
+        android:id="@+id/tv_left_description"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:padding="4dp"
+        android:maxLines="3"
+        android:gravity="start"
+        android:ellipsize="end"
+        android:elevation="8dp"
+        android:fontFamily="@font/rubik"
+        android:text=""
+        android:textColor="@color/text_main"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon_one"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_left_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:padding="4dp"
+        android:gravity="start"
+        android:elevation="8dp"
+        android:fontFamily="@font/rubik"
+        android:text=""
+        android:textColor="@color/text_main"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_left_description"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_right_description"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:padding="4dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:elevation="8dp"
+        android:fontFamily="@font/rubik"
+        android:text=""
+        android:textColor="@color/text_main"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon_one"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_right_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:padding="4dp"
+        android:gravity="end"
+        android:elevation="8dp"
+        android:fontFamily="@font/rubik"
+        android:text=""
+        android:textColor="@color/text_main"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_right_description"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/rubik"
+        android:text="____ ₽"
+        android:textColor="@color/text_main"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_basket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_basket"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="126dp"
+        android:backgroundTint="@color/greenaple"
+        android:fontFamily="@font/rubik"
+        android:text="в корзину"
+        android:textColor="@color/text_main"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

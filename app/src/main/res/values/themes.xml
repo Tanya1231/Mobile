@@ -5,5 +5,168 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.HealthyLifestyle" parent="Base.Theme.HealthyLifestyle" />
+    <style name="Theme.HealthyLifestyle" parent="Base.Theme.HealthyLifestyle">
+        <item name="colorPrimaryDark">@color/not_milk</item>
+        <item name="android:windowBackground">@color/not_milk</item>
+        <item name="android:colorBackground">@color/not_milk</item>
+        <item name="android:textColor">@color/text_main</item>
+        <item name="cardViewStyle">@style/MyCardViewStyle</item>
+    </style>
+
+    <style name="MyCardViewStyle">
+        <item name="cardBackgroundColor">@color/not_milk</item>
+    </style>
+
+    <style name="ImageLogo">
+        <item name="android:src">@drawable/logo</item>
+    </style>
+
+    <style name="ImageNext">
+        <item name="android:src">@drawable/next</item>
+    </style>
+
+    <style name="ImageProfile">
+        <item name="android:src">@drawable/profile_green</item>
+    </style>
+
+
+    <style name="SalmonBackground">
+        <item name="android:background">@color/salmon</item>
+    </style>
+
+    <style name="SalmonBackgroundBasket">
+        <item name="android:background">@color/salmon</item>
+    </style>
+
+    <style name="comment">
+        <item name="android:background">@drawable/comment</item>
+        <item name="android:textColorHint">@color/gray_light</item>
+    </style>
+
+    <style name="cardSalmonBackground">
+        <item name="cardBackgroundColor">@color/salmon</item>
+    </style>
+
+    <style name="cardBlueBackground">
+        <item name="cardBackgroundColor">@color/light_blue</item>
+    </style>
+
+
+    <style name="ButtonPlus">
+        <item name="android:background">@drawable/button_plus</item>
+    </style>
+
+    <style name="filter">
+        <item name="android:src">@drawable/filter</item>
+    </style>
+
+    <style name="FabRound">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="cardImage">
+        <item name="android:background">@drawable/shadow_day</item>
+        <item name="android:textColor">@color/text_main</item>
+    </style>
+
+    <style name="input">
+        <item name="android:background">@drawable/radius_input</item>
+        <item name="android:drawableStart">@drawable/search</item>
+        <item name="android:textColorHint">#502E3A45</item>
+    </style>
+
+    <style name="gluten_free">
+        <item name="android:src">@drawable/gluten_free</item>
+    </style>
+
+
+    <style name="without_sugar">
+        <item name="android:src">@drawable/without_sugar</item>
+    </style>
+
+    <style name="lactose_free">
+        <item name="android:src">@drawable/lactose_free</item>
+    </style>
+
+    <style name="without_meat">
+        <item name="android:src">@drawable/without_meat</item>
+    </style>
+
+    <style name="text_basket">
+        <item name="android:textColor">@color/bone</item>
+    </style>
+
+    <style name="icon_back">
+        <item name="android:src">@drawable/icon_back</item>
+    </style>
+
+    <style name="close">
+        <item name="android:src">@drawable/close_day</item>
+    </style>
+
+    <style name="button_basket">
+        <item name="android:background">@drawable/button_basket</item>
+    </style>
+
+    <style name="background_book">
+        <item name="android:background">@color/bone</item>
+        <item name="android:textColor">@color/text_main</item>
+    </style>
+
+    <style name="salmon_oval">
+        <item name="android:src">@drawable/salmon_oval</item>
+    </style>
+
+    <style name="the_curve">
+        <item name="android:src">@drawable/the_curve</item>
+    </style>
+
+    <style name="background_blue">
+        <item name="android:background">@color/light_blue</item>
+    </style>
+
+    <style name="designer">
+        <item name="android:src">@drawable/designer</item>
+    </style>
+
+    <style name="stories">
+        <item name="android:src">@drawable/stories</item>
+    </style>
+
+    <style name="stories_one">
+        <item name="android:src">@drawable/stories_one</item>
+    </style>
+
+    <style name="best">
+        <item name="android:src">@drawable/best</item>
+        <item name="android:background">@drawable/shadow_day</item>
+    </style>
+
+    <style name="basic">
+        <item name="android:src">@drawable/basic</item>
+        <item name="android:background">@drawable/shadow_day</item>
+    </style>
+
+    <style name="garnish">
+        <item name="android:src">@drawable/garnish</item>
+        <item name="android:background">@drawable/shadow_day</item>
+    </style>
+
+    <style name="soup">
+        <item name="android:src">@drawable/soup_icon</item>
+        <item name="android:background">@drawable/shadow_day</item>
+    </style>
+
+    <style name="dessert">
+        <item name="android:src">@drawable/dessert_icon</item>
+        <item name="android:background">@drawable/shadow_day</item>
+    </style>
+
+    <style name="breakfast">
+        <item name="android:src">@drawable/breakfast_icon</item>
+        <item name="android:background">@drawable/shadow_day</item>
+    </style>
+
+
 </resources>

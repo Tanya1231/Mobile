@@ -7,13 +7,73 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Switch
+        android:id="@+id/switchOne"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="end|center_vertical"
+        android:checked="false"
+        android:thumb="@drawable/resource_switch"
+        app:track="@drawable/switch_themes"
+        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_placeholder"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/navigation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/HealthyLifestyleBottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:clickable="false"
+        android:focusable="true"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_placeholder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:menu="@menu/navigation_menu" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="visible"
+            app:elevation="10dp"
+            app:fabCustomSize="96dp"
+            android:backgroundTint="@color/greenaple"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
+            app:layout_constraintEnd_toEndOf="@+id/bottom_navigation"
+            app:layout_constraintStart_toStartOf="@+id/bottom_navigation"
+            app:shapeAppearanceOverlay="@style/FabRound"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_upper"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="visible"
+        app:elevation="16dp"
+        app:fabCustomSize="64dp"
+        android:backgroundTint="@color/white"
+        app:tint="@color/text_main"
+        app:maxImageSize="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fab"
+        app:layout_constraintTop_toTopOf="@+id/fab"
+        app:layout_constraintEnd_toEndOf="@+id/fab"
+        app:layout_constraintStart_toStartOf="@+id/fab"
+        app:shapeAppearanceOverlay="@style/FabRound"
+        app:srcCompat="@drawable/ic_dish3"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
