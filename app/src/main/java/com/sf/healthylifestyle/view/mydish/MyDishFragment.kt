@@ -1,18 +1,20 @@
 package com.sf.healthylifestyle.view.mydish
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearSnapHelper
 import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
 import com.google.android.material.snackbar.Snackbar
+import com.sf.healthylifestyle.R
 import com.sf.healthylifestyle.data.dto.product.response.ProductResponse
 import com.sf.healthylifestyle.databinding.FragmentMydishBinding
 import dagger.android.support.AndroidSupportInjection
@@ -24,6 +26,8 @@ class MyDishFragment : Fragment() {
 
     private val leftHalfAdapter = LeftHalfAdapter()
     private val rightHalfAdapter = RightHalfAdapter()
+    private var leftCost: Int? = null
+    private var rightCost: Int? = null
 
     private var _binding: FragmentMydishBinding? = null
     private val binding get() = _binding!!
@@ -86,26 +90,41 @@ class MyDishFragment : Fragment() {
             Gravity.TOP,
             true
         ) { position ->
-            showDescription(leftHalfAdapter.getItem(position))
+            val item = leftHalfAdapter.getItem(position)
+            leftCost = item.price
+            showDescription(
+                Pair(binding.tvLeftDescription, binding.tvLeftCost),
+                item
+            )
         }
         val rightSnapHelper = GravitySnapHelper(
             Gravity.TOP,
             true
         ) { position ->
-            showDescription(rightHalfAdapter.getItem(position))
+            val item = rightHalfAdapter.getItem(position)
+            rightCost = item.price
+            showDescription(
+                Pair(binding.tvRightDescription, binding.tvRightCost),
+                item
+            )
         }
 
         leftSnapHelper.attachToRecyclerView(binding.rvLeftHalf)
         rightSnapHelper.attachToRecyclerView(binding.rvRightHalf)
     }
 
-    private fun showDescription(productResponse: ProductResponse) {
-//        binding.tvLeftDescription.text = productResponse.title
+    @SuppressLint("SetTextI18n")
+    private fun showDescription(
+        pairView: Pair<TextView, TextView>,
+        productResponse: ProductResponse
+    ) {
+        pairView.first.text = productResponse.title
+        pairView.first.background =
+            ContextCompat.getDrawable(requireContext(), R.drawable.background_desc)
+        pairView.second.text = productResponse.price.toString() + " ₽"
+        pairView.second.background =
+            ContextCompat.getDrawable(requireContext(), R.drawable.background_desc)
 
-        Snackbar.make(
-            binding.root,
-            productResponse.title,
-            Snackbar.LENGTH_LONG
-        ).show()
+        binding.tvCost.text = ((leftCost ?: 0) + (rightCost ?: 0)).toString() + " ₽"
     }
 }
