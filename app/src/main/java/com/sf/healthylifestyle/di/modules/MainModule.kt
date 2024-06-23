@@ -3,6 +3,7 @@ package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.view.MainActivity
 import com.sf.healthylifestyle.view.auth.AuthFragment
+import com.sf.healthylifestyle.view.basket.BasketFragment
 import com.sf.healthylifestyle.view.book.BookFragment
 import com.sf.healthylifestyle.view.catalogue.CatalogueFragment
 import com.sf.healthylifestyle.view.confirm.ConfirmFragment
@@ -42,4 +43,7 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindMyProfileFragment(): ProfileFragment
+
+    @ContributesAndroidInjector
+    fun bindBasketFragment(): BasketFragment
 }

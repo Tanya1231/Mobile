@@ -28,6 +28,8 @@ class MyDishFragment : Fragment() {
     private val rightHalfAdapter = RightHalfAdapter()
     private var leftCost: Int? = null
     private var rightCost: Int? = null
+    private var leftCurPos: Int? = null
+    private var rightCurPos: Int? = null
 
     private var _binding: FragmentMydishBinding? = null
     private val binding get() = _binding!!
@@ -74,6 +76,15 @@ class MyDishFragment : Fragment() {
                 initRV(it)
             }
         }
+
+        binding.btnBasket.setOnClickListener {
+            myDishViewModel.addDishToBasket(
+                Pair(
+                    leftHalfAdapter.getItem(leftCurPos),
+                    rightHalfAdapter.getItem(rightCurPos)
+                )
+            )
+        }
     }
 
     override fun onDestroyView() {
@@ -91,7 +102,8 @@ class MyDishFragment : Fragment() {
             true
         ) { position ->
             val item = leftHalfAdapter.getItem(position)
-            leftCost = item.price
+            leftCurPos = position
+            leftCost = item!!.price
             showDescription(
                 Pair(binding.tvLeftDescription, binding.tvLeftCost),
                 item
@@ -102,7 +114,8 @@ class MyDishFragment : Fragment() {
             true
         ) { position ->
             val item = rightHalfAdapter.getItem(position)
-            rightCost = item.price
+            rightCurPos = position
+            rightCost = item!!.price
             showDescription(
                 Pair(binding.tvRightDescription, binding.tvRightCost),
                 item
