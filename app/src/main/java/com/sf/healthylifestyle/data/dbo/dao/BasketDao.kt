@@ -16,6 +16,9 @@ interface BasketDao {
     @Delete
     fun delete(dishEntity: DishEntity)
 
+    @Query("DELETE FROM DISHES")
+    fun trunc()
+
     @Query("SELECT * FROM DISHES")
     fun getAll(): List<DishEntity>
 

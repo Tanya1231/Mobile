@@ -92,6 +92,11 @@ class MainActivity : AppCompatActivity() {
                             true
                         }
 
+                        R.id.basketFragment -> {
+                            navController.navigate(R.id.basketFragment)
+                            true
+                        }
+
                         else -> false
                     }
                 }

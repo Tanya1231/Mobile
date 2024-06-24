@@ -19,6 +19,8 @@ class ProfileFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        println("onViewCreated ProfileFragment")
+
         // TODO: Use the ViewModel
     }
 
@@ -26,6 +28,6 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_basket, container, false)
+        return inflater.inflate(R.layout.fragment_profile_two, container, false)
     }
 }

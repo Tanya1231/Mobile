@@ -7,8 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.sf.healthylifestyle.databinding.FragmentBasketBinding
+import com.sf.healthylifestyle.domain.models.Dish
 import dagger.android.support.AndroidSupportInjection
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class BasketFragment : Fragment() {
@@ -41,19 +44,25 @@ class BasketFragment : Fragment() {
 
         super.onViewCreated(view, savedInstanceState)
 
+        println("onViewCreated BasketFragment")
+
         basketViewModel =
             ViewModelProvider(this, basketViewModelFactory)[BasketViewModel::class.java]
 
         binding.rvBasket.adapter = basketAdapter
 
-//        viewLifecycleOwner.lifecycleScope.launch {
-//            myDishViewModel.pairHalfesDishes.collect {
-//
-//                println("Pair rv $it")
-//
-//                initRV(it)
-//            }
-//        }
+        viewLifecycleOwner.lifecycleScope.launch {
+            basketViewModel.dishes.collect {
+
+                println("dishes collect $it")
+                initRV(it)
+            }
+        }
+
+        binding.btnArrange.setOnClickListener {
+            basketAdapter.setData(listOf())
+            basketViewModel.delBasket()
+        }
     }
 
     override fun onDestroyView() {
@@ -61,50 +70,9 @@ class BasketFragment : Fragment() {
         super.onDestroyView()
     }
 
-//    private fun initRV(data: Pair<List<ProductResponse>, List<ProductResponse>>) {
-//
-//        leftHalfAdapter.setData(data.first)
-//        rightHalfAdapter.setData(data.second)
-//
-//        val leftSnapHelper = GravitySnapHelper(
-//            Gravity.TOP,
-//            true
-//        ) { position ->
-//            val item = leftHalfAdapter.getItem(position)
-//            leftCost = item.price
-//            showDescription(
-//                Pair(binding.tvLeftDescription, binding.tvLeftCost),
-//                item
-//            )
-//        }
-//        val rightSnapHelper = GravitySnapHelper(
-//            Gravity.TOP,
-//            true
-//        ) { position ->
-//            val item = rightHalfAdapter.getItem(position)
-//            rightCost = item.price
-//            showDescription(
-//                Pair(binding.tvRightDescription, binding.tvRightCost),
-//                item
-//            )
-//        }
-//
-//        leftSnapHelper.attachToRecyclerView(binding.rvLeftHalf)
-//        rightSnapHelper.attachToRecyclerView(binding.rvRightHalf)
-//    }
+    private fun initRV(data: List<Dish>) {
 
-//    @SuppressLint("SetTextI18n")
-//    private fun showDescription(
-//        pairView: Pair<TextView, TextView>,
-//        productResponse: ProductResponse
-//    ) {
-//        pairView.first.text = productResponse.title
-//        pairView.first.background =
-//            ContextCompat.getDrawable(requireContext(), R.drawable.background_desc)
-//        pairView.second.text = productResponse.price.toString() + " ₽"
-//        pairView.second.background =
-//            ContextCompat.getDrawable(requireContext(), R.drawable.background_desc)
-//
-//        binding.tvCost.text = ((leftCost ?: 0) + (rightCost ?: 0)).toString() + " ₽"
-//    }
+        basketAdapter.setData(data)
+
+    }
 }

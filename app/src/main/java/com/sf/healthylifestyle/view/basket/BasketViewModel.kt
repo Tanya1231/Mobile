@@ -4,50 +4,52 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.sf.healthylifestyle.data.dto.product.response.ProductResponse
+import com.sf.healthylifestyle.domain.models.Dish
+import com.sf.healthylifestyle.domain.usecases.DelBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.GetBasketUseCase
-import com.sf.healthylifestyle.domain.usecases.GetLeftHalfUseCase
-import com.sf.healthylifestyle.domain.usecases.GetRightHalfUseCase
-import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
 class BasketViewModel(
     private val getBasketUseCase: GetBasketUseCase,
+    private val delBasketUseCase: DelBasketUseCase
 ) : ViewModel() {
 
-    private var _pairHalfesDishes = MutableSharedFlow<Pair<List<ProductResponse>,List<ProductResponse>>>()
-    val pairHalfesDishes: SharedFlow<Pair<List<ProductResponse>,List<ProductResponse>>>
-        get() = _pairHalfesDishes.asSharedFlow()
+    private var _dishes = MutableSharedFlow<List<Dish>>()
+    val dishes: SharedFlow<List<Dish>>
+        get() = _dishes.asSharedFlow()
 
     init {
         println("Init BasketViewModel")
-//        getTwoHalfes()
+        getBasket()
     }
 
-//    fun getTwoHalfes() {
-//        viewModelScope.launch {
-//            val leftHalf = async { getLeftHalfUseCase() }
-//            val rightHalf = async { getRightHalfUseCase() }
-//
-//            val leftHalfResult = leftHalf.await()
-//            val rightHalfResult = rightHalf.await()
-//
-//            if (leftHalfResult != null && rightHalfResult != null)
-//                _pairHalfesDishes.emit(Pair(leftHalfResult,rightHalfResult))
-//        }
-//    }
+    fun getBasket(){
+        viewModelScope.launch {
+            _dishes.emit(getBasketUseCase())
+        }
+    }
+
+    fun delBasket(){
+        viewModelScope.launch {
+            delBasketUseCase()
+        }
+    }
+
 
     class Factory(
         private val getBasketUseCase: GetBasketUseCase,
-
+        private val delBasketUseCase: DelBasketUseCase
         ) : ViewModelProvider.Factory {
 
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(BasketViewModel::class.java)) {
                 return BasketViewModel(
                     getBasketUseCase = getBasketUseCase,
+                    delBasketUseCase = delBasketUseCase
                 ) as T
             }
             throw IllegalArgumentException("Unknown ViewModel class")

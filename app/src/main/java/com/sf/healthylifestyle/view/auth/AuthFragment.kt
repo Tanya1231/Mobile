@@ -70,11 +70,11 @@ class AuthFragment : Fragment()
     private fun renderData(authState: AuthState) {
         when (authState) {
             is AuthState.Auth<*> -> {
-                Snackbar.make(
-                    binding.root,
-                    "${authFragmentViewModel.authState.value}",
-                    Snackbar.LENGTH_LONG
-                ).show()
+//                Snackbar.make(
+//                    binding.root,
+//                    "${authFragmentViewModel.authState.value}",
+//                    Snackbar.LENGTH_LONG
+//                ).show()
             }
             is AuthState.Confirm<*> -> {
                 binding.btnSubmit.text = getString(R.string.btn_submit_enter)
@@ -90,22 +90,22 @@ class AuthFragment : Fragment()
                     etConfirm.show()
                     tvRepeat.show()
                 }
-                Snackbar.make(
-                    binding.root,
-                    "${authFragmentViewModel.authState.value}",
-                    Snackbar.LENGTH_LONG
-                ).show()
+//                Snackbar.make(
+//                    binding.root,
+//                    "${authFragmentViewModel.authState.value}",
+//                    Snackbar.LENGTH_LONG
+//                ).show()
 
 
 
                 when(authState.data) {
                     is Boolean -> {
-                        if (!authState.data)
-                            Snackbar.make(
-                                binding.root,
-                                "Вы ввели неверный код",
-                                Snackbar.LENGTH_LONG
-                            ).show()
+//                        if (!authState.data)
+//                            Snackbar.make(
+//                                binding.root,
+//                                "Вы ввели неверный код",
+//                                Snackbar.LENGTH_LONG
+//                            ).show()
                     }
                 }
             }
@@ -131,11 +131,11 @@ class AuthFragment : Fragment()
                         }
                     }
                     else -> {
-                        Snackbar.make(
-                            binding.root,
-                            "Ветка else - ${authFragmentViewModel.authState.value}",
-                            Snackbar.LENGTH_LONG
-                        ).show()
+//                        Snackbar.make(
+//                            binding.root,
+//                            "Ветка else - ${authFragmentViewModel.authState.value}",
+//                            Snackbar.LENGTH_LONG
+//                        ).show()
                         findNavController().navigate(R.id.action_authFragment_to_homeFragment)
                     }
                 }

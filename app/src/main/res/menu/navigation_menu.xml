@@ -22,7 +22,7 @@
         android:title="@string/menu_catalogue_title"
         app:showAsAction="withText" />
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/basketFragment"
         android:icon="@drawable/ic_basket"
         android:title="@string/menu_profile_text"
         app:showAsAction="withText" />

@@ -2,6 +2,7 @@ package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.domain.usecases.AddDishUseCase
 import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
+import com.sf.healthylifestyle.domain.usecases.DelBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.GetBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.GetLeftHalfUseCase
 import com.sf.healthylifestyle.domain.usecases.GetRightHalfUseCase
@@ -58,7 +59,9 @@ class AppModule() {
     @Provides
     fun provideBasketViewModelFactory(
         getBasketUseCase: GetBasketUseCase,
+        delBasketUseCase: DelBasketUseCase
     ) = BasketViewModel.Factory(
-        getBasketUseCase = getBasketUseCase
+        getBasketUseCase = getBasketUseCase,
+        delBasketUseCase = delBasketUseCase
     )
 }
