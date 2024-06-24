@@ -35,7 +35,10 @@ class LeftHalfAdapter(
 
     override fun getItemCount(): Int = leftHalf.size
 
-    fun getItem(position: Int): ProductResponse = leftHalf[position]
+    fun getItem(position: Int?): ProductResponse? {
+        return if (position == null) null
+        else leftHalf[position]
+    }
 
     @SuppressLint("NotifyDataSetChanged")
     fun setData(leftHalf: List<ProductResponse>) {

@@ -1,10 +1,10 @@
-package com.sf.healthylifestyle.data.dto.product.response
+package com.sf.healthylifestyle.domain.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class ProductResponse(
+data class Dish(
     @SerialName("id") val id: Int,
     @SerialName("title") val title: String,
     @SerialName("subtitle") val subtitle: String,
@@ -12,5 +12,6 @@ data class ProductResponse(
     @SerialName("price") val price: Int,
     @SerialName("weight") val weight: Int,
     @SerialName("calories") val calories: Float,
+    @SerialName("quantity") val quantity: Int,
 )
 

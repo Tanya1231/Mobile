@@ -22,6 +22,12 @@
         <action
             android:id="@+id/action_homeFragment_to_catalogueFragment"
             app:destination="@id/catalogueFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_basketFragment3"
+            app:destination="@id/basketFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bookFragment2"
+            app:destination="@id/bookFragment" />
     </fragment>
     <fragment
         android:id="@+id/bookFragment"
@@ -63,7 +69,7 @@
         android:id="@+id/profileFragment"
         android:name="com.sf.healthylifestyle.view.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
+        tools:layout="@layout/fragment_profile_two" >
         <action
             android:id="@+id/action_profileFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -91,6 +97,9 @@
         <action
             android:id="@+id/action_mydishFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mydishFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
@@ -125,5 +134,17 @@
         <action
             android:id="@+id/action_confirmFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.sf.healthylifestyle.view.basket.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" >
+        <action
+            android:id="@+id/action_basketFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_basketFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
     </fragment>
 </navigation>
