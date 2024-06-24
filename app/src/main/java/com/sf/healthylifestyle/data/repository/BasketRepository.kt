@@ -47,8 +47,10 @@ class BasketRepository(
         return true
     }
 
-    override suspend fun removeDish(): Boolean {
-        return true
+    override suspend fun removeDish(id: Int) {
+        withContext(Dispatchers.IO) {
+            basketDao.delete(id)
+        }
     }
 
     override suspend fun changeQuantity(): Boolean {

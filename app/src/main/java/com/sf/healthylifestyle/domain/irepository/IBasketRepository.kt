@@ -8,7 +8,7 @@ interface IBasketRepository {
     suspend fun getAll(): List<Dish>
     suspend fun delAll()
     suspend fun addDish(dish: ProductResponse): Boolean
-    suspend fun removeDish(): Boolean
+    suspend fun removeDish(id: Int)
     suspend fun changeQuantity(): Boolean
 
 }

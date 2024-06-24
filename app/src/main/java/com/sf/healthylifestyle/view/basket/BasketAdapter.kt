@@ -9,6 +9,7 @@ import com.sf.healthylifestyle.databinding.ItemBasketBinding
 import com.sf.healthylifestyle.domain.models.Dish
 
 class BasketAdapter(
+    private val onItemClick: (id: Int) -> Unit
 ) : RecyclerView.Adapter<BasketAdapter.InnerBasketViewHolder>() {
     private var basket: MutableList<Dish> = mutableListOf()
 
@@ -19,6 +20,7 @@ class BasketAdapter(
         var tvDescription = binding.tvDescription
         var tvCost = binding.tvCost
         var tvQuantity = binding.tvQuantity
+        var btnClose = binding.btnClose
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InnerBasketViewHolder {
@@ -28,18 +30,23 @@ class BasketAdapter(
         return InnerBasketViewHolder(binding)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: InnerBasketViewHolder, position: Int) {
 
         val item = basket[position]
 
         holder.tvDescription.text = item.title
-        holder.tvCost.text =item.price.toString()
-        holder.tvQuantity.text ="1"
+        holder.tvCost.text = item.price.toString() + " ₽"
+        holder.tvQuantity.text = "1"
 
         Glide.with(holder.basketRoot)
             .load(item.image_extra)
             .centerInside()
             .into(holder.imgDish)
+
+        holder.btnClose.setOnClickListener {
+            onItemClick(item.id)
+        }
     }
 
     override fun getItemCount(): Int = basket.size

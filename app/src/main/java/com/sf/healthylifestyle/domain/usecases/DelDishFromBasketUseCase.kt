@@ -2,11 +2,11 @@ package com.sf.healthylifestyle.domain.usecases
 
 import com.sf.healthylifestyle.data.repository.BasketRepository
 
-class DelBasketUseCase(
+class DelDishFromBasketUseCase(
     private val repository: BasketRepository
 ) {
 
-    suspend operator fun invoke() {
-        repository.delAll()
+    suspend operator fun invoke(id: Int) {
+        repository.removeDish(id)
     }
 }

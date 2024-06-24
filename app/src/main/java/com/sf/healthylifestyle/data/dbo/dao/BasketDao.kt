@@ -13,8 +13,8 @@ interface BasketDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun add(dishEntity: DishEntity)
 
-    @Delete
-    fun delete(dishEntity: DishEntity)
+    @Query("DELETE FROM DISHES WHERE id = :id")
+    fun delete(id: Int)
 
     @Query("DELETE FROM DISHES")
     fun trunc()
