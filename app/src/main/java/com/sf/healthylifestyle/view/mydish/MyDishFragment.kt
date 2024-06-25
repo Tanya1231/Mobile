@@ -13,12 +13,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
-import com.google.android.material.snackbar.Snackbar
 import com.sf.healthylifestyle.R
 import com.sf.healthylifestyle.data.dto.product.response.ProductResponse
 import com.sf.healthylifestyle.databinding.FragmentMydishBinding
 import dagger.android.support.AndroidSupportInjection
-import ed.maevski.minideviantart.view.decoration.TopSpacingItemDecoration
+import ed.maevski.minideviantart.view.decoration.ItemDecoration
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -61,8 +60,8 @@ class MyDishFragment : Fragment() {
             ViewModelProvider(this, myDishViewModelFactory)[MyDishViewModel::class.java]
 
         with(binding) {
-            binding.rvLeftHalf.addItemDecoration(TopSpacingItemDecoration(0, 16, 0, 0))
-            binding.rvRightHalf.addItemDecoration(TopSpacingItemDecoration(16, 0, 0, 0))
+            binding.rvLeftHalf.addItemDecoration(ItemDecoration(0, 16, 0, 0))
+            binding.rvRightHalf.addItemDecoration(ItemDecoration(16, 0, 0, 0))
 
             rvLeftHalf.adapter = leftHalfAdapter
             rvRightHalf.adapter = rightHalfAdapter

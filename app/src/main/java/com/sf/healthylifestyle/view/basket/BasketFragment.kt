@@ -1,5 +1,6 @@
 package com.sf.healthylifestyle.view.basket
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,12 +12,15 @@ import androidx.lifecycle.lifecycleScope
 import com.sf.healthylifestyle.databinding.FragmentBasketBinding
 import com.sf.healthylifestyle.domain.models.Dish
 import dagger.android.support.AndroidSupportInjection
+import ed.maevski.minideviantart.view.decoration.ItemDecoration
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class BasketFragment : Fragment() {
 
-    private val basketAdapter = BasketAdapter()
+    private val basketAdapter = BasketAdapter(){id ->
+        basketViewModel.delDish(id)
+    }
 
     private var _binding: FragmentBasketBinding? = null
     private val binding get() = _binding!!
@@ -49,6 +53,7 @@ class BasketFragment : Fragment() {
         basketViewModel =
             ViewModelProvider(this, basketViewModelFactory)[BasketViewModel::class.java]
 
+        binding.rvBasket.addItemDecoration(ItemDecoration(32, 0, 0, 0))
         binding.rvBasket.adapter = basketAdapter
 
         viewLifecycleOwner.lifecycleScope.launch {
@@ -56,6 +61,7 @@ class BasketFragment : Fragment() {
 
                 println("dishes collect $it")
                 initRV(it)
+                sum(it)
             }
         }
 
@@ -74,5 +80,11 @@ class BasketFragment : Fragment() {
 
         basketAdapter.setData(data)
 
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun sum(list: List<Dish>){
+        val totalPrice = list.sumOf { it.quantity * it.price }
+        binding.tvSum.text = totalPrice.toString()  + " ₽"
     }
 }

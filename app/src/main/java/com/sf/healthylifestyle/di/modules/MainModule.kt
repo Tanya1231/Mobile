@@ -9,6 +9,10 @@ import com.sf.healthylifestyle.view.catalogue.CatalogueFragment
 import com.sf.healthylifestyle.view.confirm.ConfirmFragment
 import com.sf.healthylifestyle.view.home.HomeFragment
 import com.sf.healthylifestyle.view.mydish.MyDishFragment
+import com.sf.healthylifestyle.view.onboarding.OnboardingFourFragment
+import com.sf.healthylifestyle.view.onboarding.OnboardingOneFragment
+import com.sf.healthylifestyle.view.onboarding.OnboardingThreeFragment
+import com.sf.healthylifestyle.view.onboarding.OnboardingTwoFragment
 import com.sf.healthylifestyle.view.profile.ProfileFragment
 import com.sf.healthylifestyle.view.register.RegisterFragment
 import dagger.Module
@@ -46,4 +50,14 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindBasketFragment(): BasketFragment
+
+    @ContributesAndroidInjector
+    fun bindOnboardingOneFragment(): OnboardingOneFragment
+    @ContributesAndroidInjector
+    fun bindOnboardingTwoFragment(): OnboardingTwoFragment
+    @ContributesAndroidInjector
+    fun bindOnboardingThreeFragment(): OnboardingThreeFragment
+
+    @ContributesAndroidInjector
+    fun bindOnboardingFourFragment(): OnboardingFourFragment
 }

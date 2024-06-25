@@ -28,7 +28,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val fragmentsWithoutToolbars = listOf(
-        R.id.authFragment, R.id.confirmFragment, R.id.registerFragment
+        R.id.authFragment,
+        R.id.registerFragment,
+        R.id.onboardingOneFragment,
+        R.id.onboardingTwoFragment,
+        R.id.onboardingThreeFragment,
+        R.id.onboardingFourFragment,
+    )
+
+    private val fragmentsWithoutSwitch = listOf(
+        R.id.authFragment,
+        R.id.registerFragment,
+        R.id.onboardingOneFragment,
+        R.id.onboardingTwoFragment,
+        R.id.onboardingThreeFragment,
+        R.id.onboardingFourFragment,
+        R.id.mydishFragment,
+        R.id.basketFragment
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +59,7 @@ class MainActivity : AppCompatActivity() {
 
         initMenu()
         initShowOrHideMainBottomBar()
+        initShowOrHideSwitch()
 
         val btn = findViewById<Switch>(R.id.switchOne)
 
@@ -117,6 +134,23 @@ class MainActivity : AppCompatActivity() {
                                 bottomNavigation.show()
                                 fab.show()
                                 fabUpper.show()
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    private fun initShowOrHideSwitch() {
+            lifecycleScope.launch {
+                repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    navController.addOnDestinationChangedListener { _, destination, _ ->
+                        with(binding) {
+                            if (fragmentsWithoutSwitch.contains(destination.id)) {
+                                switchOne.hide()
+                            } else {
+                                switchOne.show()
                             }
                         }
                     }

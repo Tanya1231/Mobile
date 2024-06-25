@@ -55,7 +55,7 @@ class ConfirmFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             confirmFragmentViewModel.isEntry.collect {
                 if (it) {
-                    findNavController().navigate(R.id.action_confirmFragment_to_homeFragment)
+//                    findNavController().navigate(R.id.action_confirmFragment_to_homeFragment)
                 }
                 else {
                     Snackbar.make(

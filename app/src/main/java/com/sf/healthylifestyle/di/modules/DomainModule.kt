@@ -6,6 +6,7 @@ import com.sf.healthylifestyle.data.repository.ProductRepository
 import com.sf.healthylifestyle.domain.usecases.AddDishUseCase
 import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
 import com.sf.healthylifestyle.domain.usecases.DelBasketUseCase
+import com.sf.healthylifestyle.domain.usecases.DelDishFromBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.GetBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.GetLeftHalfUseCase
 import com.sf.healthylifestyle.domain.usecases.GetRightHalfUseCase
@@ -78,6 +79,12 @@ class DomainModule {
     @Provides
     fun provideDelBasketUseCase(repository: BasketRepository): DelBasketUseCase {
         return DelBasketUseCase(repository = repository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideDelDishFromBasketUseCase(repository: BasketRepository): DelDishFromBasketUseCase {
+        return DelDishFromBasketUseCase(repository = repository)
     }
 
 }

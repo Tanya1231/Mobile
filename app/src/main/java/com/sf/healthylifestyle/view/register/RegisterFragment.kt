@@ -69,7 +69,7 @@ class RegisterFragment : Fragment() {
             registerFragmentViewModel.isEntry.collect {
                 println("AuthFragment: запуск authFragmentViewModel.isEntry inside")
                 if (it) {
-                    findNavController().navigate(R.id.action_authFragment_to_confirmFragment)
+//                    findNavController().navigate(R.id.action_authFragment_to_confirmFragment)
                 } else {
                     Snackbar.make(
                         binding.root,

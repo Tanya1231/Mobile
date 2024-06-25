@@ -32,15 +32,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="6dp"
         android:fontFamily="@font/rubik"
         android:textColor="@color/text_main"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/tv_description"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_dish" />
 
     <ImageView
+        android:id="@+id/btn_close"
         style="@style/close"
         android:layout_width="24dp"
         android:layout_height="24dp"

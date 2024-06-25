@@ -1,28 +1,21 @@
-package com.sf.healthylifestyle.view.home
+package com.sf.healthylifestyle.view.onboarding
 
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.sf.healthylifestyle.databinding.FragmentHomeBinding
-import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasAndroidInjector
+import androidx.navigation.fragment.findNavController
+import com.sf.healthylifestyle.R
+import com.sf.healthylifestyle.databinding.FragmentOnboardingThreeBinding
 import dagger.android.support.AndroidSupportInjection
-import javax.inject.Inject
 
-class HomeFragment : Fragment()
-    /*, HasAndroidInjector */
+class OnboardingThreeFragment : Fragment()
 {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentOnboardingThreeBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var homeFragmentViewModel: HomeViewModel
 
 //    @Inject
 //    lateinit var androidInjector: DispatchingAndroidInjector<Any>
@@ -39,7 +32,7 @@ class HomeFragment : Fragment()
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentOnboardingThreeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -47,8 +40,8 @@ class HomeFragment : Fragment()
 
         super.onViewCreated(view, savedInstanceState)
 
-//        homeFragmentViewModel =
-//            ViewModelProvider(this, vmFactory)[HomeViewModel::class.java]
+        binding.btnNext.setOnClickListener { findNavController().navigate(R.id.action_onboardingThreeFragment_to_onboardingFourFragment) }
+
 
     }
 
