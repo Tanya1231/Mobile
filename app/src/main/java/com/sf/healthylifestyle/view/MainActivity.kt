@@ -44,7 +44,8 @@ class MainActivity : AppCompatActivity() {
         R.id.onboardingThreeFragment,
         R.id.onboardingFourFragment,
         R.id.mydishFragment,
-        R.id.basketFragment
+        R.id.basketFragment,
+        R.id.profileFragment,
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
