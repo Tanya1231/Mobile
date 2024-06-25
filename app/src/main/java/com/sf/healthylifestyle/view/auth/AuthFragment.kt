@@ -98,12 +98,12 @@ class AuthFragment : Fragment()
 
                 when(authState.data) {
                     is Boolean -> {
-//                        if (!authState.data)
-//                            Snackbar.make(
-//                                binding.root,
-//                                "Вы ввели неверный код",
-//                                Snackbar.LENGTH_LONG
-//                            ).show()
+                        if (!authState.data)
+                            Snackbar.make(
+                                binding.root,
+                                "Вы ввели неверный код",
+                                Snackbar.LENGTH_LONG
+                            ).show()
                     }
                 }
             }
@@ -113,19 +113,19 @@ class AuthFragment : Fragment()
                         if (authState.data) {
 
 
-                            Snackbar.make(
-                                binding.root,
-                                "${authFragmentViewModel.authState.value}",
-                                Snackbar.LENGTH_LONG
-                            ).show()
+//                            Snackbar.make(
+//                                binding.root,
+//                                "${authFragmentViewModel.authState.value}",
+//                                Snackbar.LENGTH_LONG
+//                            ).show()
                             findNavController().navigate(R.id.action_authFragment_to_onboardingOneFragment)
 
                         } else {
-//                            Snackbar.make(
-//                                binding.root,
-//                                "Вы ввели неверный код",
-//                                Snackbar.LENGTH_LONG
-//                            ).show()
+                            Snackbar.make(
+                                binding.root,
+                                "Вы ввели неверный код!!! Done",
+                                Snackbar.LENGTH_LONG
+                            ).show()
                         }
                     }
                     else -> {

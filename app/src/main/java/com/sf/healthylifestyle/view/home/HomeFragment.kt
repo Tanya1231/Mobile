@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.sf.healthylifestyle.R
 import com.sf.healthylifestyle.databinding.FragmentHomeBinding
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -49,6 +51,8 @@ class HomeFragment : Fragment()
 
 //        homeFragmentViewModel =
 //            ViewModelProvider(this, vmFactory)[HomeViewModel::class.java]
+
+        binding.btnProfile.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_profileFragment) }
 
     }
 
