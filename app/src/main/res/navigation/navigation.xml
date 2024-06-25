@@ -120,8 +120,8 @@
             android:id="@+id/action_registerFragment_to_authFragment"
             app:destination="@id/authFragment" />
         <action
-            android:id="@+id/action_registerFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_registerFragment_to_onboardingOneFragment"
+            app:destination="@id/onboardingOneFragment" />
     </fragment>
     <fragment
         android:id="@+id/basketFragment"
