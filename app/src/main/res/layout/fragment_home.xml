@@ -29,6 +29,7 @@
                 android:showAsAction="always" />
 
             <ImageView
+                android:id="@+id/btn_profile"
                 style="@style/ImageProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"

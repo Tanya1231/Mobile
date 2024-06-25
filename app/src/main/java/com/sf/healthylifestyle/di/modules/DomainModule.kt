@@ -1,8 +1,13 @@
 package com.sf.healthylifestyle.di.modules
 
 import com.sf.healthylifestyle.data.repository.AuthRepository
+import com.sf.healthylifestyle.data.repository.BasketRepository
 import com.sf.healthylifestyle.data.repository.ProductRepository
+import com.sf.healthylifestyle.domain.usecases.AddDishUseCase
 import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
+import com.sf.healthylifestyle.domain.usecases.DelBasketUseCase
+import com.sf.healthylifestyle.domain.usecases.DelDishFromBasketUseCase
+import com.sf.healthylifestyle.domain.usecases.GetBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.GetLeftHalfUseCase
 import com.sf.healthylifestyle.domain.usecases.GetRightHalfUseCase
 import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
@@ -56,6 +61,30 @@ class DomainModule {
     @Provides
     fun provideGetRightHalfUseCase(repository: ProductRepository): GetRightHalfUseCase {
         return GetRightHalfUseCase(repository = repository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideGetBasketUseCase(repository: BasketRepository): GetBasketUseCase {
+        return GetBasketUseCase(repository = repository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideAddDishUseCase(repository: BasketRepository): AddDishUseCase {
+        return AddDishUseCase(repository = repository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideDelBasketUseCase(repository: BasketRepository): DelBasketUseCase {
+        return DelBasketUseCase(repository = repository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideDelDishFromBasketUseCase(repository: BasketRepository): DelDishFromBasketUseCase {
+        return DelDishFromBasketUseCase(repository = repository)
     }
 
 }

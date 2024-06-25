@@ -10,7 +10,6 @@ sealed class RegState {
 
     companion object {
 
-        var AGREE: Boolean = false
         var PHONE_OR_EMAIL = "phone"
     }
 }

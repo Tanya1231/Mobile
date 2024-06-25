@@ -11,6 +11,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.sf.healthylifestyle.R
+import com.sf.healthylifestyle.data.dto.auth.request.CodeRequest
+import com.sf.healthylifestyle.data.dto.auth.request.LoginRequest
+import com.sf.healthylifestyle.data.dto.auth.request.UserLoginRequest
 import com.sf.healthylifestyle.databinding.FragmentRegisterBinding
 import com.sf.healthylifestyle.utils.uiextensions.hide
 import com.sf.healthylifestyle.utils.uiextensions.show
@@ -52,6 +55,9 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnPhone.isSelected = true
+        binding.chbAgree.isSelected = false
+        binding.chbAd.isSelected = false
+        binding.btnSubmit.isEnabled = binding.chbAgree.isSelected
 
         registerFragmentViewModel =
             ViewModelProvider(this, vmFactory)[RegisterViewModel::class.java]
@@ -69,7 +75,7 @@ class RegisterFragment : Fragment() {
             registerFragmentViewModel.isEntry.collect {
                 println("AuthFragment: запуск authFragmentViewModel.isEntry inside")
                 if (it) {
-                    findNavController().navigate(R.id.action_authFragment_to_confirmFragment)
+//                    findNavController().navigate(R.id.action_authFragment_to_confirmFragment)
                 } else {
                     Snackbar.make(
                         binding.root,
@@ -166,6 +172,10 @@ class RegisterFragment : Fragment() {
                             etPhone.hide()
                             btnPhone.hide()
                             btnEmail.hide()
+                            chbAgree.hide()
+                            tvAgree.hide()
+                            chbAd.hide()
+                            tvAd.hide()
                             tvConfirmEmail.hide()
                             etConfirmEmail.hide()
                             tvConfirmPhone.show()
@@ -184,6 +194,10 @@ class RegisterFragment : Fragment() {
                             etPhone.hide()
                             btnPhone.hide()
                             btnEmail.hide()
+                            chbAgree.hide()
+                            tvAgree.hide()
+                            chbAd.hide()
+                            tvAd.hide()
                             tvConfirmPhone.hide()
                             etConfirmPhone.hide()
                             tvConfirmEmail.show()
@@ -204,51 +218,54 @@ class RegisterFragment : Fragment() {
             }
 
             is RegState.Done<*> -> {
-                when(regState.data) {
-                    is Boolean -> {
-                        if (regState.data) {
-                            binding.btnSubmit.text = getString(R.string.btn_submit_to_main)
-                            with(binding) {
-                                tvReg.hide()
-                                tilName.hide()
-                                etName.hide()
-                                tilEmail.hide()
-                                etEmail.hide()
-                                tilPhone.hide()
-                                etPhone.hide()
-                                btnPhone.hide()
-                                btnEmail.hide()
-                                tvConfirmEmail.hide()
-                                etConfirmEmail.hide()
-                                tvConfirmPhone.hide()
-                                tilConfirmPhone.hide()
-                                etConfirmPhone.hide()
-                                tvConfirmEmail.hide()
-                                tilConfirmEmail.hide()
-                                etConfirmEmail.hide()
-                                chbAgree.hide()
-                                tvAgree.hide()
-                                chbAd.hide()
-                                tvAd.hide()
-                                tvRegDone.show()
-                                imgRegDone.show()
-                            }
-                            Snackbar.make(
-                                binding.root,
-                                "${registerFragmentViewModel.regState.value}",
-                                Snackbar.LENGTH_LONG
-                            ).show()
-                        } else {
-                            Snackbar.make(
-                                binding.root,
-                                "Вы ввели неверный код",
-                                Snackbar.LENGTH_LONG
-                            ).show()
-                        }
-                    }
-                    else -> {
+                binding.btnSubmit.text = getString(R.string.btn_submit_to_main)
+                with(binding) {
+                    tvReg.hide()
+                    tilName.hide()
+                    etName.hide()
+                    tilEmail.hide()
+                    etEmail.hide()
+                    tilPhone.hide()
+                    etPhone.hide()
+                    btnPhone.hide()
+                    btnEmail.hide()
+                    tvConfirmEmail.hide()
+                    etConfirmEmail.hide()
+                    tvConfirmPhone.hide()
+                    tilConfirmPhone.hide()
+                    etConfirmPhone.hide()
+                    tvConfirmEmail.hide()
+                    tilConfirmEmail.hide()
+                    etConfirmEmail.hide()
+                    chbAgree.hide()
+                    tvAgree.hide()
+                    chbAd.hide()
+                    tvAd.hide()
+                    tvRegDone.show()
+                    imgRegDone.show()
 
-                    }
+//                when (regState.data) {
+//                    is Boolean -> {
+//                        if (regState.data) {
+//
+//                            }
+//                            Snackbar.make(
+//                                binding.root,
+//                                "${registerFragmentViewModel.regState.value}",
+//                                Snackbar.LENGTH_LONG
+//                            ).show()
+//                        } else {
+//                            Snackbar.make(
+//                                binding.root,
+//                                "Вы ввели неверный код",
+//                                Snackbar.LENGTH_LONG
+//                            ).show()
+//                        }
+//                    }
+//
+//                    else -> {
+//
+//                    }
                 }
 
             }
@@ -261,6 +278,19 @@ class RegisterFragment : Fragment() {
     private fun initBtnListeners() = with(binding) {
         actions.setOnClickListener {
             findNavController().navigate(R.id.action_registerFragment_to_authFragment)
+        }
+
+        chbAgree.setOnClickListener {
+            if (chbAgree.isSelected) {
+                chbAgree.isSelected = false
+            } else {
+                chbAgree.isSelected = true
+            }
+            binding.btnSubmit.isEnabled = chbAgree.isSelected
+        }
+
+        chbAd.setOnClickListener {
+            chbAd.isSelected = !chbAd.isSelected
         }
 
         btnPhone.setOnClickListener {
@@ -278,31 +308,23 @@ class RegisterFragment : Fragment() {
         }
 
         btnSubmit.setOnClickListener {
+            var login = ""
             when (registerFragmentViewModel.regState.value) {
                 is RegState.Reg<*> -> {
                     when (RegState.PHONE_OR_EMAIL) {
                         "phone" -> {
-                            /*** На время тестов, чтобы не писать постоянно e-mail*/
                             if (binding.etPhone.text.toString().isNotEmpty()) {
-
-                                /*** На время тестов, чтобы не писать постоянно e-mail*/
-                                if (!isEmailValid(binding.etPhone.text.toString())) {
-                                    Snackbar.make(
-                                        binding.root,
-                                        "E-mail содержит не допустимые символы. Или не верный формат записи.",
-                                        Snackbar.LENGTH_LONG
-                                    ).show()
-                                    return@setOnClickListener
-                                }
+                                /*** Здесь будет проверка на валидность телефона*/
+                                login = binding.etPhone.text.toString()
                             }
                         }
 
                         "email" -> {
                             /*** На время тестов, чтобы не писать постоянно e-mail*/
-                            if (binding.etPhone.text.toString().isNotEmpty()) {
+                            if (binding.etEmail.text.toString().isNotEmpty()) {
 
                                 /*** На время тестов, чтобы не писать постоянно e-mail*/
-                                if (!isEmailValid(binding.etPhone.text.toString())) {
+                                if (!isEmailValid(binding.etEmail.text.toString())) {
                                     Snackbar.make(
                                         binding.root,
                                         "E-mail содержит не допустимые символы. Или не верный формат записи.",
@@ -310,6 +332,8 @@ class RegisterFragment : Fragment() {
                                     ).show()
                                     return@setOnClickListener
                                 }
+
+                                login = binding.etEmail.text.toString()
                             }
                         }
 
@@ -318,17 +342,46 @@ class RegisterFragment : Fragment() {
                         }
                     }
 
+                    if (binding.etName.text.toString().isEmpty()) {
+                        Snackbar.make(
+                            binding.root,
+                            "Введите пожалуйста имя пользователя.",
+                            Snackbar.LENGTH_LONG
+                        ).show()
+                        return@setOnClickListener
+                    }
 
+                    println("Reg -> reg: userName:${binding.etName.text.toString()}, login:$login")
 
-                    registerFragmentViewModel.reg()
+                    registerFragmentViewModel.reg(
+                        userLogin = UserLoginRequest(binding.etName.text.toString(), login)
+                    )
                 }
 
                 is RegState.Confirm<*> -> {
-                    registerFragmentViewModel.confirm()
+                    var code = ""
+
+                    when (RegState.PHONE_OR_EMAIL) {
+                        "phone" -> {
+                            code = binding.etConfirmPhone.text.toString()
+                        }
+
+                        "email" -> {
+                            code = binding.etConfirmEmail.text.toString()
+                        }
+
+                        else -> {
+                            TODO("Invalid ...")
+                        }
+                    }
+
+                    println("Confirm -> code: $code")
+
+                    registerFragmentViewModel.confirm(code = CodeRequest(code))
                 }
 
                 is RegState.Done<*> -> {
-                    findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
+                    findNavController().navigate(R.id.action_registerFragment_to_onboardingOneFragment)
                 }
 
                 is RegState.Auth<*> -> TODO()

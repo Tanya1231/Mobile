@@ -7,9 +7,9 @@
         android:icon="@drawable/ic_home"
         android:title="@string/menu_home_title"/>
     <item
-        android:id="@+id/bookFragment"
-        android:icon="@drawable/ic_book"
-        android:title="@string/menu_book_title"
+        android:id="@+id/catalogueFragment"
+        android:icon="@drawable/ic_catalogue"
+        android:title="@string/menu_catalogue_title"
         app:showAsAction="withText" />
     <item
         android:id="@+id/mydishFragment"
@@ -17,12 +17,12 @@
         android:title="@string/menu_mydish_title"
         app:showAsAction="withText" />
     <item
-        android:id="@+id/catalogueFragment"
-        android:icon="@drawable/ic_catalogue"
-        android:title="@string/menu_catalogue_title"
+        android:id="@+id/bookFragment"
+        android:icon="@drawable/ic_book"
+        android:title="@string/menu_book_title"
         app:showAsAction="withText" />
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/basketFragment"
         android:icon="@drawable/ic_basket"
         android:title="@string/menu_profile_text"
         app:showAsAction="withText" />

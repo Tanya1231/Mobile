@@ -28,6 +28,7 @@
                 android:contentDescription="@string/image" />
 
             <ImageView
+                android:id="@+id/btn_profile"
                 style="@style/ImageProfile"
                 android:layout_width="44dp"
                 android:layout_height="44dp"

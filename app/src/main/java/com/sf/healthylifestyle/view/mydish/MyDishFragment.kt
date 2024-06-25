@@ -13,12 +13,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
-import com.google.android.material.snackbar.Snackbar
 import com.sf.healthylifestyle.R
 import com.sf.healthylifestyle.data.dto.product.response.ProductResponse
 import com.sf.healthylifestyle.databinding.FragmentMydishBinding
 import dagger.android.support.AndroidSupportInjection
-import ed.maevski.minideviantart.view.decoration.TopSpacingItemDecoration
+import ed.maevski.minideviantart.view.decoration.ItemDecoration
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -28,6 +27,8 @@ class MyDishFragment : Fragment() {
     private val rightHalfAdapter = RightHalfAdapter()
     private var leftCost: Int? = null
     private var rightCost: Int? = null
+    private var leftCurPos: Int? = null
+    private var rightCurPos: Int? = null
 
     private var _binding: FragmentMydishBinding? = null
     private val binding get() = _binding!!
@@ -59,8 +60,8 @@ class MyDishFragment : Fragment() {
             ViewModelProvider(this, myDishViewModelFactory)[MyDishViewModel::class.java]
 
         with(binding) {
-            binding.rvLeftHalf.addItemDecoration(TopSpacingItemDecoration(0, 16, 0, 0))
-            binding.rvRightHalf.addItemDecoration(TopSpacingItemDecoration(16, 0, 0, 0))
+            binding.rvLeftHalf.addItemDecoration(ItemDecoration(0, 16, 0, 0))
+            binding.rvRightHalf.addItemDecoration(ItemDecoration(16, 0, 0, 0))
 
             rvLeftHalf.adapter = leftHalfAdapter
             rvRightHalf.adapter = rightHalfAdapter
@@ -73,6 +74,15 @@ class MyDishFragment : Fragment() {
 
                 initRV(it)
             }
+        }
+
+        binding.btnBasket.setOnClickListener {
+            myDishViewModel.addDishToBasket(
+                Pair(
+                    leftHalfAdapter.getItem(leftCurPos),
+                    rightHalfAdapter.getItem(rightCurPos)
+                )
+            )
         }
     }
 
@@ -91,7 +101,8 @@ class MyDishFragment : Fragment() {
             true
         ) { position ->
             val item = leftHalfAdapter.getItem(position)
-            leftCost = item.price
+            leftCurPos = position
+            leftCost = item!!.price
             showDescription(
                 Pair(binding.tvLeftDescription, binding.tvLeftCost),
                 item
@@ -102,7 +113,8 @@ class MyDishFragment : Fragment() {
             true
         ) { position ->
             val item = rightHalfAdapter.getItem(position)
-            rightCost = item.price
+            rightCurPos = position
+            rightCost = item!!.price
             showDescription(
                 Pair(binding.tvRightDescription, binding.tvRightCost),
                 item

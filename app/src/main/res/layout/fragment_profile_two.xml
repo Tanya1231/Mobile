@@ -15,7 +15,6 @@
         android:background="@color/light_blue"
         android:orientation="vertical">
 
-
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

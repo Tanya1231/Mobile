@@ -11,6 +11,6 @@ data class ProductResponse(
     @SerialName("image_extra") val image_extra: String,
     @SerialName("price") val price: Int,
     @SerialName("weight") val weight: Int,
-    @SerialName("calories") val calories: Int,
+    @SerialName("calories") val calories: Float,
 )
 

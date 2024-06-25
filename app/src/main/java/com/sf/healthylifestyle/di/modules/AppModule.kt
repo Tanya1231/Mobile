@@ -1,11 +1,16 @@
 package com.sf.healthylifestyle.di.modules
 
+import com.sf.healthylifestyle.domain.usecases.AddDishUseCase
 import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
+import com.sf.healthylifestyle.domain.usecases.DelBasketUseCase
+import com.sf.healthylifestyle.domain.usecases.DelDishFromBasketUseCase
+import com.sf.healthylifestyle.domain.usecases.GetBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.GetLeftHalfUseCase
 import com.sf.healthylifestyle.domain.usecases.GetRightHalfUseCase
 import com.sf.healthylifestyle.domain.usecases.LoginUseCase
 import com.sf.healthylifestyle.domain.usecases.RegisterUseCase
 import com.sf.healthylifestyle.view.auth.AuthViewModel
+import com.sf.healthylifestyle.view.basket.BasketViewModel
 import com.sf.healthylifestyle.view.confirm.ConfirmViewModel
 import com.sf.healthylifestyle.view.mydish.MyDishViewModel
 import com.sf.healthylifestyle.view.register.RegisterViewModel
@@ -18,7 +23,7 @@ class AppModule() {
     fun provideAuthViewModelFactory(
         loginUseCase: LoginUseCase,
         confirmUseCase: ConfirmUseCase,
-        ) = AuthViewModel.Factory(
+    ) = AuthViewModel.Factory(
         loginUseCase = loginUseCase,
         confirmUseCase = confirmUseCase,
     )
@@ -37,7 +42,7 @@ class AppModule() {
     @Provides
     fun provideConfirmViewModelFactory(
         confirmUseCase: ConfirmUseCase,
-        ) = ConfirmViewModel.Factory(
+    ) = ConfirmViewModel.Factory(
         confirmUseCase = confirmUseCase,
     )
 
@@ -45,9 +50,21 @@ class AppModule() {
     fun provideMyDishViewModelFactory(
         getLeftHalfUseCase: GetLeftHalfUseCase,
         getRightHalfUseCase: GetRightHalfUseCase,
-        ) = MyDishViewModel.Factory(
+        addDishUseCase: AddDishUseCase,
+    ) = MyDishViewModel.Factory(
         getLeftHalfUseCase = getLeftHalfUseCase,
         getRightHalfUseCase = getRightHalfUseCase,
+        addDishUseCase = addDishUseCase
     )
 
+    @Provides
+    fun provideBasketViewModelFactory(
+        getBasketUseCase: GetBasketUseCase,
+        delBasketUseCase: DelBasketUseCase,
+        delDishFromBasketUseCase: DelDishFromBasketUseCase
+    ) = BasketViewModel.Factory(
+        getBasketUseCase = getBasketUseCase,
+        delBasketUseCase = delBasketUseCase,
+        delDishFromBasketUseCase = delDishFromBasketUseCase
+    )
 }
