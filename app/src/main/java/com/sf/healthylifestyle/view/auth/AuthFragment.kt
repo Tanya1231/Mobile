@@ -16,9 +16,7 @@ import com.sf.healthylifestyle.data.dto.auth.request.LoginRequest
 import com.sf.healthylifestyle.databinding.FragmentAuthBinding
 import com.sf.healthylifestyle.utils.uiextensions.hide
 import com.sf.healthylifestyle.utils.uiextensions.show
-import com.sf.healthylifestyle.view.register.RegState
 import dagger.android.support.AndroidSupportInjection
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -120,7 +118,7 @@ class AuthFragment : Fragment()
                                 "${authFragmentViewModel.authState.value}",
                                 Snackbar.LENGTH_LONG
                             ).show()
-                            findNavController().navigate(R.id.action_authFragment_to_homeFragment)
+                            findNavController().navigate(R.id.action_authFragment_to_onboardingOneFragment)
 
                         } else {
 //                            Snackbar.make(
@@ -136,7 +134,7 @@ class AuthFragment : Fragment()
 //                            "Ветка else - ${authFragmentViewModel.authState.value}",
 //                            Snackbar.LENGTH_LONG
 //                        ).show()
-                        findNavController().navigate(R.id.action_authFragment_to_homeFragment)
+                        findNavController().navigate(R.id.action_authFragment_to_onboardingOneFragment)
                     }
                 }
             }

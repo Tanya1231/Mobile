@@ -28,6 +28,17 @@
                 android:contentDescription="@string/image"
                 android:showAsAction="always" />
 
+<!--            <Switch-->
+<!--                android:id="@+id/switchOne"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="60dp"-->
+<!--                android:layout_gravity="center_vertical|end"-->
+<!--                android:checked="false"-->
+<!--                android:thumb="@drawable/resource_switch"-->
+<!--                app:track="@drawable/switch_themes"-->
+<!--                tools:ignore="UseSwitchCompatOrMaterialXml" />-->
+
             <ImageView
                 style="@style/ImageProfile"
                 android:layout_width="wrap_content"

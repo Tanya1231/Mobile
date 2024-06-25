@@ -59,6 +59,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
             android:layout_width="200dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal"
