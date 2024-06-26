@@ -5,12 +5,14 @@ import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
 import com.sf.healthylifestyle.domain.usecases.DelBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.DelDishFromBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.GetBasketUseCase
+import com.sf.healthylifestyle.domain.usecases.GetDishByIdUseCase
 import com.sf.healthylifestyle.domain.usecases.GetLeftHalfUseCase
 import com.sf.healthylifestyle.domain.usecases.GetRightHalfUseCase
 import com.sf.healthylifestyle.domain.usecases.LoginUseCase
 import com.sf.healthylifestyle.domain.usecases.RegisterUseCase
 import com.sf.healthylifestyle.view.auth.AuthViewModel
 import com.sf.healthylifestyle.view.basket.BasketViewModel
+import com.sf.healthylifestyle.view.cart.DescriptionDishViewModel
 import com.sf.healthylifestyle.view.confirm.ConfirmViewModel
 import com.sf.healthylifestyle.view.mydish.MyDishViewModel
 import com.sf.healthylifestyle.view.register.RegisterViewModel
@@ -61,10 +63,19 @@ class AppModule() {
     fun provideBasketViewModelFactory(
         getBasketUseCase: GetBasketUseCase,
         delBasketUseCase: DelBasketUseCase,
-        delDishFromBasketUseCase: DelDishFromBasketUseCase
+        delDishFromBasketUseCase: DelDishFromBasketUseCase,
+//        getDishByIdUseCase: GetDishByIdUseCase
     ) = BasketViewModel.Factory(
         getBasketUseCase = getBasketUseCase,
         delBasketUseCase = delBasketUseCase,
-        delDishFromBasketUseCase = delDishFromBasketUseCase
+        delDishFromBasketUseCase = delDishFromBasketUseCase,
+//        getDishByIdUseCase = getDishByIdUseCase
+    )
+
+    @Provides
+    fun provideDescriptionDishViewModelFactory(
+        getDishByIdUseCase: GetDishByIdUseCase
+    ) = DescriptionDishViewModel.Factory(
+        getDishByIdUseCase = getDishByIdUseCase
     )
 }

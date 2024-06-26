@@ -20,8 +20,8 @@ class DataModule {
 
     @Provides
     @Singleton
-    fun provideProductRepository(productApi: ProductApi) =
-        ProductRepository(productApi = productApi)
+    fun provideProductRepository(productApi: ProductApi,dishMapper: DishMapper) =
+        ProductRepository(productApi = productApi, dishMapper = dishMapper)
 
     @Provides
     @Singleton

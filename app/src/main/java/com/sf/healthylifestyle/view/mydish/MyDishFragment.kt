@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
 import com.sf.healthylifestyle.R
 import com.sf.healthylifestyle.data.dto.product.response.ProductResponse
@@ -22,13 +23,28 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class MyDishFragment : Fragment() {
-
     private val leftHalfAdapter = LeftHalfAdapter()
     private val rightHalfAdapter = RightHalfAdapter()
+
+//    private val leftHalfAdapter = LeftHalfAdapter    {id ->
+//        val bundle = Bundle()
+//        bundle.putInt("dishId", id)
+//        findNavController().navigate(R.id.action_mydishFragment_to_descriptionDishFragment, bundle)
+//    }
+//
+//    private val rightHalfAdapter = RightHalfAdapter    {id ->
+//        val bundle = Bundle()
+//        bundle.putInt("dishId", id)
+//        findNavController().navigate(R.id.action_mydishFragment_to_descriptionDishFragment, bundle)
+//    }
+
     private var leftCost: Int? = null
     private var rightCost: Int? = null
     private var leftCurPos: Int? = null
     private var rightCurPos: Int? = null
+
+    private var leftSnapHelper: GravitySnapHelper? = null
+    private var rightSnapHelper: GravitySnapHelper? = null
 
     private var _binding: FragmentMydishBinding? = null
     private val binding get() = _binding!!
@@ -88,6 +104,8 @@ class MyDishFragment : Fragment() {
 
     override fun onDestroyView() {
         _binding = null
+        leftSnapHelper?.attachToRecyclerView(null)
+        rightSnapHelper?.attachToRecyclerView(null)
         super.onDestroyView()
     }
 
@@ -96,7 +114,7 @@ class MyDishFragment : Fragment() {
         leftHalfAdapter.setData(data.first)
         rightHalfAdapter.setData(data.second)
 
-        val leftSnapHelper = GravitySnapHelper(
+        leftSnapHelper = GravitySnapHelper(
             Gravity.TOP,
             true
         ) { position ->
@@ -108,7 +126,7 @@ class MyDishFragment : Fragment() {
                 item
             )
         }
-        val rightSnapHelper = GravitySnapHelper(
+        rightSnapHelper = GravitySnapHelper(
             Gravity.TOP,
             true
         ) { position ->
@@ -121,8 +139,8 @@ class MyDishFragment : Fragment() {
             )
         }
 
-        leftSnapHelper.attachToRecyclerView(binding.rvLeftHalf)
-        rightSnapHelper.attachToRecyclerView(binding.rvRightHalf)
+        leftSnapHelper?.attachToRecyclerView(binding.rvLeftHalf)
+        rightSnapHelper?.attachToRecyclerView(binding.rvRightHalf)
     }
 
     @SuppressLint("SetTextI18n")

@@ -100,6 +100,9 @@
         <action
             android:id="@+id/action_mydishFragment_to_basketFragment"
             app:destination="@id/basketFragment" />
+        <action
+            android:id="@+id/action_mydishFragment_to_descriptionDishFragment"
+            app:destination="@id/descriptionDishFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
@@ -134,6 +137,9 @@
         <action
             android:id="@+id/action_basketFragment_to_bookFragment"
             app:destination="@id/bookFragment" />
+        <action
+            android:id="@+id/action_basketFragment_to_descriptionDishFragment"
+            app:destination="@id/descriptionDishFragment" />
     </fragment>
     <fragment
         android:id="@+id/onboardingOneFragment"
@@ -166,5 +172,16 @@
         <action
             android:id="@+id/action_onboardingFourFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/descriptionDishFragment"
+        android:name="com.sf.healthylifestyle.view.cart.DescriptionDishFragment"
+        android:label="DescriptionDishFragment" >
+        <action
+            android:id="@+id/action_descriptionDishFragment_to_mydishFragment"
+            app:destination="@id/mydishFragment" />
+        <action
+            android:id="@+id/action_descriptionDishFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
     </fragment>
 </navigation>

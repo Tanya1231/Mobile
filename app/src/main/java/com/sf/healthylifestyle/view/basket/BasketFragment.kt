@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.sf.healthylifestyle.R
 import com.sf.healthylifestyle.databinding.FragmentBasketBinding
 import com.sf.healthylifestyle.domain.models.Dish
 import dagger.android.support.AndroidSupportInjection
@@ -18,11 +20,17 @@ import javax.inject.Inject
 
 class BasketFragment : Fragment() {
 
-    private val basketAdapter = BasketAdapter(){id ->
+    private val basketAdapter = BasketAdapter(
+        {id ->
         basketViewModel.delDish(id)
-    }
+    },
+    {id ->
+        val bundle = Bundle()
+        bundle.putInt("dishId", id)
+        findNavController().navigate(R.id.action_basketFragment_to_descriptionDishFragment, bundle)
+    })
 
-    private var _binding: FragmentBasketBinding? = null
+        private var _binding: FragmentBasketBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var basketViewModel: BasketViewModel
@@ -64,6 +72,14 @@ class BasketFragment : Fragment() {
                 sum(it)
             }
         }
+
+//        viewLifecycleOwner.lifecycleScope.launch {
+//            basketViewModel.dish.collect {
+//
+//                println("dish collect $it")
+//                findNavController().navigate(R.id.action_basketFragment_to_descriptionDishFragment)
+//            }
+//        }
 
         binding.btnArrange.setOnClickListener {
             basketAdapter.setData(listOf())
