@@ -5,6 +5,7 @@ import com.sf.healthylifestyle.view.MainActivity
 import com.sf.healthylifestyle.view.auth.AuthFragment
 import com.sf.healthylifestyle.view.basket.BasketFragment
 import com.sf.healthylifestyle.view.book.BookFragment
+import com.sf.healthylifestyle.view.cart.DescriptionDishFragment
 import com.sf.healthylifestyle.view.catalogue.CatalogueFragment
 import com.sf.healthylifestyle.view.confirm.ConfirmFragment
 import com.sf.healthylifestyle.view.home.HomeFragment
@@ -60,4 +61,7 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindOnboardingFourFragment(): OnboardingFourFragment
+
+    @ContributesAndroidInjector
+    fun bindDescriptionDishFragment(): DescriptionDishFragment
 }

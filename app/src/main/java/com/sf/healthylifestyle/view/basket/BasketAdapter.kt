@@ -9,7 +9,8 @@ import com.sf.healthylifestyle.databinding.ItemBasketBinding
 import com.sf.healthylifestyle.domain.models.Dish
 
 class BasketAdapter(
-    private val onItemClick: (id: Int) -> Unit
+    private val onCloseClick: (id: Int) -> Unit,
+    private val onImgClick: (id: Int) -> Unit,
 ) : RecyclerView.Adapter<BasketAdapter.InnerBasketViewHolder>() {
     private var basket: MutableList<Dish> = mutableListOf()
 
@@ -45,7 +46,10 @@ class BasketAdapter(
             .into(holder.imgDish)
 
         holder.btnClose.setOnClickListener {
-            onItemClick(item.id)
+            onCloseClick(item.id)
+        }
+        holder.imgDish.setOnClickListener {
+            onImgClick(item.id)
         }
     }
 
