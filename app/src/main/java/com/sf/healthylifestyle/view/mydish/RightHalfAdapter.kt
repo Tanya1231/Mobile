@@ -9,6 +9,7 @@ import com.sf.healthylifestyle.data.dto.product.response.ProductResponse
 import com.sf.healthylifestyle.databinding.ItemRightDishesBinding
 
 class RightHalfAdapter(
+//    private val onImgClick: (id: Int) -> Unit,
 ) : RecyclerView.Adapter<RightHalfAdapter.InnerRightHalfViewHolder>() {
     private var rightHalf: MutableList<ProductResponse> = mutableListOf()
 
@@ -31,6 +32,11 @@ class RightHalfAdapter(
             .load(rightHalf[position].image_extra)
             .centerCrop()
             .into(holder.imgRightHalf)
+
+//        holder.imgRightHalf.setOnLongClickListener {
+//            onImgClick(rightHalf[position].id)
+//            true
+//        }
     }
 
     override fun getItemCount(): Int = rightHalf.size

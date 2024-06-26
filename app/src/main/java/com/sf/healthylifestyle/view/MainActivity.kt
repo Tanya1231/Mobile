@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         R.id.onboardingTwoFragment,
         R.id.onboardingThreeFragment,
         R.id.onboardingFourFragment,
+        R.id.descriptionDishFragment
     )
 
     private val fragmentsWithoutSwitch = listOf(
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         R.id.mydishFragment,
         R.id.basketFragment,
         R.id.profileFragment,
+        R.id.descriptionDishFragment
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

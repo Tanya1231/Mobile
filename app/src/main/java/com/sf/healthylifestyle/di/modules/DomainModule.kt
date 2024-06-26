@@ -8,6 +8,7 @@ import com.sf.healthylifestyle.domain.usecases.ConfirmUseCase
 import com.sf.healthylifestyle.domain.usecases.DelBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.DelDishFromBasketUseCase
 import com.sf.healthylifestyle.domain.usecases.GetBasketUseCase
+import com.sf.healthylifestyle.domain.usecases.GetDishByIdUseCase
 import com.sf.healthylifestyle.domain.usecases.GetLeftHalfUseCase
 import com.sf.healthylifestyle.domain.usecases.GetRightHalfUseCase
 import com.sf.healthylifestyle.domain.usecases.GetTokenByEmail
@@ -85,6 +86,12 @@ class DomainModule {
     @Provides
     fun provideDelDishFromBasketUseCase(repository: BasketRepository): DelDishFromBasketUseCase {
         return DelDishFromBasketUseCase(repository = repository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideGetDishByIdUseCase(repository: ProductRepository): GetDishByIdUseCase {
+        return GetDishByIdUseCase(repository = repository)
     }
 
 }

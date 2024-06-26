@@ -11,6 +11,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.withContext
 
+/***
+ * Перенести из BasketRepository все, что не относится к корзине
+ * */
 class BasketRepository(
     private val basketDao: BasketDao,
     private val dishMapper: DishMapper,
